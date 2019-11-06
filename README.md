@@ -35,6 +35,7 @@ Within the project certain standards and practices will be used by the aforement
 - Fields will be named as follows
   - [**Prefix**] + [**Tag**] + [**TableName**] + [**Suffix**]
   - e.g idsUser or dtmUserJoined
+  - Longer Table Names can be abrivated to reduce Field name size (tblPermissionAssignmentByRole -> PABR)
 
 LNC Reference: https://en.wikipedia.org/wiki/Leszynski_naming_convention
 
