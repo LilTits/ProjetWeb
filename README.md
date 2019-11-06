@@ -15,25 +15,25 @@ Created by: **Varjavandi Thomas**, **Brisé Mathéo** et **Guiochet Titouan**.
 
 ## Standards & Practices:
 
-Within the project certain standards and practices will be used by the aformantioned creators to maitian a level of organization and quality within the projects source code.
+Within the project certain standards and practices will be used by the aforementioned creators to maintain a level of organization and quality within the projects source code.
 
 ### File Names
 
 - **camelCase** will be used to name any files within the project 
 - All file names will be **clear and concise** in their representation of the file contents
-- **Sigular** only, no plural words within names
+- **Singular** only, no plural words within names
 
 ### Database Tables & Fields
 
-- All Datbase names will follow the **Lezynski Naming Convension** found bellow
-- **Sigular only**, no plural words within names
+- All Database names will follow the **Lezynski Naming Convention** found bellow
+- **Singular only**, no plural words within names
 
 - Tables will be named as follows
-  - [**prefix**] + [**tbl**] + [**TableName**] + [**suffix**]
+  - [**Prefix**] + [**tbl**] + [**TableName**] + [**Suffix**]
   - e.g. tblUserAdresses or zztblUserAdresses
   
 - Fields will be named as follows
-  - [**prefix**] + [**tag**] + [**TableName**] + [**suffix**]
+  - [**Prefix**] + [**Tag**] + [**TableName**] + [**Suffix**]
   - e.g idsUser or dtmUserJoined
 
 LNC Reference: https://en.wikipedia.org/wiki/Leszynski_naming_convention
