@@ -1,15 +1,15 @@
-# Projet Web
+# Project Web
 
-Creation of an **E-Commerce** Site for the BDE Assosiation.
+Creation of an **E-Commerce** Site for the BDE Association.
 
-## Langages used :
+## Languages used :
 
 1. HTML
 2. CSS
 3. JavaScript
 4. PHP
 
-Second year of prepatory cycle at CESI computer enginering program
+Second year of precatory cycle at CESI computer engineering program
 
 Created by: **Varjavandi Thomas**, **Brisé Mathéo** et **Guiochet Titouan**.
 
