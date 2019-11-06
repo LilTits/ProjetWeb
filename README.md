@@ -36,7 +36,7 @@ Within the project certain standards and practices will be used by the aformanti
   - [**prefix**] + [**tag**] + [**TableName**] + [**suffix**]
   - e.g idsUser or dtmUserJoined
 
-https://en.wikipedia.org/wiki/Leszynski_naming_convention
+LNC Reference: https://en.wikipedia.org/wiki/Leszynski_naming_convention
 
 #### Component Description
 
