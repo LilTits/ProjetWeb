@@ -1,0 +1,125 @@
+/* Stylesheet 
+    Created by guiochet Titouan */
+
+/* Table des matières :
+    0-Various
+    1-Header/Nav
+    2-Welcome
+    3-Product
+    4-Event
+    5-Contact
+    6-Footer 
+    7-Media Queries*/
+
+/* 0-Various */
+
+body {
+	padding-top: 56px; /* should be the same value as .nav-hide */
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
+}
+
+/* 1-Header/Navigation */
+
+#navigation{
+    background-color: #000;
+    
+}
+
+.btn_nav{
+    color: #FFF;
+    height: 100%;
+}
+
+#basket{
+    font-size: 1rem;
+    margin-left: 0;
+}
+
+.liens_nav{
+    display: none;
+}
+
+.burger_nav{
+    cursor: pointer;
+}
+
+.burger_nav div{
+    width: 30px;
+    height: 3px;
+    background-color: #FFF;
+    margin: 5px;
+}
+
+/* 2-Welcome */
+
+
+
+/* 3-Product */
+
+
+
+/* 4-Event */
+
+
+
+/* 5-Contact */
+
+
+
+/* 6-Footer */
+
+
+
+/* 7-Media Queries */
+
+/* It's better to copy the media queries in each section for more clarification
+    Media queries handle all the device larger than a mobile*/
+
+/* Plus grand qu'un mobile */
+@media (min-width: 400px) {
+    
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
+}
