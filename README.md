@@ -80,3 +80,4 @@ LNC Reference: https://en.wikipedia.org/wiki/Leszynski_naming_convention
 |Text (character)	|chr|
 |Yes/No (Boolean)	|ysn|
 |Images/Image URL |img|
+|Type (user-defined)|typ|
