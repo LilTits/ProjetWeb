@@ -1,0 +1,176 @@
+/* Stylesheet 
+    Created by guiochet Titouan */
+
+/* Table des matières :
+    0-Various
+    1-Header/Nav
+    2-Welcome
+    3-Product
+    4-Event
+    5-Contact
+    6-Footer 
+    7-Media Queries*/
+
+/* 0-Various */
+
+body{
+    background-color: #e6e6e6;
+}
+
+.title_section{
+    text-align: center;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+    
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
+}
+
+/* 1-Header/Navigation */
+
+#navigation{
+    background-color: #333333;
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+#panier{
+    margin: 13px 0 0 0;
+}
+
+#login{
+    margin: 13px 0 0 0;
+}
+
+.item_nav{
+    
+    height: 40px;
+}
+
+.item a{
+    color: #FFF;
+}
+
+.list_nav{
+    margin: 13px 0 0 0;
+    text-align: center;
+}
+
+.list_nav ul li{
+    display: inline;
+    margin: 0 20px 0 0;
+}
+
+.list_nav a{
+    text-decoration: none;
+}
+
+.burger_nav{
+    cursor: pointer;
+}
+
+.burger_nav div{
+    width: 30px;
+    height: 3px;
+    background-color: #FFF;
+    margin: 5px;
+}
+
+/* 2-Welcome */
+
+#image_header{
+    height: 200px;
+    background-color: #ffad33;
+    margin-bottom: 30px;
+}
+
+#logo_header{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-top: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* 3-Product */
+
+
+
+/* 4-Event */
+
+
+
+/* 5-Contact */
+
+
+
+/* 6-Footer */
+
+#footer{
+    background-color: #333333;
+    padding-top: 20px;
+}
+
+.footer_section{
+    color: #999;
+}
+
+.terms{
+    text-align: justify;
+}
+
+.credits h6{
+    text-align: center;
+}
+
+/* 7-Media Queries */
+
+/* It's better to copy the media queries in each section for more clarification
+    Media queries handle all the device larger than a mobile*/
+
+/* Plus grand qu'un mobile */
+@media (min-width: 400px) {
+    
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
+}
