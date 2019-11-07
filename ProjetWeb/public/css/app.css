@@ -11664,7 +11664,7 @@ a.text-dark:focus {
 /* 0-Various */
 
 body {
-  background-color: #2e2e2e;
+  background-color: #fff;
 }
 
 .title_section {
@@ -11702,6 +11702,24 @@ body {
 /* 5-Contact */
 
 /* 6-Footer */
+
+.footer_section {
+  background-color: #999;
+  color: #ccc;
+  padding: 1rem;
+}
+
+.term h6 {
+  font-size: 1.1rem;
+}
+
+.term p {
+  text-align: justify;
+}
+
+#credits {
+  text-align: center;
+}
 
 /* 7-Media Queries */
 

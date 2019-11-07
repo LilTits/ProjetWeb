@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="{{asset('js/app.js')}}"></script>
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
-        <title>Site Web du BDE</title>
+        <title>BDE CESI La Rochelle</title>
     </head>
     <body>
         @include('inc.header')
