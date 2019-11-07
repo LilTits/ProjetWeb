@@ -1090,11 +1090,6 @@ there.
 
 /* 0-Various */
 
-body {
-  padding-top: 56px;
-  /* should be the same value as .nav-hide */
-}
-
 /* Larger than mobile */
 
 /* Larger than phablet (also point when grid becomes active) */
@@ -1109,20 +1104,38 @@ body {
 
 #navigation {
   background-color: #000;
+  height: 60px;
+  margin-bottom: 30px;
 }
 
-.btn_nav {
+#panier {
+  margin: 13px 0 0 0;
+}
+
+#login {
+  margin: 13px 0 0 0;
+}
+
+.item_nav {
+  height: 40px;
+}
+
+.item a {
   color: #FFF;
-  height: 100%;
 }
 
-#basket {
-  font-size: 1rem;
-  margin-left: 0;
+.list_nav {
+  margin: 13px 0 0 0;
+  text-align: center;
 }
 
-.liens_nav {
-  display: none;
+.list_nav ul li {
+  display: inline;
+  margin: 0 20px 0 0;
+}
+
+.list_nav a {
+  text-decoration: none;
 }
 
 .burger_nav {
@@ -1138,6 +1151,22 @@ body {
 
 /* 2-Welcome */
 
+#image_header {
+  height: 200px;
+  background-color: #ffad33;
+  margin-bottom: 30px;
+}
+
+#logo_header {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  margin-top: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
 /* 3-Product */
 
 /* 4-Event */
@@ -1145,6 +1174,24 @@ body {
 /* 5-Contact */
 
 /* 6-Footer */
+
+#footer {
+  background-color: #000;
+  padding-top: 20px;
+}
+
+.contenu_section {
+  color: #FFF;
+}
+
+.terms {
+  text-align: justify;
+}
+
+.credits h5,
+h6 {
+  text-align: center;
+}
 
 /* 7-Media Queries */
 
