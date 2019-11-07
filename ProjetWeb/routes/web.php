@@ -16,3 +16,7 @@ Route::get('/product', 'PagesController@product');
 Route::get('/event', 'PagesController@event');
 Route::get('/login', 'PagesController@login');
 Route::get('/contact', 'PagesController@contact');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
