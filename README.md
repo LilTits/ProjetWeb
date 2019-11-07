@@ -79,3 +79,4 @@ LNC Reference: https://en.wikipedia.org/wiki/Leszynski_naming_convention
 |Single	|sng|
 |Text (character)	|chr|
 |Yes/No (Boolean)	|ysn|
+|Images/Image URL |img|
