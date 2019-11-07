@@ -9,7 +9,6 @@
     </head>
     <body>
         @include('inc.header')
-        <button class="button-primary">Ceci est un bouton</button>
         
         @yield('content')
         

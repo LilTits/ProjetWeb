@@ -1090,6 +1090,14 @@ there.
 
 /* 0-Various */
 
+body {
+  background-color: #e6e6e6;
+}
+
+.title_section {
+  text-align: center;
+}
+
 /* Larger than mobile */
 
 /* Larger than phablet (also point when grid becomes active) */
@@ -1103,7 +1111,7 @@ there.
 /* 1-Header/Navigation */
 
 #navigation {
-  background-color: #000;
+  background-color: #333333;
   height: 60px;
   margin-bottom: 30px;
 }
@@ -1176,20 +1184,19 @@ there.
 /* 6-Footer */
 
 #footer {
-  background-color: #000;
+  background-color: #333333;
   padding-top: 20px;
 }
 
-.contenu_section {
-  color: #FFF;
+.footer_section {
+  color: #999;
 }
 
 .terms {
   text-align: justify;
 }
 
-.credits h5,
-h6 {
+.credits h6 {
   text-align: center;
 }
 

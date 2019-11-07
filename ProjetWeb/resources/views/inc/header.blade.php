@@ -1,6 +1,6 @@
 <!-- Début section navigation -->
 <header>
-    {{-- <nav id="navigation" class="u-full-width">
+    <nav id="navigation" class="u-full-width">
         <div class="container item_nav">
             <span id="panier" class="two columns item">
                 <a href="/">Panier</a>
@@ -16,15 +16,12 @@
             <div id="login" class="three columns item">
                 <a href="/login">S'inscrire/Se Connecter</a>
             </div>
-            <div class="burger_nav item">
+            {{-- <div class="burger_nav item">
                 <div class="ligne1"></div>
                 <div class="ligne2"></div>
                 <div class="ligne3"></div>
-            </div>
+            </div> --}}
         </div>
-    </nav> --}}
-    <nav id="navigation">
-        
     </nav>
     <section id="image_header" class="u-full-width container">
         <div class="row">
