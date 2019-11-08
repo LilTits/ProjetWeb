@@ -2,25 +2,27 @@
 
 @section('content')
 
-    <section id="event">
-        <div class="content_section container">
-            <h3 class="title_section">Evènement</h3>
-            @if(count($event) > 0)
-                @foreach ($event as $item_event)
-                    <div class="row">
-                        <div class="one-third column frame">
-                            <h5>Nom : </h5>
-                            <h5>Date :</h5>
-                            <h5>Prix :</h5>
-                        </div>
-                        <div class="two-thirds column item_event">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellat temporibus quod harum nisi porro nostrum ratione cum ex, suscipit dolores accusamus facere pariatur repellendus iusto assumenda illum impedit deserunt. Est, eos. Aut consequatur quaerat explicabo a tempora facilis saepe?
-                            </p>
-                        </div>
+<!-- Start of event section -->
+<section id="event">
+    <div class="content_section container">
+        <h3 class="title_section">Evènement</h3>
+        <div class="row">
+            <div class="col-12 item_product">
+                <div class="col-12 card frame_product">
+                    <img src="iphonex.png" class="card-img-top img-thumbnail image_event" alt="Product">
+                    <div class="card-body">
+                        <h5 class="card-title title_event">Titre de l'èvenement</h5>
+                        <h6 class="price_event">000€</h6>
+                        <p class="card-text description_event">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti,
+                            possimus doloremque! Sequi velit error necessitatibus libero quam culpa, harum at vel illum
+                            fugit dolorum? In quo fugit aperiam voluptatem modi deserunt vitae unde, quod ducimus
+                            consectetur minus reiciendis ratione maiores?</p>
+                        <a href="#" class="btn btn-primary">Inscrivez vous</a>
                     </div>
-                @endforeach
-            @endif
+                </div>
+            </div>
         </div>
-    </section>
+</section>
+<!-- End of event section -->
 
 @endsection

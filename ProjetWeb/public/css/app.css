@@ -11664,7 +11664,7 @@ a.text-dark:focus {
 /* 0-Various */
 
 body {
-  background-color: #fff;
+  background-color: #e6e6e6;
 }
 
 .title_section {
@@ -11683,7 +11683,23 @@ body {
 
 /* 1-Header/Navigation */
 
+#navigation {
+  background-color: #333;
+}
+
 /* 2-Welcome */
+
+.welcome_index {
+  text-align: center;
+}
+
+.image_index {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  max-width: 10rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
 /* Larger than mobile */
 
@@ -11697,15 +11713,42 @@ body {
 
 /* 3-Product */
 
+.frame_product {
+  margin-bottom: 1.5rem;
+}
+
+.image_product {
+  margin-top: 1rem;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 /* 4-Event */
+
+.event_event {
+  margin-bottom: 1.5rem;
+  background: #ccc;
+}
+
+.card_event {
+  background-color: #d1cfcf;
+}
+
+.image_event {
+  margin-top: 1rem;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
 /* 5-Contact */
 
 /* 6-Footer */
 
 .footer_section {
-  background-color: #999;
-  color: #ccc;
+  background-color: #333;
+  color: #999;
   padding: 1rem;
 }
 
@@ -11717,7 +11760,12 @@ body {
   text-align: justify;
 }
 
-#credits {
+#term a {
+  color: #999;
+}
+
+#credits,
+#term {
   text-align: center;
 }
 
