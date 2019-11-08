@@ -1,0 +1,180 @@
+/* Stylesheet 
+    Created by guiochet Titouan */
+
+/* Table des matières :
+    0-Various
+    1-Header/Nav
+    2-Welcome
+    3-Product
+    4-Event
+    5-Contact
+    6-Footer 
+    7-Media Queries*/
+
+/* 0-Various */
+
+body{
+    background-color: #e6e6e6;
+}
+
+.title_section{
+    text-align: center;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+    
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
+}
+
+/* 1-Header/Navigation */
+
+#navigation{
+    background-color: #333;
+}
+
+/* 2-Welcome */
+
+.welcome_index{
+    text-align: center;
+}
+
+.image_index{
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    max-width: 10rem;
+    object-fit: contain;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+    
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
+}
+
+/* 3-Product */
+
+.frame_product{
+    // background-color: #999;
+    // height: 300px;
+    margin-bottom: 1.5rem;
+    // overflow: scroll;
+}
+
+.image_product{
+    margin-top: 1rem;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* 4-Event */
+
+.event_event{
+    margin-bottom: 1.5rem;
+    background: #ccc;
+}
+
+.card_event{
+    background-color: #d1cfcf;
+}
+
+.image_event{
+    margin-top: 1rem;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* 5-Contact */
+
+// Mdr y a rien 
+
+/* 6-Footer */
+
+.footer_section{
+    background-color: #333;
+    color: #999;
+    padding: 1rem;
+}
+.term h6{
+    font-size: 1.1rem;
+}
+
+.term p{
+    text-align: justify;
+}
+
+#term a{
+    color: #999;
+}
+
+#credits, #term{
+    text-align: center;
+}
+
+/* 7-Media Queries */
+
+/* It's better to copy the media queries in each section for more clarification
+    Media queries handle all the device larger than a mobile*/
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+    
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
+}
