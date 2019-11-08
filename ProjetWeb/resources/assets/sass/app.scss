@@ -1,12 +1,12 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
 
-// Reset Stylesheet
-@import "normalize";
+// Variables
+// @import "variables";
 
-// Skeleton Stylesheet
-@import "skeleton";
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap.scss";
 
-// Custom Stylesheet
+// Custom CSS
 @import "custom";
