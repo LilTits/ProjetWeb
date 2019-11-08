@@ -49,99 +49,103 @@ body{
 /* 1-Header/Navigation */
 
 #navigation{
-    background-color: #333333;
-    height: 60px;
-    margin-bottom: 30px;
-}
-
-#panier{
-    margin: 13px 0 0 0;
-}
-
-#login{
-    margin: 13px 0 0 0;
-}
-
-.item_nav{
-    
-    height: 40px;
-}
-
-.item a{
-    color: #FFF;
-}
-
-.list_nav{
-    margin: 13px 0 0 0;
-    text-align: center;
-}
-
-.list_nav ul li{
-    display: inline;
-    margin: 0 20px 0 0;
-}
-
-.list_nav a{
-    text-decoration: none;
-}
-
-.burger_nav{
-    cursor: pointer;
-}
-
-.burger_nav div{
-    width: 30px;
-    height: 3px;
-    background-color: #FFF;
-    margin: 5px;
+    background-color: #333;
 }
 
 /* 2-Welcome */
 
-#image_header{
-    height: 200px;
-    background-color: #ffad33;
-    margin-bottom: 30px;
+.welcome_index{
+    text-align: center;
 }
 
-#logo_header{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin: auto;
-    margin-top: 25px;
-    background-color: #fff;
-    border-radius: 50%;
+.image_index{
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    max-width: 10rem;
+    object-fit: contain;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+    
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
 }
 
 /* 3-Product */
 
+.frame_product{
+    // background-color: #999;
+    // height: 300px;
+    margin-bottom: 1.5rem;
+    // overflow: scroll;
+}
 
+.image_product{
+    margin-top: 1rem;
+    height: 200px;
+    object-fit: contain;
+}
 
 /* 4-Event */
 
+.event_event{
+    margin-bottom: 1.5rem;
+    background: #ccc;
+}
 
+.card_event{
+    background-color: #d1cfcf;
+}
+
+.image_event{
+    margin-top: 1rem;
+    height: 200px;
+    object-fit: contain;
+}
 
 /* 5-Contact */
 
-
+// Mdr y a rien 
 
 /* 6-Footer */
 
-#footer{
-    background-color: #333333;
-    padding-top: 20px;
-}
-
 .footer_section{
+    background-color: #333;
     color: #999;
+    padding: 1rem;
+}
+.term h6{
+    font-size: 1.1rem;
 }
 
-.terms{
+.term p{
     text-align: justify;
 }
 
-.credits h6{
+#term a{
+    color: #999;
+}
+
+#credits, #term{
     text-align: center;
 }
 
@@ -212,7 +216,7 @@ body{
 /* It's better to copy the media queries in each section for more clarification
     Media queries handle all the device larger than a mobile*/
 
-/* Plus grand qu'un mobile */
+/* Larger than mobile */
 @media (min-width: 400px) {
     
 }
