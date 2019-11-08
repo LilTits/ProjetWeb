@@ -14,8 +14,10 @@
                 </ul>
             </div>
             <div id="login" class="three columns item">
-                <a href="/login">S'inscrire/Se Connecter</a>
+            @guest                                                                                <!--When not session-->
+            <button class="popup-button" data-modal="popup"><a>Connexion/Inscription</a></button>
             </div>
+            @endguest
             {{-- <div class="burger_nav item">
                 <div class="ligne1"></div>
                 <div class="ligne2"></div>
@@ -31,4 +33,6 @@
         </div>
     </section>
 </header>
+
+<script src="{{asset('js/popup.js')}}"></script>
 <!-- Fin header -->
