@@ -38,7 +38,6 @@
       <ul class="navbar-nav navbar-right">
         <li><a class="nav-link" href="/products/create">Créer un produit</a></li>
       </ul>
-      <a class="navbar-brand" href="/login">Inscription/Connexion</a>
     </div>
   </nav>
     
