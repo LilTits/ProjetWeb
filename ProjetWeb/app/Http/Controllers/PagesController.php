@@ -12,28 +12,10 @@ class PagesController extends Controller
         return view('pages.index')->with('title', $title);
     }
 
-    public function product() {
-        $product = array(
-            'product' => [
-                'product1' => [
-                    'nom' => 'Pull',
-                    'prix' => '100€',
-                    'description' => 'Lorem ipsum'
-                ],
-                'product2' => [
-                    'nom' => 'Chaussette',
-                    'prix' => '1000€',
-                    'description' => 'Lorem ipsum'
-                ],
-                'product3' => [
-                    'nom' => 'Claquette',
-                    'prix' => '10000000000€',
-                    'description' => 'Lorem ipsum'
-                ]
-            ]
-        );
-        return view('pages.product')->with($product);
-    }
+    // Products are now in ProductsController.php
+    // public function product() {
+    //     return view('pages.product')->with($product);
+    // }
 
     public function event() {
         $event = array(

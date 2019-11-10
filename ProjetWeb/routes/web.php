@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'PagesController@index');
-Route::get('/product', 'PagesController@product');
+// Route::get('/product', 'PagesController@product');
 Route::get('/event', 'PagesController@event');
 Route::get('/login', 'PagesController@login');
 Route::get('/contact', 'PagesController@contact');
