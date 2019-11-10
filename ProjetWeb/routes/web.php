@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'PagesController@index');
-Route::get('/product', 'PagesController@product');
+// Route::get('/product', 'PagesController@product');
 Route::get('/event', 'PagesController@event');
 Route::get('/loginRe', 'PagesController@login');
 Route::get('/contact', 'PagesController@contact');
@@ -31,3 +31,5 @@ Route::resource('/users', 'UtilisateurController');
     
 
 
+
+Route::resource('products', 'ProductsController');

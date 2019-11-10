@@ -16,6 +16,7 @@
         
         @include('inc.header')
         
+        @include('inc.messages')
         @yield('content')
          
         @include('inc.footer')
