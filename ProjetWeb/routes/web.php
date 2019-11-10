@@ -12,9 +12,11 @@
 */
 
 Route::get('/', 'PagesController@index');
-Route::get('/product', 'PagesController@product');
+// Route::get('/product', 'PagesController@product');
 Route::get('/event', 'PagesController@event');
 Route::get('/login', 'PagesController@login');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/basket', 'PagesController@basket');
 Route::get('/bonus', 'PagesController@bonus');
+
+Route::resource('products', 'ProductsController');
