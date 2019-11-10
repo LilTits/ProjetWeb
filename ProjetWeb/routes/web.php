@@ -14,9 +14,22 @@
 Route::get('/', 'PagesController@index');
 // Route::get('/product', 'PagesController@product');
 Route::get('/event', 'PagesController@event');
-Route::get('/login', 'PagesController@login');
+Route::get('/loginRe', 'PagesController@login');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/basket', 'PagesController@basket');
 Route::get('/bonus', 'PagesController@bonus');
+Route::get('/deconnexion', 'PagesController@deconnexion');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::resource('/users', 'UtilisateurController');
+
+
+    
+
+
 
 Route::resource('products', 'ProductsController');
