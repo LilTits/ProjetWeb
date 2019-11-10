@@ -62,4 +62,10 @@ class PagesController extends Controller
     public function basket() {
         return view('pages.basket');
     }
+    public function deconnexion() {
+        auth()->logout();
+        return view('pages.index');
+    }
+
+
 }

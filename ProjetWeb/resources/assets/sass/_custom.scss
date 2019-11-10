@@ -150,7 +150,7 @@ body{
 }
 
 /*Popup for connexion */
-.modal {
+/*.modal {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -168,9 +168,9 @@ body{
 	-moz-transform: translateX(-50%) translateY(-50%);
 	-ms-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
-}
+}*/
 
-.modal-body{
+/*.modal-body{
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -189,8 +189,8 @@ body{
 	-ms-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
 
-}
-
+}*/
+/*
 .show {
 	visibility: visible;
 }
@@ -208,6 +208,12 @@ body{
 	-webkit-transition: all ease-in-out 0.3s;
 	-o-transition: all ease-in-out 0.3s;
 	transition: all ease-in-out 0.3s;
+}*/
+
+.tab-pane{
+	margin-left:20%;
+	margin-right:50%;
+	width :150%;
 }
 
 

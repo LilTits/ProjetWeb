@@ -1,6 +1,7 @@
 @extends('layout.app')
 
 @section('content')
+
 <!-- Start of product section -->
 <section id="product">
     <div class="product_section container">

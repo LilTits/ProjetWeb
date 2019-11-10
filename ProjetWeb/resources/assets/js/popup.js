@@ -1,3 +1,16 @@
+$(document).ready(function(){
+		$('#Connexion').modal('hide')
+		$('#Inscription').modal('show')
+
+		$('#Connexion').modal('show')
+
+
+
+});
+
+
+
+
 
 
 var popup = (function() 
@@ -6,16 +19,23 @@ var popup = (function()
 	function init() {
         
 
+
+
+
+
+
+		
 		//var overlay = $('.overlay');
 
-		$('.popup-button').each(function(i, el)
+		/*$('.popup-button').each(function(i, el)
 		{	
 			
-			var modal = $('#' + $(el).attr('data-modal'));
+			
+			var modal = $('#popup');
 			var modal1 = $('#inpopup');
 			var modal2 = $('#inpopup2');
 			
-			var close = $('.close');
+			//var close = $('.close');
 
 			// fonction qui enleve la class .show de la popup et la fait disparaitre
 			function removeModal() {
@@ -37,26 +57,29 @@ var popup = (function()
 
 			modal2.addClass('show');
 			modal1.removeClass('show');
-			});
+			});*/
+			
+				
+			
 
 			// au clic sur le bouton on ajoute la class .show a la div de la popup qui permet au CSS3 de prendre le relai
-			$(el).click(function()
+			/*$(el).click(function()
 			{	
 				modal.addClass('show');
 				
 				//overlay.unbind("click");
 				// on ajoute sur l'overlay la fonction qui permet de fermer la popup
 				//overlay.bind("click", removeModalHandler);
-			});
+			});*/
 
 			// en cliquant sur le bouton close on ferme tout et on arrête les fonctions
-			close.click(function(event)
+			/*close.click(function(event)
 			{
 				event.stopPropagation();
 				removeModalHandler();
-			});
+			});*/
 
-		});
+		//});
 	}
 
 	init();

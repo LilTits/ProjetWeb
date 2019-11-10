@@ -7,7 +7,6 @@
 
 require('./bootstrap');
 require('./popup');
-require('./in-popup');
 
 window.Vue = require('vue');
 

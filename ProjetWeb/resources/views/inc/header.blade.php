@@ -1,10 +1,5 @@
 <!-- Début header -->
 <header>
-            @guest                                                                                <!--When not session-->
-            <button class="popup-button" data-modal="popup"><a>Connexion/Inscription</a></button>
-            </div>
-            @endguest
-            <div id="login" class="three columns item">
   <nav id="navigation" class="navbar navbar-expand-md navbar-dark mb-4">
     <a class="navbar-brand" href="/basket">Panier</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,11 +23,21 @@
           <a class="nav-link" href="/bonus">Boite à idées</a>
         </li>
       </ul>
-      <a class="navbar-brand" href="/login">Inscription/Connexion</a>
+        @guest                                                                                <!--When no session-->
+          <button class="btn btn-primary"  data-toggle="modal" data-target="#popup"><a>Inscription/Connexion</a></button>
+        @endguest
+
+        @auth                                                                                 <!--When session-->
+          
+        <a href="/deconnexion" button class="btn btn-primary">Déconnexion</a>
+
+       
+        @endauth
+
     </div>
   </nav>
-    
+  
 </header>
 
-<script src="{{asset('js/popup.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>  
 <!-- Fin header -->

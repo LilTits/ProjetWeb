@@ -807,10 +807,6 @@ jQuery.extend = jQuery.fn.extend = function() {
 					// Never move original objects, clone them
 					target[ name ] = jQuery.extend( deep, clone, copy );
 
-<<<<<<< HEAD
-__webpack_require__(10);
-module.exports = __webpack_require__(43);
-=======
 				// Don't bring in undefined values
 				} else if ( copy !== undefined ) {
 					target[ name ] = copy;
@@ -818,7 +814,6 @@ module.exports = __webpack_require__(43);
 			}
 		}
 	}
->>>>>>> development
 
 	// Return the modified object
 	return target;
@@ -832,32 +827,20 @@ jQuery.extend( {
 	// Assume jQuery is ready without the ready module
 	isReady: true,
 
-<<<<<<< HEAD
-__webpack_require__(11);
-__webpack_require__(34);
-__webpack_require__(48);
-
-window.Vue = __webpack_require__(35);
-=======
 	error: function( msg ) {
 		throw new Error( msg );
 	},
 
 	noop: function() {},
->>>>>>> development
 
 	isPlainObject: function( obj ) {
 		var proto, Ctor;
 
-<<<<<<< HEAD
-Vue.component('example', __webpack_require__(39));
-=======
 		// Detect obvious negatives
 		// Use toString instead of jQuery.type to catch host objects
 		if ( !obj || toString.call( obj ) !== "[object Object]" ) {
 			return false;
 		}
->>>>>>> development
 
 		proto = getProto( obj );
 
@@ -36709,7 +36692,6 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-<<<<<<< HEAD
 /* 34 */
 /***/ (function(module, exports) {
 
@@ -36771,8 +36753,6 @@ var popup = function () {
 }();
 
 /***/ }),
-=======
->>>>>>> development
 /* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
