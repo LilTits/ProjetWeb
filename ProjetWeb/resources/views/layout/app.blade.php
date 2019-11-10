@@ -9,11 +9,18 @@
         <title>BDE CESI La Rochelle</title>
     </head>
     <body>
+
+        <!--Rajouter if connecter-->
+        
+        @include('pages.loginRe')
+        
         @include('inc.header')
         
         @include('inc.messages')
         @yield('content')
-        
+         
         @include('inc.footer')
+        
+        <script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>
