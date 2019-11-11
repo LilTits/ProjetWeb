@@ -4,7 +4,7 @@
 <!-- Start of event section -->
 <section id="event">
     <div class="event_section container">
-        <h3 class="title_section">Création de Produits</h3>
+        <h3 class="title_section">Création d'evènement</h3>
         <div class="row">
             <div class="col-12">
                 {!! Form::open(['action' => 'EventsController@store', 'method' => 'POST']) !!}

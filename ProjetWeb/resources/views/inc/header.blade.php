@@ -24,24 +24,27 @@
           <a class="nav-link" href="/ideas">Boite à idées</a>
         </li>
       </ul>
-        @guest                                                                                <!--When no session-->
-          <button class="btn btn-primary"  data-toggle="modal" data-target="#popup"><a>Inscription/Connexion</a></button>
-        @endguest
+      @guest
+      <!--When no session-->
+      <button class="btn btn-primary" data-toggle="modal" data-target="#popup"><a>Inscription/Connexion</a></button>
+      @endguest
 
-        @auth                                                                                 <!--When session-->
-          
-        <a href="/deconnexion" button class="btn btn-primary">Déconnexion</a>
+      @auth
+      <!--When session-->
 
-       
-        @endauth
+      <a href="/deconnexion" button class="btn btn-primary">Déconnexion</a>
+
+      @endauth
 
       <ul class="navbar-nav navbar-right">
         <li><a class="nav-link" href="/products/create">Créer un produit</a></li>
+        <li><a class="nav-link" href="/events/create">Créer un event</a></li>
+        <li><a class="nav-link" href="/ideas/create">Créer une idée</a></li>
       </ul>
     </div>
   </nav>
-    
+
 </header>
 
-<script src="{{asset('js/app.js')}}"></script>  
+<script src="{{asset('js/app.js')}}"></script>
 <!-- Fin header -->
