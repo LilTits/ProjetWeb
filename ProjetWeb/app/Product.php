@@ -3,13 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
-
 
 class Product extends Model
 {
-    use SoftDeletes;
+    //Table name
+    protected $table = 'products';
 
-    // Primary Key
-    protected $primaryKey = 'product_id';
+    // Primery key
+    public $primaryKey = 'product_id';
+
+    // Timestamps
+    public $timestamps = true;
 }
