@@ -15,7 +15,7 @@
           <a class="nav-link" href="/products">Produits</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/event">Evènements</a>
+          <a class="nav-link" href="/events">Evènements</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
