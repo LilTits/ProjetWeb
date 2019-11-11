@@ -13,7 +13,7 @@
                 provident molestias autem non! Error odio modi quidem, odit ducimus eligendi illo.</p>
         </div>
     </div>
-    <section id="image_header" class="u-full-width container">
+    <section id="image_header" class="container">
         <div class="row">
             <div class="twelve columns">
                 <div id="logo_header"></div>

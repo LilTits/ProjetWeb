@@ -18,6 +18,7 @@ Route::get('/loginRe', 'PagesController@login');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/basket', 'PagesController@basket');
 Route::get('/bonus', 'PagesController@bonus');
+Route::get('/legale', 'PagesController@legale');
 Route::get('/deconnexion', 'PagesController@deconnexion');
 
 Auth::routes();

@@ -14,7 +14,11 @@
 /* 0-Various */
 
 body{
-    background-color: #e6e6e6;
+	background-color: #e6e6e6;
+	display: flex;
+	flex-direction: column;
+	background: #ccc;
+	min-height: 100vh;
 }
 
 .title_section{
@@ -131,28 +135,23 @@ body{
 #footer{
 	// display: inline-block;
 	// width: 100%;
-	color: #999;
 	background-color: #333;
-}
-
-.footer_section{
-	padding: 1rem;
-	margin-top: 2rem;
-}
-.term h6{
-    font-size: 1.1rem;
-}
-
-.term p{
-    text-align: justify;
-}
-
-#term a{
-    color: #999;
+	margin-top: auto;
+	padding: 1.1rem;
 }
 
 #credits, #term{
-    text-align: center;
+	text-align: center;
+	color: #999;
+}
+
+#term h5{
+	font-size: 1.1rem;
+}
+
+#term a{
+	text-decoration: underline;
+	color: #999;
 }
 
 /*Popup for connexion */
