@@ -11198,10 +11198,14 @@ body {
 
 /* 6-Footer */
 
-.footer_section {
-  background-color: #333;
+#footer {
   color: #999;
+  background-color: #333;
+}
+
+.footer_section {
   padding: 1rem;
+  margin-top: 2rem;
 }
 
 .term h6 {
