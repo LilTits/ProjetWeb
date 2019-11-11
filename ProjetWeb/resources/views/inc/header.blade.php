@@ -21,7 +21,7 @@
           <a class="nav-link" href="/contact">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/bonus">Boite à idées</a>
+          <a class="nav-link" href="/ideas">Boite à idées</a>
         </li>
       </ul>
         @guest                                                                                <!--When no session-->
