@@ -44,6 +44,9 @@ class PagesController extends Controller
     public function basket() {
         return view('pages.basket');
     }
+    public function perso() {
+        return view('pages.perso');
+    }
     public function deconnexion() {
         auth()->logout();
         return view('pages.index');

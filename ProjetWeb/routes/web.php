@@ -19,7 +19,7 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/basket', 'PagesController@basket');
 Route::get('/bonus', 'PagesController@bonus');
 Route::get('/deconnexion', 'PagesController@deconnexion');
-
+Route::get('/perso', 'PagesController@perso');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

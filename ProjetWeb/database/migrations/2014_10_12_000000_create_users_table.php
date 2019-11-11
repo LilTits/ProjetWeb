@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('campus');
+            $table->enum('role', ['user', 'admin', 'BDE', 'CESI' ])->default('user');
             $table->rememberToken();
             $table->timestamps();
         });
