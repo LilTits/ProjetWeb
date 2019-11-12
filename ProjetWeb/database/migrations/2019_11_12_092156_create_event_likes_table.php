@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRoleUserTable extends Migration
+class CreateEventLikesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class CreateRoleUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('role_user', function (Blueprint $table)
-        {
+        Schema::create('event_likes', function (Blueprint $table) {
+            $table->increments('elike_id');
+            $table->integer('event_id')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->integer('role_id')->unsigned();
-         
-          //FOREIGN KEY CONSTRAINTS
+            $table->timestamps();
+        
+            //FOREIGN KEY CONSTRAINTS
+            $table->foreign('event_id')->references('event_id')->on('events')->onDelete('cascade');
             $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
-            $table->foreign('role_id')->references('role_id')->on('roles')->onDelete('cascade');
-         
-          //SETTING THE PRIMARY KEYS
-            $table->primary(['user_id','role_id']);
         });
     }
 
@@ -34,6 +32,6 @@ class CreateRoleUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_roles');
+        Schema::dropIfExists('event_likes');
     }
 }

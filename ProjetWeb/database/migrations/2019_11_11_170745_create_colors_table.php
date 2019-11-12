@@ -21,7 +21,7 @@ class CreateColorsTable extends Migration
         });
 
         // Default Colors
-        DB::table('groups')->insert([
+        DB::table('colors')->insert([
             ['name' => 'Blanc'],
             ['name' => 'Noir'],
             ['name' => 'Rouge'],

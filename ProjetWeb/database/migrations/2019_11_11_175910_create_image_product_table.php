@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrderProductTable extends Migration
+class CreateImageProductTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,17 @@ class CreateOrderProductTable extends Migration
      */
     public function up()
     {
-        Schema::create('order_product', function (Blueprint $table) 
+        Schema::create('image_product', function (Blueprint $table) 
         {
-            $table->integer('order_id')->unsigned();
+            $table->integer('image_id')->unsigned();
             $table->integer('product_id')->unsigned();
         
          //FOREIGN KEY CONSTRAINTS
-            $table->foreign('order_id')->references('order_id')->on('orders')->onDelete('cascade');
+            $table->foreign('image_id')->references('image_id')->on('iamges')->onDelete('cascade');
             $table->foreign('product_id')->references('product_id')->on('products')->onDelete('cascade');
          
         //SETTING THE PRIMARY KEYS
-            $table->primary(['order_id','product_id']);
+            $table->primary(['image_id','product_id']);
         });
     }
 
@@ -34,8 +34,6 @@ class CreateOrderProductTable extends Migration
      */
     public function down()
     {
-        Schema::table('order_product', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('image_products');
     }
 }

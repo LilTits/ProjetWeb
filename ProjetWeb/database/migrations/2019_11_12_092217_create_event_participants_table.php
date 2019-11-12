@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdressUserTable extends Migration
+class CreateEventParticipantsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,16 @@ class CreateAdressUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('adress_user', function (Blueprint $table) {
-            $table->increments('user_adress_id');
+        Schema::create('event_participants', function (Blueprint $table) {
+            $table->increments('eparticipant_id');
+            $table->integer('event_id')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->integer('adress_id')->unsigned();
-            $table->Boolean('is_primary');
+            $table->enum('status', ['going','busy','undecided','orginizer']);
             $table->timestamps();
-            $table->softDeletes();
-           
+        
             //FOREIGN KEY CONSTRAINTS
+            $table->foreign('event_id')->references('event_id')->on('events')->onDelete('cascade');
             $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
-            $table->foreign('adress_id')->references('adress_id')->on('adresses')->onDelete('cascade');
         });
     }
 
@@ -34,6 +33,6 @@ class CreateAdressUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_adresses');
+        Schema::dropIfExists('event_participants');
     }
 }

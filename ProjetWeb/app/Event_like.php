@@ -5,13 +5,13 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Product_Category extends Model
+class Event_like extends Model
 {
     use SoftDeletes;
 
     // Table name
-    protected $table = 'product_categories';
+    protected $table = 'event_likes';
 
     // Primary Key
-    protected $primaryKey = 'pcategory_id';
+    protected $primaryKey = 'elike_id';
 }

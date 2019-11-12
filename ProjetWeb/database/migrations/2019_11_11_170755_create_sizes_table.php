@@ -22,7 +22,7 @@ class CreateSizesTable extends Migration
         });
 
         // Default Sizes
-        DB::table('groups')->insert([
+        DB::table('sizes')->insert([
             ['name' => 'Tout Taille', 'tag' => 'tt'],
             ['name' => 'Petit', 'tag' => 's'],
             ['name' => 'Moyen', 'tag' => 'm'],
