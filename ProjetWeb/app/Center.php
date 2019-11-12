@@ -11,4 +11,11 @@ class Center extends Model
 
     // Primary Key
     protected $primaryKey = 'center_id';
+
+    public function users(){
+
+        return $this->belongsToMany('App\User');
+    }
+
+   
 }

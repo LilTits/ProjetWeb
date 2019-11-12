@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->unsignedDecimal('wallet_amount', 15, 2);
+            $table->unsignedDecimal('wallet_amount', 15, 2)->default(0);
             $table->integer('center_id')->unsigned();
             $table->rememberToken();
             $table->timestamps();

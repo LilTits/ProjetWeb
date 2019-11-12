@@ -30,6 +30,6 @@ Route::resource('/users', 'UtilisateurController');
 
     
 
-
+//Route::resource('register', 'CentersController');
 
 Route::resource('products', 'ProductsController');

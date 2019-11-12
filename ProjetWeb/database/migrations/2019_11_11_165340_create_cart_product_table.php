@@ -13,7 +13,7 @@ class CreateCartProductTable extends Migration
      */
     public function up()
     {
-        Schema::table('cart_product', function (Blueprint $table) 
+        Schema::create('cart_product', function (Blueprint $table) 
         {
             $table->integer('cart_id')->unsigned();
             $table->integer('product_id')->unsigned();
