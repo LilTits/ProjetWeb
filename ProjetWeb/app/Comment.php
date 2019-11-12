@@ -13,7 +13,7 @@ class Comment extends Model
     protected $table = 'comments';
 
     // Primery key
-    public $primaryKey = 'comment_id';
+    public $primaryKey = 'id';
 
     // Timestamps
     public $timestamps = true;
