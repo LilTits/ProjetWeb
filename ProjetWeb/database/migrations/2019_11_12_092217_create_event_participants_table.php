@@ -14,15 +14,15 @@ class CreateEventParticipantsTable extends Migration
     public function up()
     {
         Schema::create('event_participants', function (Blueprint $table) {
-            $table->increments('eparticipant_id');
+            $table->increments('id');
             $table->integer('event_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->enum('status', ['going','busy','undecided','orginizer']);
             $table->timestamps();
         
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('event_id')->references('event_id')->on('events')->onDelete('cascade');
-            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
+            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

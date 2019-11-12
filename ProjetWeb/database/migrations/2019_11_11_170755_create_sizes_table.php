@@ -14,7 +14,7 @@ class CreateSizesTable extends Migration
     public function up()
     {
         Schema::create('sizes', function (Blueprint $table) {
-            $table->increments('size_id');
+            $table->increments('id');
             $table->string('name');
             $table->string('tag');
             $table->timestamps();
@@ -23,12 +23,12 @@ class CreateSizesTable extends Migration
 
         // Default Sizes
         DB::table('sizes')->insert([
-            ['name' => 'Tout Taille', 'tag' => 'tt'],
-            ['name' => 'Petit', 'tag' => 's'],
-            ['name' => 'Moyen', 'tag' => 'm'],
-            ['name' => 'Large', 'tag' => 'l'],
-            ['name' => 'Extra Large', 'tag' => 'xl'],
-            ['name' => 'Double Extra Large', 'tag' => 'xxl'],
+            ['size_id' => 1,'name' => 'Tout Taille', 'tag' => 'tt'],
+            ['size_id' => 2,'name' => 'Petit', 'tag' => 's'],
+            ['size_id' => 3,'name' => 'Moyen', 'tag' => 'm'],
+            ['size_id' => 4,'name' => 'Large', 'tag' => 'l'],
+            ['size_id' => 5,'name' => 'Extra Large', 'tag' => 'xl'],
+            ['size_id' => 6,'name' => 'Double Extra Large', 'tag' => 'xxl'],
         ]);
     }
 

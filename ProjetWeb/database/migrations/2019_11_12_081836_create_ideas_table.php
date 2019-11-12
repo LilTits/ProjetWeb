@@ -14,17 +14,17 @@ class CreateIdeasTable extends Migration
     public function up()
     {
         Schema::create('ideas', function (Blueprint $table) {
-            $table->increments('idea_id');
+            $table->increments('id');
             $table->string('content');
             $table->string('date');
             $table->string('cost');
-            $table->boolean('is_flagged');
-            $table->integer('image_id')->unsigned();
+            $table->boolean('is_flagged')->default(false);
+            $table->integer('image_id')->unsigned()->nullable();
             $table->timestamps();
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('image_id')->references('image_id')->on('images')->onDelete('cascade');
+            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
         });
     }
 

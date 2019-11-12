@@ -34,8 +34,7 @@ class CreateCartProductTable extends Migration
      */
     public function down()
     {
-        Schema::table('cart_product', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('cart_product');
+
     }
 }

@@ -9,7 +9,4 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Review extends Model
 {
     use SoftDeletes;
-
-    // Primary Key
-    protected $primaryKey = 'review_id';
 }

@@ -14,7 +14,7 @@ class CreateEventsTable extends Migration
     public function up()
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->increments('event_id');
+            $table->increments('id');
             $table->string('name');
             $table->string('description');
             $table->dateTime('start_date');
@@ -23,17 +23,16 @@ class CreateEventsTable extends Migration
             $table->boolean('has_entry_fee')->default(false);
             $table->unsignedDecimal('price', 15, 2);
             $table->boolean('is_flagged')->default(false);
-            // $table->integer('ecategory_id')->unsigned()->default(0);
             $table->integer('ecategory_id')->unsigned();
-            $table->integer('creator')->unsigned()->default(0);
-            $table->integer('image_cover')->unsigned();
+            $table->integer('creator')->unsigned();
+            $table->integer('image_cover')->unsigned()->default(2);
             $table->timestamps();
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('ecategory_id')->references('ecategory_id')->on('categories')->onDelete('cascade');
-            $table->foreign('creator')->references('user_id')->on('users')->onDelete('cascade');
-            $table->foreign('image_cover')->references('image_id')->on('images')->onDelete('cascade');
+            $table->foreign('ecategory_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('creator')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('image_cover')->references('id')->on('images')->onDelete('cascade');
         });
     }
 

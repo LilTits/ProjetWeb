@@ -14,12 +14,17 @@ class CreateEventCategoriesTable extends Migration
     public function up()
     {
         Schema::create('event_categories', function (Blueprint $table) {
-            $table->increments('ecategory_id');
+            $table->increments('id');
             $table->string('name');
             $table->string('description');
             $table->timestamps();
             $table->softDeletes();
         });
+
+        // Default Event Categories
+        DB::table('event_categories')->insert([
+            ['ecategory_id' => 1,'name' => 'unsorted', 'description' => 'unsorted events, needs/should be storted'],
+        ]);
     }
 
     /**

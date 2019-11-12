@@ -14,16 +14,16 @@ class CreateProductTypesTable extends Migration
     public function up()
     {
         Schema::create('product_types', function (Blueprint $table) {
-            $table->increments('ptype_id');
+            $table->increments('id');
             $table->string('name');
             $table->string('description');
             $table->string('sale_percentage');
-            $table->integer('pcategory_id')->unsigned();
+            $table->integer('pcategory_id')->unsigned()->default(1);
             $table->timestamps();
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('pcategory_id')->references('pcategory_id')->on('product_categories')->onDelete('cascade');
+            $table->foreign('pcategory_id')->references('id')->on('product_categories')->onDelete('cascade');
         });
     }
 
@@ -34,6 +34,6 @@ class CreateProductTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product__types');
+        Schema::dropIfExists('product_types');
     }
 }

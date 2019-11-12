@@ -17,4 +17,19 @@ class Product extends Model
 
     // Timestamps
     public $timestamps = true;
+    
+    public function carts()
+    {
+        return $this->belongstoMany(Cart::class, 'cart_product');
+    }
+
+    public function orders()
+    {
+        return $this->belongstoMany(Order::class, 'order_product');
+    }
+
+    public function images()
+    {
+        return $this->belongstoMany(Image::class, 'image_product');
+    }
 }

@@ -14,14 +14,14 @@ class CreateCentersTable extends Migration
     public function up()
     {
         Schema::create('centers', function (Blueprint $table) {
-            $table->increments('center_id');
+            $table->increments('id');
             $table->string('name');
             $table->integer('adress_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('adress_id')->references('adress_id')->on('adresses')->onDelete('cascade');
+            $table->foreign('adress_id')->references('id')->on('adresses')->onDelete('cascade');
 
         });
     }
