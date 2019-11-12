@@ -23,12 +23,12 @@ class CreateSizesTable extends Migration
 
         // Default Sizes
         DB::table('sizes')->insert([
-            ['size_id' => 1,'name' => 'Tout Taille', 'tag' => 'tt'],
-            ['size_id' => 2,'name' => 'Petit', 'tag' => 's'],
-            ['size_id' => 3,'name' => 'Moyen', 'tag' => 'm'],
-            ['size_id' => 4,'name' => 'Large', 'tag' => 'l'],
-            ['size_id' => 5,'name' => 'Extra Large', 'tag' => 'xl'],
-            ['size_id' => 6,'name' => 'Double Extra Large', 'tag' => 'xxl'],
+            ['id' => 1,'name' => 'Tout Taille', 'tag' => 'tt'],
+            ['id' => 2,'name' => 'Petit', 'tag' => 's'],
+            ['id' => 3,'name' => 'Moyen', 'tag' => 'm'],
+            ['id' => 4,'name' => 'Large', 'tag' => 'l'],
+            ['id' => 5,'name' => 'Extra Large', 'tag' => 'xl'],
+            ['id' => 6,'name' => 'Double Extra Large', 'tag' => 'xxl'],
         ]);
     }
 

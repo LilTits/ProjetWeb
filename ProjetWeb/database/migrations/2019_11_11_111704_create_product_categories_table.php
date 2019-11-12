@@ -23,7 +23,7 @@ class CreateProductCategoriesTable extends Migration
 
         // Default  Product Categories
         DB::table('product_categories')->insert([
-            ['pcategory_id' => 1,'name' => 'unsorted', 'description' => 'unsorted products, needs/should be storted'],
+            ['id' => 1,'name' => 'unsorted', 'description' => 'unsorted products, needs/should be storted'],
         ]);
     }
 

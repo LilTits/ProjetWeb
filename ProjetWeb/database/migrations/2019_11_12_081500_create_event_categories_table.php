@@ -23,7 +23,7 @@ class CreateEventCategoriesTable extends Migration
 
         // Default Event Categories
         DB::table('event_categories')->insert([
-            ['ecategory_id' => 1,'name' => 'unsorted', 'description' => 'unsorted events, needs/should be storted'],
+            ['id' => 1,'name' => 'unsorted', 'description' => 'unsorted events, needs/should be storted'],
         ]);
     }
 
