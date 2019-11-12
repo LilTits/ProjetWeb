@@ -18,15 +18,7 @@ class PagesController extends Controller
     // }
 
     public function event() {
-        $event = array(
-            'title' => 'Our Events',
-            'event' => [
-                'Beer pong',
-                'Lan CSGO',
-                'Démontage de panneau'
-            ]
-        );
-        return view('pages.event')->with($event );
+        return view('pages.event');
     }
 
     public function login() {
@@ -39,6 +31,10 @@ class PagesController extends Controller
     
     public function bonus() {
         return view('pages.bonus');
+    }
+
+    public function legale() {
+        return view('pages.legale');
     }
     
     public function basket() {

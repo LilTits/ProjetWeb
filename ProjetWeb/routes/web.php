@@ -11,25 +11,27 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
+//First route for these pages, we now use resourceto get them
+
+// Route::get('/bonus', 'PagesController@bonus');
 // Route::get('/product', 'PagesController@product');
-Route::get('/event', 'PagesController@event');
+// Route::get('/event', 'PagesController@event');
+
+Route::get('/', 'PagesController@index');
 Route::get('/loginRe', 'PagesController@login');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/basket', 'PagesController@basket');
-Route::get('/bonus', 'PagesController@bonus');
+Route::get('/legale', 'PagesController@legale');
 Route::get('/deconnexion', 'PagesController@deconnexion');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Route::resource('/users', 'UtilisateurController');
 
-
-    
-
-
-
+//Route to subpages
 Route::resource('products', 'ProductsController');
+Route::resource('events', 'EventsController');
+Route::resource('ideas', 'IdeasController');
+Route::resource('comments', 'CommentsController');

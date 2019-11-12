@@ -11117,6 +11117,13 @@ a.text-dark:focus {
 
 body {
   background-color: #e6e6e6;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  background: #ccc;
+  min-height: 100vh;
 }
 
 .title_section {
@@ -11198,27 +11205,25 @@ body {
 
 /* 6-Footer */
 
-.footer_section {
+#footer {
   background-color: #333;
-  color: #999;
-  padding: 1rem;
-}
-
-.term h6 {
-  font-size: 1.1rem;
-}
-
-.term p {
-  text-align: justify;
-}
-
-#term a {
-  color: #999;
+  margin-top: auto;
+  padding: 1.1rem;
 }
 
 #credits,
 #term {
   text-align: center;
+  color: #999;
+}
+
+#term h5 {
+  font-size: 1.1rem;
+}
+
+#term a {
+  text-decoration: underline;
+  color: #999;
 }
 
 /*Popup for connexion */
