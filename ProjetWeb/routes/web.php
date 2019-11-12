@@ -31,7 +31,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/users', 'UtilisateurController');
 
 //Route to subpages
-Route::resource('products', 'ProductsController');
+Route::resource('products', 'ProductTypesController');
 Route::resource('events', 'EventsController');
 Route::resource('ideas', 'IdeasController');
 Route::resource('comments', 'CommentsController');

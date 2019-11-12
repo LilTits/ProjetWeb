@@ -17,7 +17,7 @@ class CreateProductTypesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('description');
-            $table->string('sale_percentage');
+            $table->string('sale_percentage')->nullable();
             $table->integer('pcategory_id')->unsigned()->default(1);
             $table->timestamps();
             $table->softDeletes();

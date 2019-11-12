@@ -7,7 +7,7 @@
         <h3 class="title_section">Edition de votre commentaire</h3>
         <div class="row">
             <div class="col-12">
-                {!! Form::open(['action' => ['CommentsController@update', $comment->comment_id], 'method' => 'POST']) !!}
+                {!! Form::open(['action' => ['CommentsController@update', $comment->id], 'method' => 'POST']) !!}
                     <div class="form-group">
                         {{Form::label('description', 'Description')}}
                         {{Form::textarea('description', $comment->description, [

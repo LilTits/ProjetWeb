@@ -16,8 +16,8 @@
         <hr>
         <small>Ajouté le {{$product->created_at}}</small>
         <hr>
-        <a href="/products/{{$product->product_id}}/edit" class="btn">Edition</a>
-        {!!Form::open(['action' => ['ProductsController@destroy', $product->product_id], 'method' => 'POST'])!!}
+        <a href="/products/{{$product_types->id}}/edit" class="btn">Edition</a>
+        {!!Form::open(['action' => ['ProductTypesController@destroy', $product->product_id], 'method' => 'POST'])!!}
             {{Form::hidden('_method', 'DELETE')}}
             {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
         {!!Form::close()!!}
