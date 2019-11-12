@@ -17,8 +17,13 @@ class CreateImagesTable extends Migration
             $table->increments('image_id');
             $table->string('image_path');
             $table->Boolean('flagged');
+            $table->integer('posted_by')->unsigned();
             $table->timestamps();
             $table->softDeletes();
+
+
+            //FOREIGN KEY CONSTRAINTS
+            $table->foreign('posted_by')->references('user_id')->on('users')->onDelete('cascade');
         });
     }
 

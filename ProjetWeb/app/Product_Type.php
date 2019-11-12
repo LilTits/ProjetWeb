@@ -13,5 +13,5 @@ class Product_Type extends Model
     protected $table = 'product_types';
 
     // Primary Key
-    protected $primaryKey = 'type_id';
+    protected $primaryKey = 'ptype_id';
 }

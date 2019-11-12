@@ -20,14 +20,14 @@ class CreateProductsTable extends Migration
             $table->unsignedTinyInteger('sale_percentage');
             $table->integer('size_id')->unsigned();
             $table->integer('color_id')->unsigned();
-            $table->integer('type_id')->unsigned();
+            $table->integer('ptype_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
             $table->foreign('size_id')->references('size_id')->on('sizes')->onDelete('cascade');
             $table->foreign('color_id')->references('color_id')->on('colors')->onDelete('cascade');
-            $table->foreign('type_id')->references('type_id')->on('product_types')->onDelete('cascade');
+            $table->foreign('ptype_id')->references('ptype_id')->on('product_types')->onDelete('cascade');
         });
     }
 
