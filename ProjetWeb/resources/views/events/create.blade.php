@@ -10,7 +10,7 @@
                 {!! Form::open(['action' => 'EventsController@store', 'method' => 'POST']) !!}
                     <div class="form-group">
                         {{Form::label('title', 'Titre')}}
-                        {{Form::text('title', '', [
+                        {{Form::text('name', '', [
                         'class' => 'form-control',
                         'placeholder' => 'Nom de l\'evènement'])}}
                     </div>
@@ -24,6 +24,14 @@
                         'class' => 'form-control',
                         'placeholder' => 'Description de l\'evènement'
                     ])}}
+                    </div>
+                    <div class="form-group">
+                        {{Form::label('start_date', 'Date de début')}}
+                        {{Form::date('start_date', \Carbon\Carbon::now())}}
+                    </div>
+                    <div class="form-group">
+                        {{Form::label('end_date', 'Date de fin')}}
+                        {{Form::date('end_date', \Carbon\Carbon::now())}}
                     </div>
                     {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
                 {!! Form::close() !!}

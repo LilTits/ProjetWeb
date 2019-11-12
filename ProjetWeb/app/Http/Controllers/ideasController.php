@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Idea;
 
 class ideasController extends Controller
 {
@@ -13,7 +14,8 @@ class ideasController extends Controller
      */
     public function index()
     {
-        //
+        $ideas = Idea::orderBy('idea_id', 'desc')->get();
+        return view('ideas.index')->with('ideas', $ideas);
     }
 
     /**
@@ -23,7 +25,7 @@ class ideasController extends Controller
      */
     public function create()
     {
-        //
+        return view('ideas.create');
     }
 
     /**
@@ -34,7 +36,18 @@ class ideasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        // Create Product
+        $idea = new Idea();
+        $idea->title = $request->input('title');
+        $idea->description = $request->input('description');
+        $idea->save();
+
+        return redirect('/ideas')->with('success', 'Idée créé');
     }
 
     /**
@@ -45,7 +58,8 @@ class ideasController extends Controller
      */
     public function show($id)
     {
-        //
+        $idea = Idea::find($id);
+        return view('ideas.show')->with('idea', $idea);
     }
 
     /**
@@ -56,7 +70,8 @@ class ideasController extends Controller
      */
     public function edit($id)
     {
-        //
+        $idea = Idea::find($id);
+        return view('ideas.edit')->with('idea', $idea);
     }
 
     /**
@@ -68,7 +83,18 @@ class ideasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        // Create Product
+        $idea = Idea::find($id);
+        $idea->title = $request->input('title');
+        $idea->description = $request->input('description');
+        $idea->save();
+
+        return redirect('/ideas')->with('success', 'Idée mis à jour');
     }
 
     /**
@@ -79,6 +105,8 @@ class ideasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $idea = Idea::find($id);
+        $idea->delete();
+        return redirect('/ideas')->with('success', 'Idée supprimée');
     }
 }

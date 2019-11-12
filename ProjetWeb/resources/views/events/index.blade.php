@@ -9,19 +9,19 @@
             @if(count($events) > 0)
             @foreach ($events as $event)
             <div class="col-12 card frame_event">
-                <img src="iphonex.png" class="card-img-top img-thumbnail image_event" alt="event">
+                <img src="{{$event->image_cover}}" class="card-img-top img-thumbnail image_event" alt="event">
                 <div class="card-body">
-                    <h5 class="card-title">{{$event->title}}</h5>
+                    <h5 class="card-title">{{$event->name}}</h5>
                     <h6 class="price">{{$event->price}}</h6>
                     <p class="card-text">{{$event->description}}</p>
                     <a href="/events/{{$event->event_id}}" class="btn btn-primary buy_button_event">En savoir plus</a>
                     <br>
-                    <small>Ajouté le {{$event->created_at}}</small>
+                <small>Ajouté le {{$event->created_at}} by {{$event->creator}}</small>
                 </div>
             </div>
             @endforeach
             @else
-            <p>Pas d'evènement'</p>
+            <p>Pas d'evènement</p>
             @endif
         </div>
     </div>

@@ -4,7 +4,7 @@
 <!-- Start of idea section -->
 <section id="idea">
     <div class="idea_section container">
-        <h3 class="title_section">Produits</h3>
+        <h3 class="title_section">Idée</h3>
         <div class="row">
             @if(count($ideas) > 0)
             @foreach ($ideas as $idea)

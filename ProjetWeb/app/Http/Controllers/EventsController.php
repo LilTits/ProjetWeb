@@ -37,16 +37,20 @@ class EventsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
+            'name' => 'required',
             'price' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required'
         ]);
 
         // Create Event
         $event = new Event();
-        $event->title = $request->input('title');
+        $event->name = $request->input('name');
         $event->price = $request->input('price');
         $event->description = $request->input('description');
+        $event->start_date = $request->input('start_date');
+        $event->end_date = $request->input('end_date');
         $event->save();
 
         return redirect('/events')->with('success', 'Evènement créé');
@@ -86,16 +90,20 @@ class EventsController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => 'required',
+            'name' => 'required',
             'price' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required'
         ]);
 
         // Create Event
         $event = Event::find($id);
-        $event->title = $request->input('title');
+        $event->name = $request->input('name');
         $event->price = $request->input('price');
         $event->description = $request->input('description');
+        $event->start_date = $request->input('start_date');
+        $event->end_date = $request->input('end_date');
         $event->save();
 
         return redirect('/events')->with('success', 'Evènement mis à jour');

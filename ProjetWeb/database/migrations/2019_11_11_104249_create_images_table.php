@@ -15,7 +15,7 @@ class CreateImagesTable extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->increments('image_id');
-            $table->string('image_path');
+            $table->string('image_path')->default('img/therock.jpg');
             $table->Boolean('flagged');
             $table->integer('posted_by')->unsigned();
             $table->timestamps();
