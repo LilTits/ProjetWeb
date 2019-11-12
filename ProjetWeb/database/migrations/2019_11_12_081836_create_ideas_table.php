@@ -15,11 +15,12 @@ class CreateIdeasTable extends Migration
     {
         Schema::create('ideas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('content');
-            $table->string('date');
-            $table->string('cost');
+            $table->string('title');
+            $table->string('description');
+            // $table->string('date');
+            // $table->string('cost');
             $table->boolean('is_flagged')->default(false);
-            $table->integer('image_id')->unsigned()->nullable();
+            $table->integer('image_id')->unsigned()->default(2);
             $table->timestamps();
             $table->softDeletes();
 

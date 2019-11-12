@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->unsignedTinyInteger('sale_percentage');
             $table->integer('size_id')->unsigned()->default(1);
             $table->integer('color_id')->unsigned()->default(1);
-            $table->integer('ptype_id')->unsigned();
+            $table->integer('ptype_id')->unsigned()->default(1);
             $table->timestamps();
             $table->softDeletes();
 

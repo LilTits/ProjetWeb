@@ -19,6 +19,10 @@
                         {{Form::number('price', '', [ 'class' => 'form-control' ])}}
                     </div>
                     <div class="form-group">
+                        {{Form::label('stock', 'Quantité')}}
+                        {{Form::number('stock', '', [ 'class' => 'form-control' ])}}
+                    </div>
+                    <div class="form-group">
                         {{Form::label('description', 'Description')}}
                         {{Form::textarea('description', '', [
                         'class' => 'form-control',

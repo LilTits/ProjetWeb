@@ -14,11 +14,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        // $products = Product::all();
-        // $products = Product::orderBy('product_id', 'desc')->take(1)->get();
-        // $products = Product::orderBy('product_id', 'desc')->paginate(9);
-
-        $products = Product::orderBy('product_id', 'desc')->get();
+        $products = Product::orderBy('id', 'desc')->get();
         return view('products.index')->with('products', $products);
     }
 
@@ -43,6 +39,7 @@ class ProductsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'price' => 'required',
+            'stock' => 'required',
             'description' => 'required'
         ]);
 
@@ -50,6 +47,7 @@ class ProductsController extends Controller
         $product = new Product();
         $product->title = $request->input('title');
         $product->price = $request->input('price');
+        $product->stock = $request->input('stock');
         $product->description = $request->input('description');
         $product->save();
 
@@ -92,6 +90,7 @@ class ProductsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'price' => 'required',
+            'stock' => 'required',
             'description' => 'required'
         ]);
 
@@ -99,6 +98,7 @@ class ProductsController extends Controller
         $product = Product::find($id);
         $product->title = $request->input('title');
         $product->price = $request->input('price');
+        $product->stock = $request->input('stock');
         $product->description = $request->input('description');
         $product->save();
 
