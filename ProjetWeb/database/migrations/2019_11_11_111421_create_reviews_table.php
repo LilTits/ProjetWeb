@@ -19,12 +19,14 @@ class CreateReviewsTable extends Migration
             $table->string('content');
             $table->integer('author')->unsigned();
             $table->integer('product_id')->unsigned();
+            $table->integer('image_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
             $table->foreign('author')->references('user_id')->on('users')->onDelete('cascade');
             $table->foreign('product_id')->references('product_id')->on('products')->onDelete('cascade');
+            $table->foreign('image_id')->references('image_id')->on('images')->onDelete('cascade');
         });
     }
 
