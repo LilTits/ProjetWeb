@@ -14,7 +14,7 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->increments('order_id');
+            $table->increments('id');
             $table->unsignedDecimal('total_cost', 15, 2);
             $table->boolean('is_paid')->default(false);
             $table->boolean('is_shipped')->default(false);
@@ -25,8 +25,8 @@ class CreateOrdersTable extends Migration
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
-            $table->foreign('adress_id')->references('adress_id')->on('adresses')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('adress_id')->references('id')->on('adresses')->onDelete('cascade');
         });
     }
 

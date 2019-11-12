@@ -14,7 +14,7 @@ class CreateTicketsTable extends Migration
     public function up()
     {
         Schema::create('tickets', function (Blueprint $table) {
-            $table->increments('ticket_id');
+            $table->increments('id');
             $table->string('creator_email');
             $table->string('content');
             $table->integer('image_id')->unsigned()->nullable();
@@ -23,8 +23,8 @@ class CreateTicketsTable extends Migration
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('image_id')->references('image_id')->on('images')->onDelete('cascade');
-            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
+            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

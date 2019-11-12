@@ -2,17 +2,18 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Permissions\HasPermissionsTrait;
+
 
 class User extends Authenticatable
 {
     use Notifiable;
     use SoftDeletes;
-
-    // Primary Key
-    protected $primaryKey = 'user_id';
+    use HasPermissionsTrait;
     
     /**
      * The attributes that are mass assignable.

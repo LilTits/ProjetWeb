@@ -11,7 +11,4 @@ class User_Adress extends Model
 
     // Table Name
     protected $table = 'user_adresses';
-
-    // Primary Key
-    protected $primaryKey = 'uadress_id';
 }

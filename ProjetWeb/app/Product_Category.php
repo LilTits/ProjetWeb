@@ -11,7 +11,4 @@ class Product_Category extends Model
 
     // Table name
     protected $table = 'product_categories';
-
-    // Primary Key
-    protected $primaryKey = 'pcategory_id';
 }

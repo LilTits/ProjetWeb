@@ -14,7 +14,7 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->increments('product_id');
+            $table->increments('id');
             $table->unsignedDecimal('price', 15, 2);
             $table->unsignedInteger('stock');
             $table->unsignedTinyInteger('sale_percentage');
@@ -25,9 +25,9 @@ class CreateProductsTable extends Migration
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('size_id')->references('size_id')->on('sizes')->onDelete('cascade');
-            $table->foreign('color_id')->references('color_id')->on('colors')->onDelete('cascade');
-            $table->foreign('ptype_id')->references('ptype_id')->on('product_types')->onDelete('cascade');
+            $table->foreign('size_id')->references('id')->on('sizes')->onDelete('cascade');
+            $table->foreign('color_id')->references('id')->on('colors')->onDelete('cascade');
+            $table->foreign('ptype_id')->references('id')->on('product_types')->onDelete('cascade');
         });
     }
 

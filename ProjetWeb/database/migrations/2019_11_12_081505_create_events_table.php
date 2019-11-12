@@ -14,7 +14,7 @@ class CreateEventsTable extends Migration
     public function up()
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->increments('event_id');
+            $table->increments('id');
             $table->string('name');
             $table->string('description');
             $table->dateTime('start_date');
@@ -30,9 +30,9 @@ class CreateEventsTable extends Migration
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('ecategory_id')->references('ecategory_id')->on('categories')->onDelete('cascade');
-            $table->foreign('creator')->references('user_id')->on('users')->onDelete('cascade');
-            $table->foreign('image_cover')->references('image_id')->on('images')->onDelete('cascade');
+            $table->foreign('ecategory_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('creator')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('image_cover')->references('id')->on('images')->onDelete('cascade');
         });
     }
 

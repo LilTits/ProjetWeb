@@ -9,9 +9,6 @@ class Role extends Model
 {
     use SoftDeletes;
 
-    // Primary Key
-    protected $primaryKey = 'role_id';
-
     public function permissions()
     {
         return $this->belongstoMany(Permission::class, 'permission_role');

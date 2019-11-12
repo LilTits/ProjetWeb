@@ -14,7 +14,7 @@ class CreateIdeasTable extends Migration
     public function up()
     {
         Schema::create('ideas', function (Blueprint $table) {
-            $table->increments('idea_id');
+            $table->increments('id');
             $table->string('content');
             $table->string('date');
             $table->string('cost');
@@ -24,7 +24,7 @@ class CreateIdeasTable extends Migration
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('image_id')->references('image_id')->on('images')->onDelete('cascade');
+            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
         });
     }
 

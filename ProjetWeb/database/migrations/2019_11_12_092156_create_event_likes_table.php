@@ -14,14 +14,14 @@ class CreateEventLikesTable extends Migration
     public function up()
     {
         Schema::create('event_likes', function (Blueprint $table) {
-            $table->increments('elike_id');
+            $table->increments('id');
             $table->integer('event_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->timestamps();
         
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('event_id')->references('event_id')->on('events')->onDelete('cascade');
-            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
+            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

@@ -8,7 +8,4 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Event extends Model
 {
     use SoftDeletes;
-
-    // Primary Key
-    protected $primaryKey = 'event_id';
 }

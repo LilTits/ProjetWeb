@@ -11,7 +11,4 @@ class Event_category extends Model
 
     // Table name
     protected $table = 'event_categories';
-
-    // Primary Key
-    protected $primaryKey = 'ecategory_id';
 }

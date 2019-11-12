@@ -9,11 +9,8 @@ class Image extends Model
 {
     use SoftDelets;
 
-    // Primary Key
-    protected $primaryKey = 'image_id';
-
     public function products()
     {
-        return $this->belongstoMany(Product::class, 'image_product');
+        return $this->belongstoMany(Image::class, 'image_product');
     }
 }

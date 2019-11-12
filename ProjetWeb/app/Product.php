@@ -10,9 +10,6 @@ class Product extends Model
 {
     use SoftDeletes;
 
-    // Primary Key
-    protected $primaryKey = 'product_id';
-
     public function carts()
     {
         return $this->belongstoMany(Cart::class, 'cart_product');

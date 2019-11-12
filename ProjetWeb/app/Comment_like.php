@@ -11,7 +11,4 @@ class Comment_like extends Model
 
     // Table name
     protected $table = 'comment_likes';
-
-    // Primary Key
-    protected $primaryKey = 'clike_id';
 }

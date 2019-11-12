@@ -14,8 +14,7 @@ class CreateCommentsTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->increments('comment_id');
-            $table->string('content');
+            $table->increments('comment_nt');
             $table->boolean('is_flagged')->default(false);
             $table->integer('image_id')->unsigned()->nullable();
             $table->integer('event_id')->unsigned();
@@ -24,9 +23,9 @@ class CreateCommentsTable extends Migration
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('image_id')->references('image_id')->on('images')->onDelete('cascade');
-            $table->foreign('event_id')->references('event_id')->on('events')->onDelete('cascade');
-            $table->foreign('author')->references('user_id')->on('users')->onDelete('cascade');
+            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
+            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
+            $table->foreign('author')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

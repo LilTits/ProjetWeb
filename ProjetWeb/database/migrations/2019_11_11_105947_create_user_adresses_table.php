@@ -14,7 +14,7 @@ class CreateUserAdressesTable extends Migration
     public function up()
     {
         Schema::create('user_adresses', function (Blueprint $table) {
-            $table->increments('uadress_id');
+            $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('adress_id')->unsigned();
             $table->Boolean('is_primary');
@@ -22,8 +22,8 @@ class CreateUserAdressesTable extends Migration
             $table->softDeletes();
            
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
-            $table->foreign('adress_id')->references('adress_id')->on('adresses')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('adress_id')->references('id')->on('adresses')->onDelete('cascade');
         });
     }
 

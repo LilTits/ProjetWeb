@@ -11,7 +11,4 @@ class Event_like extends Model
 
     // Table name
     protected $table = 'event_likes';
-
-    // Primary Key
-    protected $primaryKey = 'elike_id';
 }
