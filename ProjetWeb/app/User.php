@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Database\Eloquent\Model;
+//use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Permissions\HasPermissionsTrait;
 
@@ -17,18 +17,18 @@ class User extends Authenticatable
     use HasPermissionsTrait;
 
     // Primary Key
-    protected $primaryKey = 'user_id';
+    protected $primaryKey = 'id';
 
         public function centers(){
 
             return $this->belongsToMany('App\Center');
         }
 
-        public function roles(){
+        /*public function roles(){
 
             return $this->belongsToMany(Role::class);
             
-        }
+        }*/
     
     /**
      * The attributes that are mass assignable.

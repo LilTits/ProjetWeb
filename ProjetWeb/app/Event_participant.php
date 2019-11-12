@@ -13,5 +13,5 @@ class Event_participant extends Model
     protected $table = 'event_participants';
 
     // Primary Key
-    protected $primaryKey = 'eparticipant_id';
+    protected $primaryKey = 'id';
 }
