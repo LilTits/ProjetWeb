@@ -40,6 +40,7 @@
         <li><a class="nav-link" href="/products/create">Créer un produit</a></li>
         <li><a class="nav-link" href="/events/create">Créer un event</a></li>
         <li><a class="nav-link" href="/ideas/create">Créer une idée</a></li>
+        <li><a class="nav-link" href="/comments/create">Créer un commentaire</a></li>
       </ul>
     </div>
   </nav>

@@ -18,9 +18,26 @@
         <hr>
         <a href="/events/{{$event->event_id}}/edit" class="btn">Edition</a>
         {!!Form::open(['action' => ['EventsController@destroy', $event->event_id], 'method' => 'POST'])!!}
-            {{Form::hidden('_method', 'DELETE')}}
-            {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
+        {{Form::hidden('_method', 'DELETE')}}
+        {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
         {!!Form::close()!!}
+        <hr>
+        <section id="comments">
+            <ul class="list-group">
+                <div class="card-block">
+                    {!! Form::open(['action' => 'CommentsController@store', 'method' => 'POST']) !!}
+                    <div class="form-group">
+                        {{Form::label('description', 'Description')}}
+                        {{Form::textarea('description', '', [
+                            'class' => 'form-control',
+                            'placeholder' => 'Votre commentaire'
+                        ])}}
+                    </div>
+                    {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+                    {!! Form::close() !!}
+                </div>
+            </ul>
+        </section>
     </div>
 </section>
 <!-- End of event section -->
