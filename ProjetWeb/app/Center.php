@@ -10,7 +10,7 @@ class Center extends Model
     use SoftDeletes;
 
     // Primary Key
-    protected $primaryKey = 'center_id';
+    protected $primaryKey = 'id';
 
     public function users(){
 
