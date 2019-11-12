@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Comment extends Model
 {
+     use SoftDeletes;
+     
     //Table name
     protected $table = 'comments';
 
@@ -15,3 +18,6 @@ class Comment extends Model
     // Timestamps
     public $timestamps = true;
 }
+
+
+   
