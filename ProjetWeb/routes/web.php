@@ -23,7 +23,7 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/basket', 'PagesController@basket');
 Route::get('/legale', 'PagesController@legale');
 Route::get('/deconnexion', 'PagesController@deconnexion');
-
+Route::get('/perso', 'PagesController@perso');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

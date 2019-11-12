@@ -13,9 +13,22 @@ use App\Permissions\HasPermissionsTrait;
 class User extends Authenticatable 
 {
     use Notifiable;
-    
     use SoftDeletes;
     use HasPermissionsTrait;
+
+    // Primary Key
+    protected $primaryKey = 'user_id';
+
+        public function centers(){
+
+            return $this->belongsToMany('App\Center');
+        }
+
+        public function roles(){
+
+            return $this->belongsToMany(Role::class);
+            
+        }
     
     /**
      * The attributes that are mass assignable.
@@ -24,7 +37,7 @@ class User extends Authenticatable
      */
     
     protected $fillable = [
-        'name', 'prenom', 'email', 'password', 'campus',
+        'first_name', 'last_name', 'email', 'password', 'center_id',
     ];
 
     /**
