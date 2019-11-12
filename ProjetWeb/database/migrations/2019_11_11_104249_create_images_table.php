@@ -16,15 +16,16 @@ class CreateImagesTable extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->increments('image_id');
             $table->string('image_path');
-            $table->Boolean('flagged');
-            $table->integer('posted_by')->unsigned();
+            $table->Boolean('flagged')->default(false);
             $table->timestamps();
             $table->softDeletes();
-
-
-            //FOREIGN KEY CONSTRAINTS
-            $table->foreign('posted_by')->references('user_id')->on('users')->onDelete('cascade');
         });
+
+        // Default images
+        DB::table('images')->insert([
+            ['image_id' => 1,'image_path' => 'path/default_user_profile.png'],
+            ['image_id' => 2,'image_path' => 'path/default_event_cover.png'],
+        ]);
     }
 
     /**

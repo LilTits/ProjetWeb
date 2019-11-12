@@ -11,4 +11,14 @@ class Permission extends Model
 
     // Primary Key
     protected $primaryKey = 'permission_id';
+
+    public function roles()
+    {
+        return $this->belongstoMany(Role::class, 'permission_role');
+    }
+
+    public function users()
+    {
+        return $this->belongstoMany(User::class, 'permission_user');
+    }
 }

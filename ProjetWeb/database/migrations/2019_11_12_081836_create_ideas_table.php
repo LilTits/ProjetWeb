@@ -18,8 +18,8 @@ class CreateIdeasTable extends Migration
             $table->string('content');
             $table->string('date');
             $table->string('cost');
-            $table->boolean('is_flagged');
-            $table->integer('image_id')->unsigned();
+            $table->boolean('is_flagged')->default(false);
+            $table->integer('image_id')->unsigned()->nullable();
             $table->timestamps();
             $table->softDeletes();
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdressUserTable extends Migration
+class CreateUserAdressesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateAdressUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('adress_user', function (Blueprint $table) {
-            $table->increments('user_adress_id');
+        Schema::create('user_adresses', function (Blueprint $table) {
+            $table->increments('uadress_id');
             $table->integer('user_id')->unsigned();
             $table->integer('adress_id')->unsigned();
             $table->Boolean('is_primary');
@@ -34,6 +34,6 @@ class CreateAdressUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_adresses');
+        Schema::dropIfExists('user_adresses');
     }
 }

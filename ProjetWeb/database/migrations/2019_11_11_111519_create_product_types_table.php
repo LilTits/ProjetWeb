@@ -18,7 +18,7 @@ class CreateProductTypesTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('sale_percentage');
-            $table->integer('pcategory_id')->unsigned();
+            $table->integer('pcategory_id')->unsigned()->default(1);
             $table->timestamps();
             $table->softDeletes();
 
@@ -34,6 +34,6 @@ class CreateProductTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product__types');
+        Schema::dropIfExists('product_types');
     }
 }

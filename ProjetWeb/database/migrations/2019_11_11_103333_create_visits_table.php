@@ -17,7 +17,7 @@ class CreateVisitsTable extends Migration
             $table->increments('visit_id');
             $table->integer('ipv4')->unsigned();
             $table->integer('ipv6')->unsigned();
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id')->unsigned()->nullable();
             $table->timestamps();
             $table->softDeletes();
 

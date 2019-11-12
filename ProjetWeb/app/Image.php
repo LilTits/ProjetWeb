@@ -11,4 +11,9 @@ class Image extends Model
 
     // Primary Key
     protected $primaryKey = 'image_id';
+
+    public function products()
+    {
+        return $this->belongstoMany(Product::class, 'image_product');
+    }
 }

@@ -22,10 +22,10 @@ class CreateEventsTable extends Migration
             $table->boolean('is_recurrent');
             $table->boolean('has_entry_fee');
             $table->unsignedDecimal('price', 15, 2);
-            $table->boolean('is_flagged');
+            $table->boolean('is_flagged')->default(false);
             $table->integer('ecategory_id')->unsigned();
             $table->integer('creator')->unsigned();
-            $table->integer('image_cover')->unsigned();
+            $table->integer('image_cover')->unsigned()->default(2);
             $table->timestamps();
             $table->softDeletes();
 

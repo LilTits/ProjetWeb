@@ -12,4 +12,19 @@ class Product extends Model
 
     // Primary Key
     protected $primaryKey = 'product_id';
+
+    public function carts()
+    {
+        return $this->belongstoMany(Cart::class, 'cart_product');
+    }
+
+    public function orders()
+    {
+        return $this->belongstoMany(Order::class, 'order_product');
+    }
+
+    public function images()
+    {
+        return $this->belongstoMany(Image::class, 'image_product');
+    }
 }

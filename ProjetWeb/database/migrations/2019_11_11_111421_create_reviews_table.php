@@ -19,7 +19,7 @@ class CreateReviewsTable extends Migration
             $table->string('content');
             $table->integer('author')->unsigned();
             $table->integer('product_id')->unsigned();
-            $table->integer('image_id')->unsigned();
+            $table->integer('image_id')->unsigned()->nullable();
             $table->timestamps();
             $table->softDeletes();
 

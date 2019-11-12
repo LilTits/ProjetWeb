@@ -20,6 +20,11 @@ class CreateProductCategoriesTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+        // Default  Product Categories
+        DB::table('product_categories')->insert([
+            ['pcategory_id' => 1,'name' => 'unsorted', 'description' => 'unsorted products, needs/should be storted'],
+        ]);
     }
 
     /**
@@ -29,6 +34,6 @@ class CreateProductCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product__categories');
+        Schema::dropIfExists('product_categories');
     }
 }

@@ -17,7 +17,7 @@ class CreateTicketsTable extends Migration
             $table->increments('ticket_id');
             $table->string('creator_email');
             $table->string('content');
-            $table->integer('image_id')->unsigned();
+            $table->integer('image_id')->unsigned()->nullable();
             $table->integer('user_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();

@@ -16,8 +16,8 @@ class CreateCommentsTable extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('comment_id');
             $table->string('content');
-            $table->boolean('is_flagged');
-            $table->integer('image_id')->unsigned();
+            $table->boolean('is_flagged')->default(false);
+            $table->integer('image_id')->unsigned()->nullable();
             $table->integer('event_id')->unsigned();
             $table->integer('author')->unsigned();
             $table->timestamps();

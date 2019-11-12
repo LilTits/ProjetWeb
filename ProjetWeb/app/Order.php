@@ -11,4 +11,9 @@ class Order extends Model
 
     // Primary Key
     protected $primaryKey = 'order_id';
+
+    public function products()
+    {
+        return $this->belongstoMany(Product::class, 'order_product');
+    }
 }

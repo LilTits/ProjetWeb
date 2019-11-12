@@ -22,12 +22,12 @@ class CreateColorsTable extends Migration
 
         // Default Colors
         DB::table('colors')->insert([
-            ['name' => 'Blanc'],
-            ['name' => 'Noir'],
-            ['name' => 'Rouge'],
-            ['name' => 'Bleu'],
-            ['name' => 'Orange'],
-            ['name' => 'Vert'],
+            ['color_id' => 1,'name' => 'Blanc'],
+            ['color_id' => 2,'name' => 'Noir'],
+            ['color_id' => 3,'name' => 'Rouge'],
+            ['color_id' => 4,'name' => 'Bleu'],
+            ['color_id' => 5,'name' => 'Orange'],
+            ['color_id' => 6,'name' => 'Vert'],
         ]);
     }
 

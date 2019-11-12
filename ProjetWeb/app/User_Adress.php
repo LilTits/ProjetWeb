@@ -13,5 +13,5 @@ class User_Adress extends Model
     protected $table = 'user_adresses';
 
     // Primary Key
-    protected $primaryKey = 'user_adress_id';
+    protected $primaryKey = 'uadress_id';
 }
