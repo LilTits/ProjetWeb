@@ -25,6 +25,8 @@ class CreateImagesTable extends Migration
             //FOREIGN KEY CONSTRAINTS
             $table->foreign('posted_by')->references('user_id')->on('users')->onDelete('cascade');
         });
+
+        
     }
 
     /**

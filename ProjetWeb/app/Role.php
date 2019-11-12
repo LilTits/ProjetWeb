@@ -11,4 +11,10 @@ class Role extends Model
 
     // Primary Key
     protected $primaryKey = 'role_id';
+
+
+    public function users(){
+
+        return $this->belongsToMany(User::class);
+    }
 }

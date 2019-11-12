@@ -34,7 +34,7 @@
         
         @endauth
         @auth 
-        @if(Auth::user()->role == 'admin')                                                 <!--Only admin can make a product-->
+        @if(Auth::user()->user_id)                                                 <!--Only admin can make a product-->
       <ul class="navbar-nav navbar-right">
         <li><a class="nav-link" href="/products/create">Créer un produit</a></li>
       </ul>

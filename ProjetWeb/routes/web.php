@@ -33,3 +33,5 @@ Route::resource('/users', 'UtilisateurController');
 //Route::resource('register', 'CentersController');
 
 Route::resource('products', 'ProductsController');
+
+Route::name('language')->get('language/{lang}', 'HomeController@language');
