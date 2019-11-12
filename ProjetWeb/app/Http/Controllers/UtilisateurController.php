@@ -15,7 +15,7 @@ class UtilisateurController extends Controller
      */
     public function index()
     {   
-        $users = User::where('name', Auth::user()->name)->first();
+        $users = User::where('first_name', Auth::user()->name)->first();
 
       
            
