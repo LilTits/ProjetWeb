@@ -18,7 +18,7 @@
                     {{-- <p class="card-text">Et termine le : {{$event->end_date}}</p> --}}
                     <a href="/events/{{$event->event_id}}" class="btn btn-primary buy_button_event">En savoir plus</a>
                     <br>
-                    <small>Ajouté le {{$event->created_at}} by {{$event->creator}}</small>
+                    <small>Ajouté le {{$event->created_at}} by {{$event->user->first_name}} {{$event->user->first_name}} </small>
                 </div>
             </div>
             @endforeach

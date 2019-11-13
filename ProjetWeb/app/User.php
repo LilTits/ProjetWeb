@@ -16,9 +16,6 @@ class User extends Authenticatable
     use SoftDeletes;
     use HasPermissionsTrait;
 
-    // Primary Key
-    protected $primaryKey = 'id';
-
         public function centers(){
 
             return $this->belongsToMany('App\Center');
@@ -62,5 +59,13 @@ class User extends Authenticatable
     public function adresses()
     {
         return $this->belongstoMany(Permission::class, 'permission_user');
+    }
+
+    public function comments(){
+        return $this->hasMany('App\Comment', 'author');
+    }
+
+    public function events(){
+        return $this->hasMany('App\Event', 'creator');
     }
 }
