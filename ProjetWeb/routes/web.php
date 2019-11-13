@@ -46,7 +46,7 @@ Route::resource('images', 'ImagesController');
 Route::resource('orders', 'OrdersController');
 Route::resource('permissions', 'PermissionsController');
 Route::resource('product_categories', 'ProductCategoriesController');
-Route::resource('products', 'ProductsController');
+Route::resource('products', 'ProductTypesController');
 Route::resource('product_types', 'ProductTypesController');
 Route::resource('reviews', 'ReviewsController');
 Route::resource('roles', 'RolesController');
