@@ -28,10 +28,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// TODO change this to users? we'll see later
 Route::resource('/users', 'UtilisateurController');
 
-//Route to subpages
-Route::resource('products', 'ProductTypesController');
+//Route to database
+Route::resource('products', 'ProductsController');
+//Route::resource('products', 'ProductTypesController');
 Route::resource('events', 'EventsController');
 Route::resource('ideas', 'IdeasController');
 Route::resource('comments', 'CommentsController');
+
