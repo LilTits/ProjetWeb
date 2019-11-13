@@ -20,9 +20,9 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('role_user')->insert([
-            ['id' => 100, 'role_id' => 1],
-            ['id' => 101, 'role_id' => 2],
-            ['id' => 102, 'role_id' => 3],
+            ['user_id' => 100, 'role_id' => 1],
+            ['user_id' => 101, 'role_id' => 2],
+            ['user_id' => 102, 'role_id' => 3],
         ]);
     }
 }
