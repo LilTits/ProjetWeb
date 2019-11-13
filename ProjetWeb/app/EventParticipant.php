@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Event_participant extends Model
+class EventParticipant extends Model
 {
     use SoftDeletes;
 
@@ -14,4 +14,14 @@ class Event_participant extends Model
 
     // Primary Key
     protected $primaryKey = 'id';
+
+    public function event()
+    {
+        return $this->belongsTo('App\Event');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

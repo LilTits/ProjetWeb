@@ -14,7 +14,7 @@ class CreateCommentsTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->increments('comment_nt');
+            $table->increments('id');
             $table->boolean('is_flagged')->default(false);
             $table->string('description');
             $table->integer('image_id')->unsigned()->nullable();

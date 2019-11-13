@@ -32,4 +32,30 @@ class Event extends Model
     {
         return $this->belongsTo('App\EventCategory', 'ecategory_id');
     }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
+    public function eventLikes()
+    {
+        return $this->hasMany('App\EventLike');
+    }
+
+    public function usersLiked()
+    {
+        return $this->belongsToMany('App\User', 'event_likes');
+    }
+
+    public function eventParticipants()
+    {
+        return $this->hasMany('App\EventParticipant');
+    }
+
+    public function participatedUsers()
+    {
+        return $this->belongsToMany('App\User', 'event_participants')
+        ->withPivot('status');
+    }
 }

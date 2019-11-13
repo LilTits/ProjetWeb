@@ -28,4 +28,14 @@ class Image extends Model
     {
         return $this->hasMany('App\Event', 'image_cover');
     }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
+    public function ideas()
+    {
+        return $this->hasMany('App\idea');
+    }
 }

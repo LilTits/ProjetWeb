@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Event_category extends Model
+class EventCategory extends Model
 {
     use SoftDeletes;
 

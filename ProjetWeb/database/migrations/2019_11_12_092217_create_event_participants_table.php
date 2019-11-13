@@ -17,8 +17,9 @@ class CreateEventParticipantsTable extends Migration
             $table->increments('id');
             $table->integer('event_id')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->enum('status', ['going','busy','undecided','orginizer']);
+            $table->enum('status', ['going','busy','undecided','orginizer'])->default('undecided');
             $table->timestamps();
+            $table->softDeletes();
         
             //FOREIGN KEY CONSTRAINTS
             $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');

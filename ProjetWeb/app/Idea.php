@@ -17,4 +17,9 @@ class Idea extends Model
 
     // Timestamps
     public $timestamps = true;
+
+    public function image()
+    {
+        return $this->belongsTo('App\Image');
+    }
 }

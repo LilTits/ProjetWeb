@@ -12,6 +12,12 @@ class Adress extends Model
     // Table Name
     protected $table = 'adresses';
 
+    public function users()
+    {
+        return $this->belongsToMany('App\User', 'user_adresses')
+        ->withPivot('is_primary');
+    }
+
     public function centers()
     {
         return $this->hasMany('App\Center');
