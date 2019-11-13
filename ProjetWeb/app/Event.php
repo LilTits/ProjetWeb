@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+
 class Event extends Model
 {
     use SoftDeletes;
@@ -44,9 +45,8 @@ class Event extends Model
         return $this->hasMany('App\EventParticipant');
     }
 
-    public function participatedUsers()
+    public function creatorProfile()
     {
-        return $this->belongsToMany('App\User', 'event_participants')
-        ->withPivot('status');
+        app('App\User')->profile->image_path;
     }
 }

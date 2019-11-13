@@ -50,7 +50,6 @@ class EventsController extends Controller
         $event->price = $request->input('price');
         $event->description = $request->input('description');
         $event->start_date = $request->input('start_date');
-        // $event->creator = auth()->user()->id;
         $event->creator = auth()->user()->id;
         $event->end_date = $request->input('end_date');
         $event->save();
