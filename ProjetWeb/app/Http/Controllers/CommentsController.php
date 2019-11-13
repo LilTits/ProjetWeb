@@ -43,6 +43,8 @@ class CommentsController extends Controller
         // Create Comment
         $comment = new Comment();
         $comment->description = $request->input('description');
+        $comment->author = 1;
+        $comment->event_id = 1;
         $comment->save();
 
         return redirect('/comments')->with('success', 'Commentaire créé');

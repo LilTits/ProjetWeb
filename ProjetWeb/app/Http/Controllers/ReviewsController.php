@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Review;
 
 class ReviewsController extends Controller
 {
@@ -13,7 +14,8 @@ class ReviewsController extends Controller
      */
     public function index()
     {
-        //
+        $reviews = Review::orderBy('id', 'desc')->get();
+        return view('reviews.index')->with('reviews', $reviews);
     }
 
     /**
@@ -23,7 +25,7 @@ class ReviewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('reviews.create');
     }
 
     /**
@@ -34,7 +36,18 @@ class ReviewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'description' => 'required'
+        ]);
+
+        // Create review
+        $review = new Review();
+        $review->description = $request->input('description');
+        $review->author = 1;
+        $review->product_id = 1;
+        $review->save();
+
+        return redirect('/reviews')->with('success', 'Avis créé');
     }
 
     /**
@@ -45,7 +58,8 @@ class ReviewsController extends Controller
      */
     public function show($id)
     {
-        //
+        $review = Review::find($id);
+        return view('reviews.show')->with('review', $review);
     }
 
     /**
@@ -56,7 +70,8 @@ class ReviewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $review = Review::find($id);
+        return view('reviews.edit')->with('review', $review);
     }
 
     /**
@@ -68,7 +83,18 @@ class ReviewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'description' => 'required'
+        ]);
+
+        // Create review
+        $review = Review::find($id);
+        $review->description = $request->input('description');
+        $review->author = 1;
+        $review->product_id = 1;
+        $review->save();
+
+        return redirect('/reviews')->with('success', 'Avis mis à jour');
     }
 
     /**
@@ -79,6 +105,8 @@ class ReviewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $review = Review::find($id);
+        $review->delete();
+        return redirect('/reviews')->with('sucess', 'Avis supprimé');
     }
 }
