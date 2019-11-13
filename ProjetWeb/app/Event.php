@@ -10,10 +10,10 @@ class Event extends Model
 {
     use SoftDeletes;
 
-    public function cover()
-    {
-        return $this->belongsTo('App\Image', 'image_cover');
-    }
+    // public function cover()
+    // {
+    //     return $this->belongsTo('App\Image', 'image_cover');
+    // }
 
     public function eventCreator()
     {
@@ -45,8 +45,8 @@ class Event extends Model
         return $this->hasMany('App\EventParticipant');
     }
 
-    public function creatorProfile()
-    {
-        app('App\User')->profile->image_path;
-    }
+    // public function creatorProfile()
+    // {
+    //     app('App\User')->profile->image_path;
+    // }
 }

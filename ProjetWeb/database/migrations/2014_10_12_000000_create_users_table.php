@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->unsignedDecimal('wallet_amount', 15, 2)->default(0);
             $table->integer('center_id')->unsigned()->nullable();
-            $table->integer('image_profile')->unsigned();
+            $table->integer('image_profile')->unsigned()->default(1);
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

@@ -41,8 +41,12 @@ class EventsController extends Controller
             'price' => 'required',
             'description' => 'required',
             'start_date' => 'required',
-            'end_date' => 'required'
+            'end_date' => 'required',
+            'event_image' => 'image|nullable|max:1999'
         ]);
+
+        // Images upload
+
 
         // Create Event
         $event = new Event();

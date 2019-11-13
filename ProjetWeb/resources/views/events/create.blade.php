@@ -7,7 +7,7 @@
         <h3 class="title_section">Création d'evènement</h3>
         <div class="row">
             <div class="col-12">
-                {!! Form::open(['action' => 'EventsController@store', 'method' => 'POST']) !!}
+                {!! Form::open(['action' => 'EventsController@store', 'method' => 'POST', 'enctype' => 'multipart/data']) !!}
                     <div class="form-group">
                         {{Form::label('title', 'Titre')}}
                         {{Form::text('name', '', [
@@ -33,6 +33,9 @@
                         {{Form::label('end_date', 'Date de fin')}}
                         {{Form::date('end_date', \Carbon\Carbon::now())}}
                     </div>
+                    {{-- <div class="form-group">
+                        {{Form::file('path_image')}}
+                    </div> --}}
                     {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
                 {!! Form::close() !!}
             </div>
