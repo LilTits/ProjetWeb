@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Comment;
+use App\ProductType;
 
-class CommentsController extends Controller
+class ProductTypesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        $comments = Comment::orderBy('comment_nt', 'desc')->get();
-        return view('comments.index')->with('comments', $comments);
+        $product = ProductType::orderBy('id', 'desc')->get();
+        return view('products.index')->with('products', $product);
     }
 
     /**
@@ -25,7 +25,7 @@ class CommentsController extends Controller
      */
     public function create()
     {
-        return view('comments.create');
+        return view('products.create');
     }
 
     /**
@@ -37,17 +37,17 @@ class CommentsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+            'name' => 'required',
             'description' => 'required'
         ]);
 
-        // Create Comment
-        $comment = new Comment();
-        $comment->description = $request->input('description');
-        $comment->author = 1;
-        $comment->event_id = 1;
-        $comment->save();
+        // Create Product
+        $product = new ProductType();
+        $product->name = $request->input('name');
+        $product->description = $request->input('description');
+        $product->save();
 
-        return redirect('/comments')->with('success', 'Commentaire créé');
+        return redirect('/products')->with('success', 'Produit créé');
     }
 
     /**
@@ -58,8 +58,8 @@ class CommentsController extends Controller
      */
     public function show($id)
     {
-        $comment = Comment::find($id);
-        return view('comments.show')->with('comment', $comment);
+        $product = ProductType::find($id);
+        return view('products.show')->with('product', $product);
     }
 
     /**
@@ -70,8 +70,8 @@ class CommentsController extends Controller
      */
     public function edit($id)
     {
-        $comment = Comment::find($id);
-        return view('comments.edit')->with('comment', $comment);
+        $product =  ProductType::find($id);
+        return view('products.edit')->with('product', $product);
     }
 
     /**
@@ -84,15 +84,17 @@ class CommentsController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
+            'name' => 'required',
             'description' => 'required'
         ]);
 
-        // Create Comment
-        $comment = Comment::find($id);
-        $comment->description = $request->input('description');
-        $comment->save();
+        // Create Product
+        $product = ProductType::find($id);
+        $product->name = $request->input('name');
+        $product->description = $request->input('description');
+        $product->save();
 
-        return redirect('/comments')->with('success', 'Commentaire mis à jour');
+        return redirect('/products')->with('success', 'Produit mis à jour');
     }
 
     /**
@@ -103,8 +105,8 @@ class CommentsController extends Controller
      */
     public function destroy($id)
     {
-        $comment = Comment::find($id);
-        $comment->delete();
-        return redirect('/comments')->with('sucess', 'Commentaire supprimé');
+        $product = ProductType::find($id);
+        $product->delete();
+        return redirect('/products')->with('success', 'Produit supprimé');
     }
 }

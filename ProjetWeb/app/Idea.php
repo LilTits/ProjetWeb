@@ -13,7 +13,7 @@ class Idea extends Model
     protected $table = 'ideas';
 
     // Primery key
-    public $primaryKey = 'idea_id';
+    public $primaryKey = 'id';
 
     // Timestamps
     public $timestamps = true;

@@ -39,3 +39,4 @@ Route::resource('comments', 'CommentsController');
 Route::resource('perso', 'PersoController');
 
 //});
+Route::resource('reviews', 'ReviewsController');

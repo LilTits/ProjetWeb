@@ -8,16 +8,15 @@
         <div class="col-12 item_product">
             <img src="iphonex.png" class="card-img-top img-thumbnail image_product" alt="Product">
             <small class="card-body">
-                <h5 class="card-title">{{$product->title}}</h5>
-                <h6 class="price">{{$product->price}}</h6>
+                <h5 class="card-title">{{$product->name}}</h5>
                 <p class="card-text">{{$product->description}}</p>
             </small>
         </div>
         <hr>
         <small>Ajouté le {{$product->created_at}}</small>
         <hr>
-        <a href="/products/{{$product->product_id}}/edit" class="btn">Edition</a>
-        {!!Form::open(['action' => ['ProductsController@destroy', $product->product_id], 'method' => 'POST'])!!}
+        <a href="/products/{{$product->id}}/edit" class="btn">Edition</a>
+        {!!Form::open(['action' => ['ProductTypesController@destroy', $product->id], 'method' => 'POST'])!!}
             {{Form::hidden('_method', 'DELETE')}}
             {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
         {!!Form::close()!!}

@@ -24,7 +24,7 @@ class User extends Authenticatable
             return $this->belongsToMany('App\Center');
         }
 
-       /* public function roles(){
+        /*public function roles(){
 
             return $this->belongsToMany(Role::class);
             

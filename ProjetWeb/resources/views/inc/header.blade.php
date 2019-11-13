@@ -35,12 +35,13 @@
         
         @endauth
         @auth 
-                                                       <!--Only admin can make a product-->
+        @if(Auth::user()->user_id)                                                 <!--Only admin can make a product-->
       <ul class="navbar-nav navbar-right">
         <li><a class="nav-link" href="/products/create">Créer un produit</a></li>
         <li><a class="nav-link" href="/events/create">Créer un event</a></li>
         <li><a class="nav-link" href="/ideas/create">Créer une idée</a></li>
         <li><a class="nav-link" href="/comments/create">Créer un commentaire</a></li>
+        <li><a class="nav-link" href="/reviews/create">Créer un avis</a></li>
       </ul>
       
       
