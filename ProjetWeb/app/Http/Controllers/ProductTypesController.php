@@ -14,8 +14,8 @@ class ProductTypesController extends Controller
      */
     public function index()
     {
-        $products = ProductType::orderBy('id', 'desc')->get();
-        return view('products.index')->with('products', $products);
+        $product = ProductType::orderBy('id', 'desc')->get();
+        return view('products.index')->with('products', $product);
     }
 
     /**

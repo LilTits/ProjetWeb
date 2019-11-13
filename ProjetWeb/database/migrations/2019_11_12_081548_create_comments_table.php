@@ -18,8 +18,7 @@ class CreateCommentsTable extends Migration
             $table->boolean('is_flagged')->default(false);
             $table->string('description');
             $table->integer('image_id')->unsigned()->nullable();
-            $table->integer('event_id')->unsigned()->nullable();
-            $table->integer('product_id')->unsigned()->nullable();
+            $table->integer('event_id')->unsigned();
             $table->integer('author')->unsigned();
             $table->timestamps();
             $table->softDeletes();
