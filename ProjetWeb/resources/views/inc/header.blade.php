@@ -41,6 +41,7 @@
         <li><a class="nav-link" href="/events/create">Créer un event</a></li>
         <li><a class="nav-link" href="/ideas/create">Créer une idée</a></li>
         <li><a class="nav-link" href="/comments/create">Créer un commentaire</a></li>
+        <li><a class="nav-link" href="/reviews/create">Créer un avis</a></li>
       </ul>
       
       @endauth

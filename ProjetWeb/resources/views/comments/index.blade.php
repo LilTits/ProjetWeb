@@ -13,6 +13,11 @@
                     <br>
                     <small>Ajouté le {{$comment->created_at}}</small>
                 </div>
+                <a href="/comments/{{$comment->id}}/edit" class="btn btn-primary">Edition</a>
+                {!!Form::open(['action' => ['CommentsController@destroy', $comment->id], 'method' => 'POST'])!!}
+                    {{Form::hidden('_method', 'DELETE')}}
+                    {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
+                {!!Form::close()!!}
             </div>
             @endforeach
             @else

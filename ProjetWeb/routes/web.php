@@ -35,3 +35,4 @@ Route::resource('products', 'ProductTypesController');
 Route::resource('events', 'EventsController');
 Route::resource('ideas', 'IdeasController');
 Route::resource('comments', 'CommentsController');
+Route::resource('reviews', 'ReviewsController');
