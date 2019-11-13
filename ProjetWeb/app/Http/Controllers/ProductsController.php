@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class ProductsController extends Controller
 {
@@ -13,7 +14,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        // $products = Product::orderBy('id', 'desc')->get();
+        // return view('products.index')->with('products', $products);
     }
 
     /**
@@ -23,7 +25,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        // return view('products.create');
     }
 
     /**
@@ -34,7 +36,22 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $this->validate($request, [
+        //     'title' => 'required',
+        //     'price' => 'required',
+        //     'stock' => 'required',
+        //     'description' => 'required'
+        // ]);
+
+        // // Create Product
+        // $product = new Product();
+        // $product->title = $request->input('title');
+        // $product->price = $request->input('price');
+        // $product->stock = $request->input('stock');
+        // $product->description = $request->input('description');
+        // $product->save();
+
+        // return redirect('/products')->with('success', 'Produit créé');
     }
 
     /**
@@ -45,7 +62,8 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        // $product =  Product::find($id);
+        // return view('products.show')->with('product', $product);
     }
 
     /**
@@ -56,7 +74,8 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+        // $product =  Product::find($id);
+        // return view('products.edit')->with('product', $product);
     }
 
     /**
@@ -68,7 +87,22 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $this->validate($request, [
+        //     'title' => 'required',
+        //     'price' => 'required',
+        //     'stock' => 'required',
+        //     'description' => 'required'
+        // ]);
+
+        // // Create Product
+        // $product = Product::find($id);
+        // $product->title = $request->input('title');
+        // $product->price = $request->input('price');
+        // $product->stock = $request->input('stock');
+        // $product->description = $request->input('description');
+        // $product->save();
+
+        // return redirect('/products')->with('success', 'Produit mis à jour');
     }
 
     /**
@@ -79,6 +113,8 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // $product = Product::find($id);
+        // $product->delete();
+        // return redirect('/products')->with('success', 'Produit supprimé');
     }
 }

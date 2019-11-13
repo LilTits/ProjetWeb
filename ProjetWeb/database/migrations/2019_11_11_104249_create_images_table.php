@@ -23,8 +23,8 @@ class CreateImagesTable extends Migration
 
         // Default images
         DB::table('images')->insert([
-            ['id' => 1,'image_path' => 'path/default_user_profile.png'],
-            ['id' => 2,'image_path' => 'path/default_event_cover.png'],
+            ['id' => 1,'image_path' => 'img/therock.jpg'],
+            ['id' => 2,'image_path' => 'img/therock.jpg'],
         ]);
     }
 

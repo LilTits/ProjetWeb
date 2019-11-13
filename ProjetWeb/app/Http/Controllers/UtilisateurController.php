@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
-class Product_TypesController extends Controller
+class UtilisateurController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -12,8 +14,12 @@ class Product_TypesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        $users = User::where('first_name', Auth::user()->name)->first();
+
+      
+           
+        
     }
 
     /**

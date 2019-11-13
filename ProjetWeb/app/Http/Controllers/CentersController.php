@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Center;
 class CentersController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class CentersController extends Controller
      */
     public function index()
     {
-        //
+        $posts=Center::all();
+         return view('register')->with('centers', $centers); 
     }
 
     /**
@@ -22,8 +23,8 @@ class CentersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {   
+      
     }
 
     /**

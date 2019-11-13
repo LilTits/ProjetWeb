@@ -20,7 +20,6 @@ class CreateCentersTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-           
             //FOREIGN KEY CONSTRAINTS
             $table->foreign('adress_id')->references('id')->on('adresses')->onDelete('cascade');
 

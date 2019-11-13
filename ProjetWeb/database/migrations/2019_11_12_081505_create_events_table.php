@@ -19,8 +19,8 @@ class CreateEventsTable extends Migration
             $table->string('description');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
-            $table->boolean('is_recurrent');
-            $table->boolean('has_entry_fee');
+            $table->boolean('is_recurrent')->default(false);
+            $table->boolean('has_entry_fee')->default(false);
             $table->unsignedDecimal('price', 15, 2);
             $table->boolean('is_flagged')->default(false);
             $table->integer('ecategory_id')->unsigned();

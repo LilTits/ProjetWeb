@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Comment;
 
 class CommentsController extends Controller
 {
@@ -13,7 +14,8 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        //
+        $comments = Comment::orderBy('comment_nt', 'desc')->get();
+        return view('comments.index')->with('comments', $comments);
     }
 
     /**
@@ -23,7 +25,7 @@ class CommentsController extends Controller
      */
     public function create()
     {
-        //
+        return view('comments.create');
     }
 
     /**
@@ -34,7 +36,16 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'description' => 'required'
+        ]);
+
+        // Create Comment
+        $comment = new Comment();
+        $comment->description = $request->input('description');
+        $comment->save();
+
+        return redirect('/comments')->with('success', 'Commentaire créé');
     }
 
     /**
@@ -45,7 +56,8 @@ class CommentsController extends Controller
      */
     public function show($id)
     {
-        //
+        $comment = Comment::find($id);
+        return view('comments.show')->with('comment', $comment);
     }
 
     /**
@@ -56,7 +68,8 @@ class CommentsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comment = Comment::find($id);
+        return view('comments.edit')->with('comment', $comment);
     }
 
     /**
@@ -68,7 +81,16 @@ class CommentsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'description' => 'required'
+        ]);
+
+        // Create Comment
+        $comment = Comment::find($id);
+        $comment->description = $request->input('description');
+        $comment->save();
+
+        return redirect('/comments')->with('success', 'Commentaire mis à jour');
     }
 
     /**
@@ -79,6 +101,8 @@ class CommentsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comment = Comment::find($id);
+        $comment->delete();
+        return redirect('/comments')->with('sucess', 'Commentaire supprimé');
     }
 }

@@ -7,10 +7,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Image extends Model
 {
-    use SoftDelets;
+    use SoftDeletes;
 
     public function products()
     {
         return $this->belongstoMany(Image::class, 'image_product');
+    }
+
+    // Images
+    public function events(){
+        return $this->hasOne('App\Event');
     }
 }
