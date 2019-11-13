@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Idea;
 
-class ideasController extends Controller
+class IdeasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ideasController extends Controller
      */
     public function index()
     {
-        $ideas = Idea::orderBy('idea_id', 'desc')->get();
+        $ideas = Idea::orderBy('id', 'desc')->get();
         return view('ideas.index')->with('ideas', $ideas);
     }
 

@@ -16,8 +16,10 @@ class CreateCommentsTable extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('comment_nt');
             $table->boolean('is_flagged')->default(false);
+            $table->string('description');
             $table->integer('image_id')->unsigned()->nullable();
-            $table->integer('event_id')->unsigned();
+            $table->integer('event_id')->unsigned()->nullable();
+            $table->integer('product_id')->unsigned()->nullable();
             $table->integer('author')->unsigned();
             $table->timestamps();
             $table->softDeletes();
@@ -25,6 +27,7 @@ class CreateCommentsTable extends Migration
             //FOREIGN KEY CONSTRAINTS
             $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
             $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->foreign('author')->references('id')->on('users')->onDelete('cascade');
         });
     }
