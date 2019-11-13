@@ -15,17 +15,6 @@ class User extends Authenticatable
     use Notifiable;
     use SoftDeletes;
     use HasPermissionsTrait;
-
-        public function centers(){
-
-            return $this->belongsToMany('App\Center');
-        }
-
-        /*public function roles(){
-
-            return $this->belongsToMany(Role::class);
-            
-        }*/
     
     /**
      * The attributes that are mass assignable.
@@ -55,17 +44,87 @@ class User extends Authenticatable
     {
         return $this->belongstoMany(Permission::class, 'permission_user');
     }
-
+    
     public function adresses()
     {
-        return $this->belongstoMany(Permission::class, 'permission_user');
+        return $this->belongsToMany('App\Adress', 'user_adresses')
+        ->withPivot('is_primary');
     }
 
-    public function comments(){
+    public function center()
+    {
+        return $this->belongsTo('App\Center');
+    }
+
+    public function profile()
+    {
+        return $this->belongsTo('App\Image', 'image_profile');
+    }
+
+    public function tickets()
+    {
+        return $this->hasMany('App\Ticket');
+    }
+
+    public function visits()
+    {
+        return $this->hasMany('App\Visit');
+    }
+
+    public function carts()
+    {
+        return $this->hasMany('App\Cart');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany('App\Review', 'author');
+    }
+
+    public function eventsCreated()
+    {
+        return $this->hasMany('App\Event', 'creator');
+    }
+
+    public function comments()
+    {
         return $this->hasMany('App\Comment', 'author');
     }
 
-    public function events(){
-        return $this->hasMany('App\Event', 'creator');
+    public function commentLikes()
+    {
+        return $this->hasMany('App\CommentLike');
     }
+
+    public function likedComments()
+    {
+        return $this->belongsToMany('App\Comment', 'comment_likes');
+    }
+
+    public function eventLikes()
+    {
+        return $this->hasMany('App\EventLike');
+    }
+
+    public function likedEvents()
+    {
+        return $this->belongsToMany('App\Event', 'event_likes');
+    }
+
+    public function eventParticipants()
+    {
+        return $this->hasMany('App\EventParticipant');
+    }
+
+    public function participatedEvents()
+    {
+        return $this->belongsToMany('App\Event', 'event_participants')
+        ->withPivot('status');
+    }
+
 }

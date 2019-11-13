@@ -18,6 +18,7 @@ class CreateEventLikesTable extends Migration
             $table->integer('event_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->timestamps();
+            $table->softDeletes();
         
             //FOREIGN KEY CONSTRAINTS
             $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');

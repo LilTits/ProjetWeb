@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Visit extends Model
 {
     use SoftDeletes;
+
+    public function visitor()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
+

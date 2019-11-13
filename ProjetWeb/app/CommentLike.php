@@ -5,13 +5,16 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Ticket extends Model
+class CommentLike extends Model
 {
     use SoftDeletes;
 
-    public function image()
+    // Table name
+    protected $table = 'comment_likes';
+
+    public function comment()
     {
-        return $this->belongsTo('App\Image');
+        return $this->belongsTo('App\Comment');
     }
 
     public function user()
@@ -19,4 +22,3 @@ class Ticket extends Model
         return $this->belongsTo('App\User');
     }
 }
-
