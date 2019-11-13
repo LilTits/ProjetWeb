@@ -11,9 +11,9 @@
                 <div class="card-body">
                     <p class="card-text">{{$comment->description}}</p>
                     <br>
-                    <small>Ajouté le {{$comment->created_at}}</small>
+                    <small>Ajouté le {{$comment->created_at}} by {{$comment->user->first_name}} {{$comment->user->last_name}} </small>
                 </div>
-                <a href="/comments/{{$comment->id}}/edit" class="btn btn-primary">Edition</a>
+                <a href="/comments/{{$comment->id}}edit" class="btn btn-primary">Edition</a>
                 {!!Form::open(['action' => ['CommentsController@destroy', $comment->id], 'method' => 'POST'])!!}
                     {{Form::hidden('_method', 'DELETE')}}
                     {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}

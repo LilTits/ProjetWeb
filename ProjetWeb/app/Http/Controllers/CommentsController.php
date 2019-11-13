@@ -14,7 +14,7 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        $comments = Comment::orderBy('comment_nt', 'desc')->get();
+        $comments = Comment::orderBy('id', 'desc')->get();
         return view('comments.index')->with('comments', $comments);
     }
 
@@ -43,7 +43,7 @@ class CommentsController extends Controller
         // Create Comment
         $comment = new Comment();
         $comment->description = $request->input('description');
-        $comment->author = 1;
+        $comment->author = auth()->user()->id;
         $comment->event_id = 1;
         $comment->save();
 

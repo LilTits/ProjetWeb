@@ -25,14 +25,14 @@ class CreateEventsTable extends Migration
             $table->boolean('is_flagged')->default(false);
             $table->integer('ecategory_id')->unsigned()->default(1);
             $table->integer('creator')->unsigned();
-            $table->integer('image_cover')->unsigned()->default(2);
+            $table->string('event_image');
             $table->timestamps();
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS
             $table->foreign('ecategory_id')->references('id')->on('categories')->onDelete('cascade');
             $table->foreign('creator')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('image_cover')->references('id')->on('images')->onDelete('cascade');
+            // $table->foreign('image_cover')->references('id')->on('images')->onDelete('cascade');
         });
     }
 

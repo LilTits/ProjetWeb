@@ -14,8 +14,11 @@ class Center extends Model
 
     public function users(){
 
-        return $this->belongsToMany('App\User');
+        return $this->hasMany('App\User');
     }
 
-   
+    public function adress()
+    {
+        return $this->belongsTo('App\Adress');
+    }
 }

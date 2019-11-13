@@ -32,4 +32,24 @@ class Product extends Model
     {
         return $this->belongstoMany(Image::class, 'image_product');
     }
+
+    public function reviews()
+    {
+        return $this->hasMany('App\Review');
+    }
+
+    public function size()
+    {
+        return $this->belongsTo('App\Size');
+    }
+
+    public function color()
+    {
+        return $this->belongsTo('App\Color');
+    }
+
+    public function type()
+    {
+        return $this->belongsTo('App\ProductType', 'ptype_id');
+    }
 }

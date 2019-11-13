@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventParticipantsTable extends Migration
+class CreateUserAdressesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,17 @@ class CreateEventParticipantsTable extends Migration
      */
     public function up()
     {
-        Schema::create('event_participants', function (Blueprint $table) {
+        Schema::create('user_adresses', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('event_id')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->enum('status', ['going','busy','undecided','orginizer'])->default('undecided');
+            $table->integer('adress_id')->unsigned();
+            $table->Boolean('is_primary');
             $table->timestamps();
             $table->softDeletes();
-        
+           
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('adress_id')->references('id')->on('adresses')->onDelete('cascade');
         });
     }
 
@@ -34,6 +34,6 @@ class CreateEventParticipantsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('event_participants');
+        Schema::dropIfExists('user_adresses');
     }
 }

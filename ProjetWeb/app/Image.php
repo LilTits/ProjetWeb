@@ -14,8 +14,28 @@ class Image extends Model
         return $this->belongstoMany(Image::class, 'image_product');
     }
 
-    // Images
-    public function events(){
-        return $this->hasOne('App\Event');
+    public function tickets()
+    {
+        return $this->hasMany('App\Ticket');
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany('App\Review');
+    }
+
+    public function events()
+    {
+        return $this->hasMany('App\Event', 'image_cover');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
+    public function ideas()
+    {
+        return $this->hasMany('App\idea');
     }
 }

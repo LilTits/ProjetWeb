@@ -19,8 +19,8 @@ class CreateOrderProductTable extends Migration
             $table->integer('product_id')->unsigned();
         
          //FOREIGN KEY CONSTRAINTS
-            $table->foreign('order_id')->references('order_id')->on('orders')->onDelete('cascade');
-            $table->foreign('product_id')->references('product_id')->on('products')->onDelete('cascade');
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
          
         //SETTING THE PRIMARY KEYS
             $table->primary(['order_id','product_id']);
