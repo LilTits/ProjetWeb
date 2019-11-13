@@ -37,13 +37,13 @@ class User extends Authenticatable
 
     public function roles()
     {
-        return $this->belongstoMany(Role::class, 'role_user');
+        return $this->belongsTo('App\Role', 'role_id');
     }
 
     public function rolesName()
     {
-        return $this->belongstoMany(Role::class)
-        ->selectRaw('roles.name');
+        return $this->belongstoMany(Role::class);
+        //->selectRaw('roles.name');
     }
 
     public function permissions()

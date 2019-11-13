@@ -23,6 +23,9 @@
         <li class="nav-item">
           <a class="nav-link" href="/ideas">Boite à idées</a>
         </li>
+         
+        
+        
       </ul>
       @guest
       <!--When no session-->
@@ -32,6 +35,8 @@
         @auth                                                                              <!--When session-->
           
         <a href="/deconnexion" button class="btn btn-primary">Déconnexion</a>
+        
+          <a class="nav-link">Bonjour {{Auth::user()->first_name}}</a>
         
         @endauth
         @auth 

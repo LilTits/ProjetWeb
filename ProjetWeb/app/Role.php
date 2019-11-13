@@ -9,13 +9,16 @@ class Role extends Model
 {
     use SoftDeletes;
 
+    // Primary Key
+    protected $primaryKey = 'id';
+
     public function permissions()
     {
         return $this->belongstoMany(Permission::class, 'permission_role');
     }
 
-    public function users()
-    {
-        return $this->belongstoMany(User::class, 'role_user');
+    public function users(){
+
+        return $this->hasMany('App\User');
     }
 }
