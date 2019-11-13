@@ -11,4 +11,15 @@ class Adress extends Model
 
     // Table Name
     protected $table = 'adresses';
+
+    public function centers()
+    {
+        return $this->hasMany('App\Center');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
+    
 }

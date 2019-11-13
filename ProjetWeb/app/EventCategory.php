@@ -11,4 +11,9 @@ class Event_category extends Model
 
     // Table name
     protected $table = 'event_categories';
+
+    public function events()
+    {
+        return $this->hasMany('App\Event', 'ecategory_id');
+    }
 }

@@ -18,8 +18,18 @@ class Event extends Model
     // Timestamps
     public $timestamps = true;
 
-    public function images()
+    public function cover()
     {
         return $this->belongsTo('App\Image', 'image_cover');
+    }
+
+    public function creator()
+    {
+        return $this->belongsTo('App\User', 'creator');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo('App\EventCategory', 'ecategory_id');
     }
 }

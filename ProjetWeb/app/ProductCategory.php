@@ -11,4 +11,9 @@ class Product_Category extends Model
 
     // Table name
     protected $table = 'product_categories';
+
+    public function types()
+    {
+        return $this->hasMany('App\ProductType', 'pcategory_id');
+    }
 }

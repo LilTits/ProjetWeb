@@ -32,9 +32,24 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/users', 'UtilisateurController');
 
 //Route to database
-Route::resource('products', 'ProductsController');
-//Route::resource('products', 'ProductTypesController');
+Route::resource('Adresses', 'AdressesController');
+Route::resource('carts', 'CartsController');
+Route::resource('centers', 'CentersController');
+Route::resource('comment_likes', 'CommentLikesController');
+Route::resource('comments', 'CommentsController');
+Route::resource('event_categories', 'EventCategoriesController');
+Route::resource('event_likes', 'EventLikesController');
+Route::resource('event_participants', 'EventParticipantsController');
 Route::resource('events', 'EventsController');
 Route::resource('ideas', 'IdeasController');
-Route::resource('comments', 'CommentsController');
-
+Route::resource('images', 'ImagesController');
+Route::resource('orders', 'OrdersController');
+Route::resource('permissions', 'PermissionsController');
+Route::resource('product_categories', 'ProductCategoriesController');
+Route::resource('products', 'ProductsController');
+Route::resource('product_types', 'ProductTypesController');
+Route::resource('reviews', 'ReviewsController');
+Route::resource('roles', 'RolesController');
+Route::resource('tickets', 'TicketsController');
+Route::resource('users', 'UsersController');
+Route::resource('visits', 'VisitsController');

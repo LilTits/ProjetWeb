@@ -8,13 +8,23 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class ProductType extends Model
 {
     use SoftDeletes;
+    public $timestamps = true;
 
     // Table Name
     protected $table = 'product_types';
-
     // Primery key
+
     public $primaryKey = 'id';
 
     // Timestamps
-    public $timestamps = true;
+
+    public function products()
+    {
+        return $this->hasMany('App\Product', 'ptype_id');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo('App\ProductCategory', 'pcategory_id');
+    }
 }

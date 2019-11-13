@@ -18,17 +18,6 @@ class User extends Authenticatable
 
     // Primary Key
     protected $primaryKey = 'id';
-
-        public function centers(){
-
-            return $this->belongsToMany('App\Center');
-        }
-
-        /*public function roles(){
-
-            return $this->belongsToMany(Role::class);
-            
-        }*/
     
     /**
      * The attributes that are mass assignable.
@@ -62,5 +51,45 @@ class User extends Authenticatable
     public function adresses()
     {
         return $this->belongstoMany(Permission::class, 'permission_user');
+    }
+
+    public function center()
+    {
+        return $this->belongsTo('App\Center');
+    }
+
+    public function profile()
+    {
+        return $this->belongsTo('App\Image', 'image_profile');
+    }
+
+    public function tickets()
+    {
+        return $this->hasMany('App\Ticket');
+    }
+
+    public function visits()
+    {
+        return $this->hasMany('App\Visit');
+    }
+
+    public function carts()
+    {
+        return $this->hasMany('App\Cart');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany('App\Review', 'author');
+    }
+
+    public function events()
+    {
+        return $this->hasMany('App\Event', 'creator');
     }
 }
