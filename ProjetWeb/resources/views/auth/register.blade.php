@@ -79,7 +79,7 @@
                             <div class="col-md-6">
                             <select id="campus" type="text" class="form-control" size= 1 name="campus" required>
 
-                                <option  value="1">Aix-En-Provence</option>
+                                <option value="1">Aix-En-Provence</option>
                                 <option value="2">Angoulême</option>
                                 <option value="3">Arras</option>
                                 <option value="4">Bordeaux</option>
