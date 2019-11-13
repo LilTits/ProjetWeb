@@ -77,9 +77,9 @@
                             <label for="campus" class="col-md-4 control-label">Campus</label>
 
                             <div class="col-md-6">
-                            <select id="campus" type="text" class="form-control" size= 2 name="campus" required>
+                            <select id="campus" type="text" class="form-control" size= 1 name="campus" required>
 
-                                <option value="1">Aix-En-Provence</option>
+                                <option  value="1">Aix-En-Provence</option>
                                 <option value="2">Angoulême</option>
                                 <option value="3">Arras</option>
                                 <option value="4">Bordeaux</option>
@@ -103,7 +103,7 @@
                                 <option value="22">Rouen</option>
                                 <option value="23">Saint-Nazaire</option>
                                 <option value="24">Strasbourg</option>
-                                <option value="25">Toulouse</option>
+                                <option selected="yes" value="25">Toulouse</option>
                             </select>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="mentions" value="1"> Accepter les mentions légales
+                                        <input type="checkbox" name="mentions" value="1"><a href="/legale">Accepter les mentions légales</a>
                                     </label>
                                 </div>
                             </div>

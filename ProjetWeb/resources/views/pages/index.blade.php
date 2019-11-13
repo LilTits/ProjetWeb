@@ -1,5 +1,6 @@
 @extends('layout.app')
 
+
 @section('content')
 <!-- Start of index section -->
 <section id="welcome">
@@ -10,7 +11,7 @@
             <p class="description_index">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui impedit quisquam,
                 excepturi necessitatibus
                 doloremque soluta nemo in ipsum est voluptates vel ipsa expedita natus harum, voluptas ab quibusdam,
-                provident molestias autem non! Error odio modi quidem, odit ducimus eligendi illo.</p>
+                provident molestias autem non! Error odio modi quidem, odit ducimus eligendi illo.</br><a  href="img.jpg" download>Télécharger les photos</a></p>
         </div>
     </div>
     <section id="image_header" class="container">
@@ -21,5 +22,6 @@
         </div>
     </section>
 </section>
+
 <!-- End of index section -->
 @endsection
