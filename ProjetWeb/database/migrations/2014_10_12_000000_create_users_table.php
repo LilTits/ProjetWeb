@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->unsignedDecimal('wallet_amount', 15, 2)->default(0);
-            $table->integer('center_id')->unsigned()->nullable();
+            $table->integer('center_id')->unsigned();
             $table->integer('image_profile')->unsigned()->default(1);
             $table->rememberToken();
             $table->timestamps();
@@ -28,8 +28,8 @@ class CreateUsersTable extends Migration
 
 
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('center_id')->references('center_id')->on('centers')->onDelete('cascade');
-            $table->foreign('image_profile')->references('image_id')->on('images')->onDelete('cascade');
+            $table->foreign('center_id')->references('id')->on('centers')->onDelete('cascade');
+            $table->foreign('image_profile')->references('id')->on('images')->onDelete('cascade');
 
         });
     }

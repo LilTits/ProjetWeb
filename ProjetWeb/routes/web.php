@@ -56,4 +56,4 @@ Route::resource('visits', 'VisitsController');
 Route::resource('perso', 'PersoController');
 
 //});
->>>>>>>>> Temporary merge branch 2
+//>>>>>>>>> Temporary merge branch 2
