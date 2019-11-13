@@ -14,8 +14,8 @@ class ProductTypesController extends Controller
      */
     public function index()
     {
-        $product = ProductType::orderBy('id', 'desc')->get();
-        return view('products.index')->with('products', $product);
+        $products = ProductType::orderBy('id', 'desc')->get();
+        return view('products.index')->with('products', $products);
     }
 
     /**
@@ -43,7 +43,7 @@ class ProductTypesController extends Controller
 
         // Create Product
         $product = new ProductType();
-        $product->title = $request->input('title');
+        $product->name = $request->input('name');
         $product->description = $request->input('description');
         $product->save();
 
@@ -58,7 +58,7 @@ class ProductTypesController extends Controller
      */
     public function show($id)
     {
-        $product =  ProductType::find($id);
+        $product = ProductType::find($id);
         return view('products.show')->with('product', $product);
     }
 
@@ -84,15 +84,13 @@ class ProductTypesController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'price' => 'required',
-            'stock' => 'required',
+            'name' => 'required',
             'description' => 'required'
         ]);
 
         // Create Product
         $product = ProductType::find($id);
-        $product->title = $request->input('title');
+        $product->name = $request->input('name');
         $product->description = $request->input('description');
         $product->save();
 
