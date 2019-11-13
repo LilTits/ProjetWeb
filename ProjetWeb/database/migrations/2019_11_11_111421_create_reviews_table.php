@@ -26,7 +26,7 @@ class CreateReviewsTable extends Migration
             //FOREIGN KEY CONSTRAINTS
             $table->foreign('author')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->foreign('image_id')->references('_id')->on('images')->onDelete('cascade');
+            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
         });
     }
 

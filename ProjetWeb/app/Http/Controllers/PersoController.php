@@ -3,23 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use Illuminate\Support\Facades\Auth;
 
-class UtilisateurController extends Controller
+class PersoController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        $users = Center::where('center_id', Auth::user()->center_id)->first();
-
-      
-           
-        
+    {
+        return view('perso.index');
     }
 
     /**

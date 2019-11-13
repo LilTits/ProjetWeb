@@ -23,7 +23,7 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/basket', 'PagesController@basket');
 Route::get('/legale', 'PagesController@legale');
 Route::get('/deconnexion', 'PagesController@deconnexion');
-Route::get('/perso', 'PagesController@perso');
+Route::get('/perso', 'PagesController@perso')->middleware('App\Http\Middleware\Auth');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -53,3 +53,7 @@ Route::resource('roles', 'RolesController');
 Route::resource('tickets', 'TicketsController');
 Route::resource('users', 'UsersController');
 Route::resource('visits', 'VisitsController');
+Route::resource('perso', 'PersoController');
+
+//});
+//>>>>>>>>> Temporary merge branch 2

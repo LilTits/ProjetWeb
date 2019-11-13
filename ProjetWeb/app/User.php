@@ -40,6 +40,12 @@ class User extends Authenticatable
         return $this->belongstoMany(Role::class, 'role_user');
     }
 
+    public function rolesName()
+    {
+        return $this->belongstoMany(Role::class)
+        ->selectRaw('roles.name');
+    }
+
     public function permissions()
     {
         return $this->belongstoMany(Permission::class, 'permission_user');
@@ -51,9 +57,9 @@ class User extends Authenticatable
         ->withPivot('is_primary');
     }
 
-    public function center()
+    public function centers()
     {
-        return $this->belongsTo('App\Center');
+        return $this->belongsTo('App\Center', 'center_id');
     }
 
     public function profile()

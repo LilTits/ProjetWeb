@@ -19,8 +19,8 @@ class CreateCartProductTable extends Migration
             $table->integer('product_id')->unsigned();
         
          //FOREIGN KEY CONSTRAINTS
-            $table->foreign('cart_id')->references('cart_id')->on('carts')->onDelete('cascade');
-            $table->foreign('product_id')->references('product_id')->on('products')->onDelete('cascade');
+            $table->foreign('cart_id')->references('id')->on('carts')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
          
         //SETTING THE PRIMARY KEYS
             $table->primary(['cart_id','product_id']);

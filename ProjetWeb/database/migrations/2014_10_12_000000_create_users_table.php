@@ -28,8 +28,8 @@ class CreateUsersTable extends Migration
 
 
             //FOREIGN KEY CONSTRAINTS
-            $table->foreign('center_id')->references('center_id')->on('centers')->onDelete('cascade');
-            $table->foreign('image_profile')->references('image_id')->on('images')->onDelete('cascade');
+            $table->foreign('center_id')->references('id')->on('centers')->onDelete('cascade');
+            $table->foreign('image_profile')->references('id')->on('images')->onDelete('cascade');
 
         });
     }
