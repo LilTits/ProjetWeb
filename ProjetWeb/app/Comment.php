@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Comment extends Model
 {
-     use SoftDeletes;
+    use SoftDeletes;
      
     //Table name
     protected $table = 'comments';
