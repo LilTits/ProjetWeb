@@ -13,7 +13,7 @@
     <li class="list-group-item">{{Auth::user()->email}}</li>
     <li class="list-group-item">Votre solde : {{Auth::user()->wallet_amount}} €</li>
     <li class="list-group-item">Votre campus : {{Auth::user()->centers->name}}</li>
-    <li class="list-group-item">Votre role : {{Auth::user()->roles->first()->name}}</li>
+    <li class="list-group-item">Votre role : {{Auth::user()->roles->name}}</li>
   </ul>
   <div class="card-body">
     <a href="#" class="card-link">Card link</a>
@@ -22,8 +22,22 @@
 </div>
 
 <!--If admin-->
-@include('perso.bde')
 
+@if(Auth::user()->role_id == 2)
+@include('perso.user')
+@endif
+
+@if(Auth::user()->role_id == 3)
+@include('perso.admin')
+@endif
+
+@if(Auth::user()->role_id == 4)
+@include('perso.bde')
+@endif
+
+@if(Auth::user()->role_id == 5)
+@include('perso.cesi')
+@endif
 
 
 @endsection
