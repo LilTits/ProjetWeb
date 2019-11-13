@@ -46,7 +46,30 @@ class EventsController extends Controller
         ]);
 
         // Images upload
+        if ($request->hasFile('event_image')) {
+            
+            // Get image name with his extension
+            $fileNameWithExt = $request->file('event_image')->getClientOriginalName();
+            
+            // Get just the name of the image
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            
+            // Get just the extension
+            $ext = $request->file('event_image')->getClientOriginalExtension();
+            
+            // Name of the image to store in the db
+            $fileNameToStore = $fileName.'_'.time().'.'.$ext;
 
+            // Upload the image
+            $path = $request->file('event_image')->storeAs('public/events', $fileNameToStore);
+
+            // Path of event images
+            // $eventPath = 'public/events';
+            // $x = $eventPath + $fileNameToStore;
+
+        }   else {
+            $fileNameToStore = 'therock.jpg';
+        }
 
         // Create Event
         $event = new Event();
@@ -56,6 +79,7 @@ class EventsController extends Controller
         $event->start_date = $request->input('start_date');
         $event->creator = auth()->user()->id;
         $event->end_date = $request->input('end_date');
+        $event->event_image = $fileNameToStore;
         $event->save();
 
         return redirect('/events')->with('success', 'Evènement créé');
@@ -102,6 +126,29 @@ class EventsController extends Controller
             'end_date' => 'required'
         ]);
 
+        // Images upload
+        if ($request->hasFile('event_image')) {
+            
+            // Get image name with his extension
+            $fileNameWithExt = $request->file('event_image')->getClientOriginalName();
+            
+            // Get just the name of the image
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            
+            // Get just the extension
+            $ext = $request->file('event_image')->getClientOriginalExtension();
+            
+            // Name of the image to store in the db
+            $fileNameToStore = $fileName.'_'.time().'.'.$ext;
+
+            // Upload the image
+            $path = $request->file('event_image')->storeAs('public/events', $fileNameToStore);
+
+            // Path of event images
+            // $eventPath = 'public/events';
+            // $x = $eventPath + $fileNameToStore;
+        }
+
         // Create Event
         $event = Event::find($id);
         $event->name = $request->input('name');
@@ -109,6 +156,9 @@ class EventsController extends Controller
         $event->description = $request->input('description');
         $event->start_date = $request->input('start_date');
         $event->end_date = $request->input('end_date');
+        if ($request->hasFile('event_image')) {
+            $event->event_image = $fileNameToStore;
+        }
         $event->save();
 
         return redirect('/events')->with('success', 'Evènement mis à jour');
