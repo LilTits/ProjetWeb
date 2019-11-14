@@ -26,6 +26,10 @@
                     ])}}
                     </div>
                     <div class="form-group">
+                        {{Form::label('nb_people', 'Nombre de places disponible')}}
+                        {{Form::number('nb_people', $event->nb_people, [ 'class' => 'form-control' ])}}
+                    </div>
+                    <div class="form-group">
                         {{Form::label('start_date', 'Date de début')}}
                         {{Form::date('start_date', \Carbon\Carbon::now())}}
                     </div>

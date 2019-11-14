@@ -40,6 +40,7 @@ class EventsController extends Controller
             'name' => 'required',
             'price' => 'required',
             'description' => 'required',
+            'nb_people' => 'required',
             'start_date' => 'required',
             'end_date' => 'required',
             'event_image' => 'image|nullable|max:1999'
@@ -76,6 +77,7 @@ class EventsController extends Controller
         $event->name = $request->input('name');
         $event->price = $request->input('price');
         $event->description = $request->input('description');
+        $event->nb_people = $request->input('nb_people');
         $event->start_date = $request->input('start_date');
         $event->creator = auth()->user()->id;
         $event->end_date = $request->input('end_date');
@@ -154,6 +156,7 @@ class EventsController extends Controller
         $event->name = $request->input('name');
         $event->price = $request->input('price');
         $event->description = $request->input('description');
+        $event->nb_people = $request->input('nb_people');
         $event->start_date = $request->input('start_date');
         $event->end_date = $request->input('end_date');
         if ($request->hasFile('event_image')) {
