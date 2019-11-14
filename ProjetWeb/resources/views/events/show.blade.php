@@ -6,7 +6,7 @@
     <div class="event_section container">
         <a href="/events" class="btn btn-default">Retour en arrière</a>
         <div class="col-12 item_event">
-            <img src="img/iphonex.png" class="card-img-top img-thumbnail image_event" alt="event">
+            <img src="/storage/events/{{$event->event_image}}" class="card-img-top img-thumbnail image_event" alt="event">
             <small class="card-body">
                 <h5 class="card-title">{{$event->title}}</h5>
                 <h6 class="price">{{$event->price}}</h6>
