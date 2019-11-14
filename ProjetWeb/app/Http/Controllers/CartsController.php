@@ -36,6 +36,14 @@ class CartsController extends Controller
      */
     public function store(Request $request)
     {
+        $duplicateItems = Cart::search(function ($cardItem, $rowId) use ($request){
+            return $cardItem->id === $request->id;
+        });
+
+        if ($duplicateItems->isNotEmpty()) {
+            return redirect()->route('carts.index')->with('success', 'Le produit est déjà dans le panier');
+        }
+
         // Cart::add($request->id, $request->name, 1, $request->price, $request->product_image)->associate('App\ProductType');
         Cart::add($request->id, $request->name, 1, $request->price)->associate('App\ProductType');
 
