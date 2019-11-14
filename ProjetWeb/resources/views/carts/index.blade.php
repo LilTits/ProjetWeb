@@ -15,7 +15,7 @@
                     @foreach ($cart as $product)
                     @if ($product->user_id == auth()->user()->id)
                     <li class="list-group-item">
-                        <div class="card mb-3"">
+                        <div class="card mb-3"    >
                             <div class=" row no-gutters">
                                 <div class="col-6">
                                     <h5 class="card-title">{{$product->id}}</h5>

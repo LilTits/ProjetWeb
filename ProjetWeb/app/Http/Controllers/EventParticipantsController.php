@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\EventParticipant;
 
-class Event_ParticipantsController extends Controller
+class EventParticipantsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +14,25 @@ class Event_ParticipantsController extends Controller
      */
     public function index()
     {
-        //
+        $event_participants = EventParticipant::all();
+        return view('participants.index')->with('event_participants', $event_participants);
     }
 
+    public function participants(Request $request) {
+
+        $this->validate($request, [
+            'id' => 'required'
+        ]);
+
+        $event_participants = new EventParticipant();
+        $event_participants->user_id = auth()->user()->id;
+        $event_participants->event_id = $request->input('id');
+        $event_participants->save();
+        // $event_participants = EventParticipant::where('event_id', $request)->get();
+
+        // return view('participants.index')->with('event_participants', $event_participants);
+        return redirect()->route('events.index')->with('success', 'Inscription réussie');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -34,7 +51,17 @@ class Event_ParticipantsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'event_id' => 'required',
+            'user_id' => 'required'
+        ]);
+
+        $event_participants = new EventParticipant();
+        $event_participants->user_id = auth()->user()->id;
+        $event_participants->event_id = $request->input('id');
+        $event_participants->save();
+
+        return redirect('/events')->with('success', 'Commentaire créé');
     }
 
     /**
