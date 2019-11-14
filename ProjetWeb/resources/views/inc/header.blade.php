@@ -24,7 +24,16 @@
 <!-- Début header -->
 <header>
   <nav id="navigation" class="navbar navbar-expand-md navbar-dark mb-4">
-  <a class="navbar-brand" href="{{route('products.basket')}}">Panier <span class="badge">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span></a>
+  <a class="navbar-brand" href="{{route('carts.index')}}">
+    <span class="badge">
+        @if (Cart::instance('default')->count() >0)
+        
+        @endif
+        <span>{{Cart::instance('default')->count()}}</span>
+    </span>
+    {{-- Panier <span class="badge">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span> --}}
+    panier
+  </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
       aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -49,7 +58,7 @@
   Launch demo modal
 </button>-->
         </li>
-         
+        
         
         
       </ul>
@@ -66,7 +75,7 @@
         
         @endauth
         @auth 
-                                                       <!--Only admin can make a product-->
+        <!--Only admin can make a product-->
       <ul class="navbar-nav navbar-right">
         <li><a class="nav-link" href="/products/create">Créer un produit</a></li>
         <li><a class="nav-link" href="/events/create">Créer un event</a></li>

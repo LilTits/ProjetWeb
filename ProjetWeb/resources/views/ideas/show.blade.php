@@ -33,28 +33,11 @@
             <small>Ajouté le {{$comment->created_at}}</small>
             <hr>
             <a href="/comments/{{$comment->comment_id}}/edit" class="btn">Edition</a>
-            {!!Form::open(['action' => ['CommentsController@destroy', $comment->comment_id], 'method' => 'POST'])!!}
+            {!!Form::open(['action' => ['CommentsController@destroy', $comment->id], 'method' => 'POST'])!!}
                 {{Form::hidden('_method', 'DELETE')}}
                 {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
             {!!Form::close()!!}
         </div>
-        <hr>
-        <section id="comments">
-            <ul class="list-group">
-                <div class="card-block">
-                    {!! Form::open(['action' => 'CommentsController@store', 'method' => 'POST']) !!}
-                    <div class="form-group">
-                        {{Form::label('description', 'Description')}}
-                        {{Form::textarea('description', '', [
-                            'class' => 'form-control',
-                            'placeholder' => 'Votre commentaire'
-                        ])}}
-                    </div>
-                    {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
-                    {!! Form::close() !!}
-                </div>
-            </ul>
-        </section>
     </div>
 </section>
 <!-- End of idea section -->
