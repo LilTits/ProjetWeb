@@ -20,9 +20,9 @@ class Product extends Model
     
     public function carts()
     {
-        return $this->belongstoMany(Cart::class, 'cart_product');
+        return $this->hasMany('App\Cart');
     }
-
+    
     public function orders()
     {
         return $this->belongstoMany(Order::class, 'order_product');
