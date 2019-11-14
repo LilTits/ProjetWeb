@@ -1,7 +1,7 @@
 <!-- Début header -->
 <header>
   <nav id="navigation" class="navbar navbar-expand-md navbar-dark mb-4">
-    <a class="navbar-brand" href="/basket">Panier</a>
+  <a class="navbar-brand" href="{{route('products.basket')}}">Panier <span class="badge">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
       aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
