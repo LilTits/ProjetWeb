@@ -14,7 +14,7 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        $comments = Comment::orderBy('comment_nt', 'desc')->get();
+        $comments = Comment::orderBy('id', 'desc')->get();
         return view('comments.index')->with('comments', $comments);
     }
 
