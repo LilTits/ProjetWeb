@@ -19,7 +19,7 @@ class CreateProductTypesTable extends Migration
             $table->string('description');
             $table->unsignedDecimal('price', 15, 2);
             $table->unsignedInteger('stock');
-            $table->string('product_image')->default('img/therock.jpg');
+            $table->string('product_image')->default('therock.jpg');
             $table->unsignedTinyInteger('sale_percentage')->default(0);
             $table->integer('pcategory_id')->unsigned()->default(1);
             $table->timestamps();
