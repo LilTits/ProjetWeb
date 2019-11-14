@@ -43,6 +43,7 @@ class ProductTypesController extends Controller
             'description' => 'required',
             'price' => 'required',
             'stock' => 'required',
+            'pcategory_id' => 'required',
             'event_image' => 'image|nullable|max:1999'
         ]);
 
@@ -78,6 +79,7 @@ class ProductTypesController extends Controller
         $product->description = $request->input('description');
         $product->price = $request->input('price');
         $product->stock = $request->input('stock');
+        $product->pcategory_id = $request->input('pcategory_id');
         $product->product_image = $fileNameToStore;
         $product->save();
 
@@ -122,6 +124,7 @@ class ProductTypesController extends Controller
             'description' => 'required',
             'price' => 'required',
             'stock' => 'required',
+            'pcategory_id' => 'required',
             'event_image' => 'image|nullable|max:1999'
         ]);
 
@@ -155,6 +158,7 @@ class ProductTypesController extends Controller
         $product->description = $request->input('description');
         $product->price = $request->input('price');
         $product->stock = $request->input('stock');
+        $product->pcategory_id = $request->input('pcategory_id');
         if ($request->hasFile('event_image')) {
             $product->product_image = $fileNameToStore;
         }

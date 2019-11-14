@@ -9,6 +9,7 @@
             <img src="/storage/products/{{$product->product_image}}" class="card-img-top img-thumbnail image_product" alt="Product">
             <small class="card-body">
                 <h5 class="card-title">{{$product->name}}</h5>
+                <p class="card-text">{{$product->category->name}}</p>
                 <p class="card-text">{{$product->description}}</p>
             </small>
         </div>
