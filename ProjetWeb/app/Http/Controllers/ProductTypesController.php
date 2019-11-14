@@ -180,33 +180,33 @@ class ProductTypesController extends Controller
      * Add product to the shopping cart
      */
 
-    public function getAddToCart(Request $request, $id) {
-        $product = ProductType::find($id);
-        $oldCart = Session::has('cart') ? Session::get('cart') : null;
-        $cart = new Cart($oldCart);
-        $cart->add($product, $product->id);
+    // public function getAddToCart(Request $request, $id) {
+    //     $product = ProductType::find($id);
+    //     $oldCart = Session::has('cart') ? Session::get('cart') : null;
+    //     $cart = new Cart($oldCart);
+    //     $cart->add($product, $product->id);
 
-        $request->session()->put('cart', $cart);
-        // dd($request->session()->get('cart'));
-        return redirect()->route('products.index');
-    }
+    //     $request->session()->put('cart', $cart);
+    //     // dd($request->session()->get('cart'));
+    //     return redirect()->route('products.index');
+    // }
 
     /**
      * Get the product cart
      */
 
-    public function getCart() {
-        if (!Session::has('cart')) {
-            return view('products.basket', ['products' => null]);
-        }
-        $oldCart = Session::get('cart');
-        $cart = new Cart($oldCart);
-        return view('products.basket', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
-    }
+    // public function getCart() {
+    //     if (!Session::has('cart')) {
+    //         return view('products.basket', ['products' => null]);
+    //     }
+    //     $oldCart = Session::get('cart');
+    //     $cart = new Cart($oldCart);
+    //     return view('products.basket', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
+    // }
 
-    public function deleteCart() {
-        $cart = Cart::all();
-        $cart->delete();
-        return view('products.basket');
-    }
+    // public function deleteCart() {
+    //     $cart = Cart::all();
+    //     $cart->delete();
+    //     return view('products.basket');
+    // }
 }
