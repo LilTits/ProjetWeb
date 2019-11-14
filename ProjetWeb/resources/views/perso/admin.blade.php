@@ -7,7 +7,8 @@
         <a button class="btn btn-primary btn-lg" href="/events/create">Créer un event</a>
         <a button class="btn btn-primary btn-lg" href="/ideas/create">Créer une idée</a>
         <a button class="btn btn-primary btn-lg" href="/comments/create">Créer un commentaire</a>
-     
+        <a button class="btn btn-primary btn-lg"  href="/emails">Envoyer un mail</a>
+        
         </div>
     </div>
     

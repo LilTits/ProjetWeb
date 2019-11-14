@@ -24,6 +24,8 @@ Route::get('/basket', 'PagesController@basket');
 Route::get('/legale', 'PagesController@legale');
 Route::get('/deconnexion', 'PagesController@deconnexion');
 Route::get('/perso', 'PagesController@perso')->middleware('App\Http\Middleware\Auth');
+Route::get('/emails', 'SendeMailController@sendemail');
+Route::get('/email', 'SendeMail@sendemail');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -54,6 +56,7 @@ Route::resource('tickets', 'TicketsController');
 Route::resource('users', 'UsersController');
 Route::resource('visits', 'VisitsController');
 Route::resource('perso', 'PersoController');
+//Route::resource('emails', 'SendeMailController@sendemail');
 
 //});
 //>>>>>>>>> Temporary merge branch 2

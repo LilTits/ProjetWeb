@@ -1,3 +1,26 @@
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cookies</h5>
+        
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Nous n'avons pas de cookies</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <a button class="btn btn-primary">Ok</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 <!-- Début header -->
 <header>
   <nav id="navigation" class="navbar navbar-expand-md navbar-dark mb-4">
@@ -21,7 +44,10 @@
           <a class="nav-link" href="/contact">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/ideas">Boite à idées</a>
+          <!--<a class="nav-link" href="/ideas">Boite à idées</a>
+          <button type="button" class="btn btn-primary" id="test1" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>-->
         </li>
          
         
