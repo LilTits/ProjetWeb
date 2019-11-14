@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="card" style="width: 18rem;">
-  <img src="{{Auth::user()->profile->image_path}}" class="card-img-top" alt="">
+  <img src="storage/{{Auth::user()->profile->image_path}}" class="card-img-top" alt="">
   <div class="card-body">
     <h5 class="card-title">{{Auth::user()->first_name}}</br>{{Auth::user()->last_name}}</h5>
     <p class="card-text"></p>
