@@ -1,6 +1,9 @@
+
+
 @extends('layout.app')
 
 @section('content')
+@auth
 <!-- Start of idea section -->
 <section id="idea">
     <div class="idea_section container">
@@ -27,5 +30,13 @@
         </div>
     </div>
 </section>
+
+@endauth
+@guest
+
+<div class="d-flex justify-content-center">@include('auth.login')</div>
+@endguest
 <!-- End of idea section -->
 @endsection
+
+

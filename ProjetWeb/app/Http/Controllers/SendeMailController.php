@@ -47,7 +47,7 @@ class SendeMailController extends Controller
             $message->subject($subject);
              });
              
-            return redirect('/')->with ('success', $user2);
+            return redirect('/')->with ('success', 'Votre Mail a bien été envoyé.');
         }
         catch (\Exception $e)
         {

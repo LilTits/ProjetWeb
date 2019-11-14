@@ -67,29 +67,24 @@
       <button class="btn btn-primary" data-toggle="modal" data-target="#popup"><a>Inscription/Connexion</a></button>
       @endguest
 
-        @auth                                                                              <!--When session-->
-          
-        <a href="/deconnexion" button class="btn btn-primary">Déconnexion</a>
         
-          <a class="nav-link">Bonjour {{Auth::user()->first_name}}</a>
-        
-        @endauth
-        @auth 
+        @auth                                                                   <!--When session-->
         <!--Only admin can make a product-->
       <ul class="navbar-nav navbar-right">
-        <li><a class="nav-link" href="/products/create">Créer un produit</a></li>
-        <li><a class="nav-link" href="/events/create">Créer un event</a></li>
-        <li><a class="nav-link" href="/ideas/create">Créer une idée</a></li>
-        <li><a class="nav-link" href="/comments/create">Créer un commentaire</a></li>
-        <li><a class="nav-link" href="/reviews/create">Créer un avis</a></li>
-      </ul>
-      
-      
-      <ul class="navbar-nav navbar-right">
+        <!-- <li><a class="nav-link" href="/products/create">Créer un produit</a></li> -->
+        <!-- <li><a class="nav-link" href="/events/create">Créer un event</a></li> -->
+        <li><a class="nav-link" href="/ideas/create">Une idée d'évènement?</a></li>
+        <li><a class="nav-link">Bonjour {{Auth::user()->first_name}} !!!</a></li>
+        <!-- <li><a class="nav-link" href="/comments/create">Créer un commentaire</a></li> -->
+        <!-- <li><a class="nav-link" href="/reviews/create">Créer un avis</a></li> -->
         <li><a class="nav-link" href="/perso">Espace personnel</a></li>
+        <li><a href="/deconnexion" button class="btn btn-primary">Déconnexion</a></li>
       </ul>
-@endauth
-
+        
+        
+          
+        
+        @endauth
     </div>
   </nav>
 

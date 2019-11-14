@@ -1,6 +1,8 @@
 @extends('layout.app')
 
 @section('content')
+
+@auth
 <!-- Start of comment section -->
 <section id="comment">
     <div class="comment_section container">
@@ -26,5 +28,10 @@
         </div>
     </div>
 </section>
+@endauth
+@guest
+
+<div class="d-flex justify-content-center">@include('auth.login')</div>
+@endguest
 <!-- End of comment section -->
 @endsection

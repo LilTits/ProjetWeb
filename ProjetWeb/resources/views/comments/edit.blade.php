@@ -2,6 +2,7 @@
 
 @section('content')
 <!-- Start of comment section -->
+@auth
 <section id="comment">
     <div class="comment_section container">
         <h3 class="title_section">Edition de votre commentaire</h3>
@@ -22,5 +23,11 @@
         </div>
     </div>
 </section>
+
+@endauth
+@guest
+
+<div class="d-flex justify-content-center">@include('auth.login')</div>
+@endguest
 <!-- End of comment section -->
 @endsection

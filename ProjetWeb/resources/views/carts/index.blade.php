@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-
+@auth
 <section id="basket" class="container">
     <div class="row">
         <div class="col-12">
@@ -54,5 +54,10 @@
     </div>
 
 </section>
+@endauth
 
+@guest
+
+<div class="d-flex justify-content-center">@include('auth.login')</div>
+@endguest
 @endsection

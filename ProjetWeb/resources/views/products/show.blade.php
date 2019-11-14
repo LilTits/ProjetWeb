@@ -16,11 +16,15 @@
         <hr>
         <small>Ajouté le {{$product->created_at}}</small>
         <hr>
+        @auth
+        @if((Auth::user()->role_id == 3) || (Auth::user()->role_id == 4))   <!--Only admin or member BBD-->
         <a href="/products/{{$product->id}}/edit" class="btn">Edition</a>
         {!!Form::open(['action' => ['ProductTypesController@destroy', $product->id], 'method' => 'POST'])!!}
             {{Form::hidden('_method', 'DELETE')}}
             {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
         {!!Form::close()!!}
+        @endif
+        @endauth
     </div>
 </section>
 <!-- End of product section -->

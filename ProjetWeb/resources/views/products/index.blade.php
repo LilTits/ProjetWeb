@@ -25,8 +25,10 @@
                             {{Form::hidden('price', $product->price)}}
                             {{Form::hidden('product_image', $product->product_image)}}
                         </div>
+                        @auth                                <!--Only auth-->
                         {{Form::submit('Ajoutez au panier', ['class' => 'btn btn-primary'])}}
                         {!! Form::close() !!}
+                        @endauth
                         <br>
                         <small>Ajouté le {{$product->created_at}}</small>
                     </div>

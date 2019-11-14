@@ -1,4 +1,4 @@
-
+@auth
 @extends('layout.app')
 
 @section('content')
@@ -42,5 +42,5 @@
 
 @endsection
 
-
+@endauth
 
