@@ -203,4 +203,10 @@ class ProductTypesController extends Controller
         $cart = new Cart($oldCart);
         return view('products.basket', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
     }
+
+    public function deleteCart() {
+        $cart = Cart::all();
+        $cart->delete();
+        return view('products.basket');
+    }
 }

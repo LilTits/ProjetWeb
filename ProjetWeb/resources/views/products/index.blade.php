@@ -15,7 +15,7 @@
                         <h5 class="card-title">{{$product->name}}</h5>
                         <p class="card-text">{{$product->price}}</p>
                         <a href="/products/{{$product->id}}" class="btn btn-primary buy_button_product">En savoir plus</a>
-                    <a href="{{ route('products.addToCart', ['id' => $product->id])}}" class="btn btn-primary buy_button_product">Ajoutez au panier</a>
+                        <a href="{{ route('products.addToCart', ['id' => $product->id])}}" class="btn btn-primary buy_button_product">Ajoutez au panier</a>
                         <br>
                         <small>Ajouté le {{$product->created_at}}</small>
                     </div>

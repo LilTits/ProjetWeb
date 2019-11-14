@@ -28,8 +28,13 @@
         <div class="col-sm-6 col-md-6">
             <p>Total : {{$totalPrice}} </p>
         </div>
-        <div class="col-sm-6 col-md-6">
-            <button class="btn btn-success">Commander</button>
+        <div class="btn-group">
+            <a href="" button class="btn btn-success">Commander</a>
+            {!!Form::open(['action' => ['ProductTypesController@deleteCart', $products->cart->item], 'method' => 'POST'])!!}
+                {{Form::hidden('_method', 'DELETE')}}
+                {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
+            {!!Form::close()!!}
+            <a href="" button class="btn btn-success">Sauvegarder le panier</a>
         </div>
     </div>
     @else

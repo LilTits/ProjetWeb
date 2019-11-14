@@ -23,7 +23,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/ideas">Boite à idées</a>
         </li>
-         
+        
         
         
       </ul>
@@ -40,7 +40,7 @@
         
         @endauth
         @auth 
-                                                       <!--Only admin can make a product-->
+        <!--Only admin can make a product-->
       <ul class="navbar-nav navbar-right">
         <li><a class="nav-link" href="/products/create">Créer un produit</a></li>
         <li><a class="nav-link" href="/events/create">Créer un event</a></li>

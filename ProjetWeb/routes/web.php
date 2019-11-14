@@ -62,6 +62,11 @@ Route::get('/addToCart/{id}', [
     'as' => 'products.addToCart'
 ]);
 
+Route::delete('/deleteCart/{id}', [
+    'uses' => 'ProductTypesController@deleteCart',
+    'as' => 'products.deleteCart'
+]);
+
 Route::get('/basket', [
     'uses' => 'ProductTypesController@getCart',
     'as' => 'products.basket'
