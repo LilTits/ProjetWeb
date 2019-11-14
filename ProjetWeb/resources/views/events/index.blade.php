@@ -18,6 +18,7 @@
                     <p class="card-text">Débute le : {{$event->start_date}}</p>
                     {{-- <p class="card-text">Et termine le : {{$event->end_date}}</p> --}}
                     <a href="/events/{{$event->id}}" class="btn btn-primary buy_button_event">En savoir plus</a>
+                    <a href="" class="btn btn-primary buy_button_event">S'inscrire</a>
                     <hr>
 
                     <small>Ajouté le {{$event->created_at}} by {{$event->eventCreator->first_name}}
