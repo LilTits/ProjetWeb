@@ -17,6 +17,8 @@ class CreateOrderProductTable extends Migration
         {
             $table->integer('order_id')->unsigned();
             $table->integer('product_id')->unsigned();
+            $table->integer('qty')->unsigned();
+
         
          //FOREIGN KEY CONSTRAINTS
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
