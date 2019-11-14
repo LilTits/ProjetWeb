@@ -15,6 +15,11 @@ class Event extends Model
     //     return $this->belongsTo('App\Image', 'image_cover');
     // }
 
+    // public function eventCreator()
+    // {
+    //     return $this->belongsTo('App\Image', 'image_cover');
+    // }
+
     public function eventCreator()
     {
         return $this->belongsTo('App\User', 'creator');

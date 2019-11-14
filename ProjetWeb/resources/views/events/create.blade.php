@@ -26,8 +26,8 @@
                     ])}}
                     </div>
                     <div class="form-group">
-                        {{Form::label('nb_people', 'Nombre de place disponible')}}
-                        {{Form::number('nb_people', '', [ 'class' => 'form-control' ])}}
+                        {{Form::label('max_participants', 'Nombre de place disponible')}}
+                        {{Form::number('max_participants', '', [ 'class' => 'form-control' ])}}
                     </div>
                     <div class="form-group">
                         {{Form::label('start_date', 'Date de début')}}

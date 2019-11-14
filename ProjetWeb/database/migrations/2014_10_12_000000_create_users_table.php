@@ -34,6 +34,13 @@ class CreateUsersTable extends Migration
             $table->foreign('image_profile')->references('id')->on('images')->onDelete('cascade');
 
         });
+
+        DB::table('users')->insert([
+            ['id' => 1,'first_name' => 'Student', 'last_name' => 'Root', 'email' => 'student@cesi-root.com', 'password' =>  bcrypt('student123'), 'wallet_amount' => '100000000', 'center_id' => 1, 'role_id' => '2'],
+            ['id' => 2,'first_name' => 'Admin', 'last_name' => 'Root', 'email' => 'admin@cesi-root.com', 'password' =>  bcrypt('admin123'), 'wallet_amount' => '100000000', 'center_id' => 1, 'role_id' => '3'],
+            ['id' => 3,'first_name' => 'BDE', 'last_name' => 'Root', 'email' => 'bde@cesi-root.com', 'password' =>  bcrypt('bde123'), 'wallet_amount' => '100000000', 'center_id' => 1, 'role_id' => '4'],
+            ['id' => 4,'first_name' => 'Cesi', 'last_name' => 'Root', 'email' => 'cesi@cesi-root.com', 'password' =>  bcrypt('cesi123'), 'wallet_amount' => '100000000', 'center_id' => 1, 'role_id' => '5'],
+        ]);
     }
 
     /**

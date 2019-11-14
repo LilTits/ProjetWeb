@@ -57,12 +57,20 @@ Route::resource('perso', 'PersoController');
 
 // Basket
 
-Route::get('/addToCart/{id}', [
-    'uses' => 'ProductTypesController@getAddToCart',
-    'as' => 'products.addToCart'
-]);
+Route::get('/carts', 'CartsController@index')->name('carts.index');
+Route::post('/carts', 'CartsController@store')->name('carts.store');
 
-Route::get('/basket', [
-    'uses' => 'ProductTypesController@getCart',
-    'as' => 'products.basket'
-]);
+// Route::get('/addToCart/{id}', [
+//     'uses' => 'ProductTypesController@getAddToCart',
+//     'as' => 'products.addToCart'
+// ]);
+
+// Route::delete('/deleteCart/{id}', [
+//     'uses' => 'ProductTypesController@deleteCart',
+//     'as' => 'products.deleteCart'
+// ]);
+
+// Route::get('/basket', [
+//     'uses' => 'ProductTypesController@getCart',
+//     'as' => 'products.basket'
+// ]);
