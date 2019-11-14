@@ -61,7 +61,8 @@ Route::resource('perso', 'PersoController');
 // Basket
 
 Route::get('/carts', 'CartsController@index')->name('carts.index');
-Route::post('/carts', 'CartsController@store')->name('carts.store');
+Route::post('/carts/{id}', 'CartsController@show')->name('carts.show');
+Route::post('/carts', 'CartsController@saveCart')->name('carts.store');
 
 // Route::get('/addToCart/{id}', [
 //     'uses' => 'ProductTypesController@getAddToCart',

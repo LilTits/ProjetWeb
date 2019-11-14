@@ -19,7 +19,7 @@ class Comment extends Model
         return $this->belongsTo('App\Event');
     }
 
-    public function author()
+    public function commentAuthor()
     {
         return $this->belongsTo('App\User', 'author');
     }

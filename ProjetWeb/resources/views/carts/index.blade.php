@@ -7,17 +7,18 @@
         <div class="col-12">
             <h2>Panier</h2>
         </div>
-        @if (Cart::count() > 0)
+        @if (count($cart) > 0)
         <div class="col-sm-6 col-md-6">
-            <h4>Vous avez {{Cart::count()}} produit(s) dans votre panier</h4>
+            {{-- <h4>Vous avez {{count($cart)}} produit(s) dans votre panier</h4> --}}
             <div class="row">
                 <ul class="list-group">
-                    @foreach (Cart::content() as $product)
+                    @foreach ($cart as $product)
+                    @if ($product->user_id == auth()->user()->id)
                     <li class="list-group-item">
                         <div class="card mb-3"">
                             <div class=" row no-gutters">
                                 <div class="col-6">
-                                    <h5 class="card-title">{{$product->name}}</h5>
+                                    <h5 class="card-title">{{$product->id}}</h5>
                                 </div>
                                 <div class="col-6">
                                     <p class="card-text"><small>{{$product->price}} €</small></p>
@@ -33,6 +34,7 @@
                             </div>
                         </div>
                     </li>
+                    @endif
                     @endforeach
                 </ul>
             </div>
@@ -45,6 +47,13 @@
         <br>
         <span>Prix TTC : {{ Cart::total()}} €</span>
     </div>
+
+    
+    {{-- <div class="col-12">
+        {!!Form::open(['action' => ['CartsController@saveCart',$product->id, 'method' => 'POST']])!!}
+        {{Form::submit('Sauvegardez le panier', ['class' => 'btn btn-success'])}}
+        {!!Form::close()!!}
+    </div> --}}
     @else
     <div class="col-sm-6 col-md-6">
         <h3>Pas de produit dans le panier</h3>

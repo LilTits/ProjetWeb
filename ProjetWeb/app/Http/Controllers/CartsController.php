@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use App\Cart;
+use App\Cart as myCart;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CartsController extends Controller
@@ -15,7 +15,9 @@ class CartsController extends Controller
      */
     public function index()
     {
-        return view('carts.index');
+        $cart = myCart::all();
+
+        return view('carts.index')->with('cart', $cart);
     }
 
     /**
@@ -51,6 +53,44 @@ class CartsController extends Controller
     }
 
     /**
+     * Store the cart on the database
+     * 
+     */
+
+    public function saveCart(Request $request) {
+
+        $this->validate($request, [
+            'id' => 'required'
+        ]);
+
+        // $cart = Cart::content();
+
+        $saveCart = new myCart();
+        $saveCart->user_id = auth()->user()->id;
+        $saveCart->product_id = $request->input('id');
+        $saveCart->quantity = 1;
+        $saveCart->save();
+
+        return redirect()->route('products.index')->with('success', 'Article ajouté au panier');
+    }
+
+    /**
+     * 
+     */
+
+    // public function storeCart($identifier){ 
+    //     Cart::store($identifier);
+    // }
+
+    /**
+     * 
+     */
+
+    // public function restoreCart($identifier){ 
+    //     Cart::restore($identifier); 
+    // }
+
+    /**
      * Display the specified resource.
      *
      * @param  int  $id
@@ -81,7 +121,15 @@ class CartsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $this->validate($request, [
+        //     'id' => 'required'
+        // ]);
+
+        // $saveCart = myCart::find($id);
+        // $saveCart->quantity = myCart::;
+        // $saveCart->save();
+
+        // return redirect()->route('products.index')->with('success', 'Article ajouté au panier');
     }
 
     /**
