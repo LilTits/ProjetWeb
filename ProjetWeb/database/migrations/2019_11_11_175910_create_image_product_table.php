@@ -19,7 +19,7 @@ class CreateImageProductTable extends Migration
             $table->integer('product_id')->unsigned();
         
          //FOREIGN KEY CONSTRAINTS
-            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
+            $table->foreign('image_id')->references('id')->on('iamges')->onDelete('cascade');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
          
         //SETTING THE PRIMARY KEYS
