@@ -11,16 +11,16 @@
 |
 */
 
-//First route for these pages, we now use resourceto get them
+//First route for these pages, we now use resource to get them
 
 // Route::get('/bonus', 'PagesController@bonus');
 // Route::get('/product', 'PagesController@product');
 // Route::get('/event', 'PagesController@event');
+// Route::get('/basket', 'PagesController@basket');
 
 Route::get('/', 'PagesController@index');
 Route::get('/loginRe', 'PagesController@login');
 Route::get('/contact', 'PagesController@contact');
-Route::get('/basket', 'PagesController@basket');
 Route::get('/legale', 'PagesController@legale');
 Route::get('/deconnexion', 'PagesController@deconnexion');
 Route::get('/perso', 'PagesController@perso')->middleware('App\Http\Middleware\Auth');
@@ -58,5 +58,14 @@ Route::resource('visits', 'VisitsController');
 Route::resource('perso', 'PersoController');
 //Route::resource('emails', 'SendeMailController@sendemail');
 
-//});
-//>>>>>>>>> Temporary merge branch 2
+// Basket
+
+Route::get('/addToCart/{id}', [
+    'uses' => 'ProductTypesController@getAddToCart',
+    'as' => 'products.addToCart'
+]);
+
+Route::get('/basket', [
+    'uses' => 'ProductTypesController@getCart',
+    'as' => 'products.basket'
+]);

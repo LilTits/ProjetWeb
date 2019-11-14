@@ -8,7 +8,7 @@ class Cart extends Model
 {
     public function products()
     {
-        return $this->belongstoMany(Product::class, 'cart_product');
+        return $this->belongsTo('App\Product');
     }
 
     public function customer()

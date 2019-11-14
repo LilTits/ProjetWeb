@@ -7,7 +7,7 @@
         <h3 class="title_section">Création de Produits</h3>
         <div class="row">
             <div class="col-12">
-                {!! Form::open(['action' => 'ProductTypesController@store', 'method' => 'POST']) !!}
+                {!! Form::open(['action' => 'ProductTypesController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
                 <div class="form-group">
                     {{Form::label('name', 'Nom')}}
                     {{Form::text('name', '', [
@@ -20,6 +20,17 @@
                     'class' => 'form-control',
                     'placeholder' => 'Description du produit'
                 ])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('price', 'Prix')}}
+                    {{Form::number('price', '', [ 'class' => 'form-control' ])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('stock', 'Quantité restante')}}
+                    {{Form::number('stock', '', [ 'class' => 'form-control' ])}}
+                </div>
+                <div class="form-group">
+                    {{Form::file('product_image')}}
                 </div>
                 {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
             {!! Form::close() !!}
