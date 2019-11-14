@@ -18,7 +18,7 @@
         
         @include('inc.messages')
         @yield('content')
-         
+        
         @include('inc.footer')
         
         <script src="{{asset('js/app.js')}}"></script>
