@@ -19,13 +19,14 @@
 // Route::get('/basket', 'PagesController@basket');
 
 Route::get('/', 'PagesController@index');
-Route::get('/loginRe', 'PagesController@login');
+//Route::get('/loginRe', 'PagesController@login');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/legale', 'PagesController@legale');
 Route::get('/deconnexion', 'PagesController@deconnexion');
 Route::get('/perso', 'PagesController@perso')->middleware('App\Http\Middleware\Auth');
 Route::get('/emails', 'SendeMailController@sendemail');
 Route::get('/email', 'SendeMail@sendemail');
+Route::get('/downloadsf', 'Download@DownloadAll');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -1,6 +1,8 @@
+
 @extends('layout.app')
 
 @section('content')
+@auth
 <!-- Start of product section -->
 <section id="product">
     <div class="product_section container">
@@ -45,5 +47,10 @@
         </div>
     </div>
 </section>
+@endauth
+@guest
+
+<div class="d-flex justify-content-center">@include('auth.login')</div>
+@endguest
 <!-- End of product section -->
 @endsection

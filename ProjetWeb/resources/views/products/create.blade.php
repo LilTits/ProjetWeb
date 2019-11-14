@@ -2,6 +2,7 @@
 
 @section('content')
 <!-- Start of product section -->
+@auth <!--If auth-->
 <section id="product">
     <div class="product_section container">
         <h3 class="title_section">Création de Produits</h3>
@@ -44,5 +45,10 @@
         </div>
     </div>
 </section>
+@endauth
+@guest
+
+<div class="d-flex justify-content-center">@include('auth.login')</div>
+@endguest
 <!-- End of product section -->
 @endsection

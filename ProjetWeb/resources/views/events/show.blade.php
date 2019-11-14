@@ -16,11 +16,16 @@
         <hr>
         <small>Ajouté le {{$event->created_at}}</small>
         <hr>
+
+        @auth
+        @if((Auth::user()->role_id == 3) || (Auth::user()->role_id == 4))   <!--Only admin or member BBD-->
         <a href="/events/{{$event->id}}/edit" class="btn">Edition</a>
         {!!Form::open(['action' => ['EventsController@destroy', $event->id], 'method' => 'POST'])!!}
         {{Form::hidden('_method', 'DELETE')}}
         {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
         {!!Form::close()!!}
+        @endif
+        @endauth
         <hr>
     </div>
 </section>
