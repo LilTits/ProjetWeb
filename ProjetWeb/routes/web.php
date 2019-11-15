@@ -25,6 +25,7 @@ Route::get('/legale', 'PagesController@legale');
 Route::get('/deconnexion', 'PagesController@deconnexion');
 Route::get('/perso', 'PagesController@perso')->middleware('App\Http\Middleware\Auth');
 Route::get('/emails', 'SendeMailController@sendemail');
+Route::get('/emailsproduct', 'SendeMailController@sendemailproduct');
 Route::get('/downloadsf', 'DownloadController@downloadAll');
 Auth::routes();
 

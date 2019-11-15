@@ -63,7 +63,7 @@ class ProductTypesController extends Controller
             $fileNameToStore = $fileName.'_'.time().'.'.$ext;
 
             // Upload the image
-            $path = $request->file('product_image')->storeAs('public/products', $fileNameToStore);
+            $path = $request->file('product_image')->storeAs('public/image/products', $fileNameToStore);
 
             // Path of event images
             // $eventPath = 'public/events';
@@ -144,7 +144,7 @@ class ProductTypesController extends Controller
             $fileNameToStore = $fileName.'_'.time().'.'.$ext;
 
             // Upload the image
-            $path = $request->file('product_image')->storeAs('public/products', $fileNameToStore);
+            $path = $request->file('product_image')->storeAs('public/image/products', $fileNameToStore);
 
             // Path of event images
             // $eventPath = 'public/events';
