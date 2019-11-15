@@ -26,8 +26,9 @@ class CreateEventsTable extends Migration
             $table->boolean('is_flagged')->default(false);
             $table->integer('ecategory_id')->unsigned()->default(1);
             $table->integer('creator')->unsigned();
-            $table->string('event_image')->default('therock.jpg');
-            $table->timestamps();
+            $table->string('event_image')->default('img/therock.jpg');
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS

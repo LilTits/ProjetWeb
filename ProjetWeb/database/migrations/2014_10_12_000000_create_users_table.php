@@ -24,7 +24,8 @@ class CreateUsersTable extends Migration
             $table->integer('role_id')->unsigned()->default(1);
             $table->integer('image_profile')->unsigned()->default(1);
             $table->rememberToken();
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->softDeletes();
 
 

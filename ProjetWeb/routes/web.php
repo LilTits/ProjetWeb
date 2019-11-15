@@ -63,6 +63,22 @@ Route::resource('perso', 'PersoController');
 
 Route::resource('carts', 'CartsController');
 
+//product categories
+
+Route::get('/products/category/{id}', [
+    'uses' => 'ProductTypesController@getCategory',
+    'as' => 'products.category'
+]);
+
+//product sorted
+
+Route::get('/products/sorted/{type}', [
+    'uses' => 'ProductTypesController@getProductSorted',
+]);
+    'as' => 'products.sorted'
+
+
+Route::get('/search', 'ProductTypesController@getSearchedProducts')->name('search');
 // Route::get('/carts', 'CartsController@index')->name('carts.index');
 // Route::post('/carts/{id}', 'CartsController@show')->name('carts.show');
 Route::post('/carts', 'CartsController@saveCart')->name('carts.saveCarts');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Cart;
 use App\ProductType;
+use App\ProductCategory;
 use Session;
 
 class ProductTypesController extends Controller
@@ -199,18 +200,76 @@ class ProductTypesController extends Controller
      * Get the product cart
      */
 
-    // public function getCart() {
-    //     if (!Session::has('cart')) {
-    //         return view('products.basket', ['products' => null]);
-    //     }
-    //     $oldCart = Session::get('cart');
-    //     $cart = new Cart($oldCart);
-    //     return view('products.basket', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
-    // }
+    public function getCart() {
+        if (!Session::has('cart')) {
+            return view('products.basket', ['products' => null]);
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('products.basket', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
+    }
 
-    // public function deleteCart() {
-    //     $cart = Cart::all();
-    //     $cart->delete();
-    //     return view('products.basket');
-    // }
+    /**
+     * Get the product categories
+     */
+
+    public function getCategory($id) {
+        $categorizedproducts = ProductType::where('pcategory_id', $id)->get();
+        //$categorizedproducts = ProductType::all();
+        //dd($categorizedproducts);
+        return view('products.category', ['categorizedproducts' => $categorizedproducts]);
+    }
+
+    /**
+     * Get the product sorted
+     */
+
+    public function getProductSorted($type) 
+    {
+        $products = new ProductType();
+        switch ($type) {
+            case 1:
+                $sortedproducts = $products->orderBy('name', 'asc')->get();        
+                break;
+
+            case 2:
+                $sortedproducts = $products->orderBy('name', 'desc')->get();        
+                break;
+
+            case 3:
+                $sortedproducts = $products->orderBy('price', 'asc')->get();        
+                break;
+
+            case 4:
+                $sortedproducts = $products->orderBy('price', 'desc')->get();        
+                break;
+            
+            case 5:
+                $sortedproducts = $products->orderBy('created_at', 'asc')->get();        
+                break;
+            
+            case 6:
+                $sortedproducts = $products->orderBy('created_at', 'desc')->get();        
+                break;
+            
+            default:
+                $sortedproducts = ProductType::all()->get();
+                break;
+        }
+
+        //$categorizedproducts = ProductType::all();
+        //dd($categorizedproducts);
+        return view('products.sorted', ['sortedproducts' => $sortedproducts]);
+    }
+
+    /**
+     * Get the product categories
+     */
+
+    public function getSearchedProducts(Request $request) {
+        $query = $request->input('query');
+        $searchedproducts = ProductType::search("$query", true, true, true)->get();
+        return view('products.search', ['searchedproducts' => $searchedproducts]);
+    }
+
 }

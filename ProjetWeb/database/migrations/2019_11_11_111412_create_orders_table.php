@@ -21,7 +21,8 @@ class CreateOrdersTable extends Migration
             $table->boolean('is_complete')->default(false);
             $table->integer('user_id')->unsigned();
             $table->integer('adress_id')->unsigned();
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS

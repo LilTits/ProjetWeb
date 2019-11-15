@@ -20,7 +20,8 @@ class CreateReviewsTable extends Migration
             $table->integer('author')->unsigned();
             $table->integer('product_id')->unsigned();
             $table->integer('image_id')->unsigned()->nullable();
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->softDeletes();
 
             //FOREIGN KEY CONSTRAINTS

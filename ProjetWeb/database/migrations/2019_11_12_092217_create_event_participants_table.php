@@ -18,7 +18,8 @@ class CreateEventParticipantsTable extends Migration
             $table->integer('event_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->enum('status', ['going','busy','undecided','orginizer'])->default('undecided');
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->softDeletes();
         
             //FOREIGN KEY CONSTRAINTS
