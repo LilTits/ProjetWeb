@@ -42,7 +42,7 @@ Route::resource('comment_likes', 'CommentLikesController');
 Route::resource('comments', 'CommentsController');
 Route::resource('event_categories', 'EventCategoriesController');
 Route::resource('event_likes', 'EventLikesController');
-Route::resource('event_participants', 'EventParticipantsController');
+// Route::resource('event_participants', 'EventParticipantsController');
 Route::resource('events', 'EventsController');
 Route::resource('ideas', 'IdeasController');
 Route::resource('images', 'ImagesController');
@@ -64,6 +64,16 @@ Route::resource('perso', 'PersoController');
 Route::get('/carts', 'CartsController@index')->name('carts.index');
 Route::post('/carts/{id}', 'CartsController@show')->name('carts.show');
 Route::post('/carts', 'CartsController@saveCart')->name('carts.store');
+
+// Participants
+
+Route::get('/participants', 'EventParticipantsController@index')->name('participants.index');
+Route::get('/participants/{id}', 'EventParticipantsController@salutcestcool')->name('participants.salutcestcool');
+// Route::get('/events/show/{id}', 'EventParticipantsController@salutcestcool')->name('participants.salutcestcool');
+Route::post('/participants', 'EventParticipantsController@participants')->name('participants.salut');
+
+// Route::get('/events/', 'EventParticipantsController@index');
+// Route::post('/events/{id}', 'EventParticipantsController@store');
 
 // Route::get('/addToCart/{id}', [
 //     'uses' => 'ProductTypesController@getAddToCart',

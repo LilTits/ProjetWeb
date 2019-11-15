@@ -5,17 +5,17 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-
 class Event extends Model
 {
     use SoftDeletes;
+
+    // Table name
+    protected $table = 'events';
 
     // public function cover()
     // {
     //     return $this->belongsTo('App\Image', 'image_cover');
     // }
-
-  
 
     public function eventCreator()
     {
@@ -40,6 +40,11 @@ class Event extends Model
     public function usersLiked()
     {
         return $this->belongsToMany('App\User', 'event_likes');
+    }
+
+    public function userParticipates()
+    {
+        return $this->belongsToMany('App\User', 'event_participants');
     }
 
     public function eventParticipants()
