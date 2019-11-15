@@ -16,12 +16,7 @@
         <hr>
         <small>Ajouté le {{$event->created_at}}</small>
         <hr>
-        {!! Form::open(['action' => 'EventParticipantsController@participants', 'method' => 'POST']) !!}
-        <div class="form-group">
-            {{Form::hidden('id', $event->id)}}
-        </div>
-        {{Form::submit('S\'inscrire', ['class' => 'btn btn-primary'])}}
-        {!! Form::close() !!}
+        <a href="{{ route('participants.index')}}" class="btn btn-primary">Liste des participants</a>
 
         <a href="/events/{{$event->id}}/edit" class="btn">Edition</a>
         {!!Form::open(['action' => ['EventsController@destroy', $event->id], 'method' => 'POST'])!!}

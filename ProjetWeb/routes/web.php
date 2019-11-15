@@ -67,6 +67,8 @@ Route::post('/carts', 'CartsController@saveCart')->name('carts.store');
 // Participants
 
 Route::get('/participants', 'EventParticipantsController@index')->name('participants.index');
+Route::get('/participants/{id}', 'EventParticipantsController@salutcestcool')->name('participants.salutcestcool');
+// Route::get('/events/show/{id}', 'EventParticipantsController@salutcestcool')->name('participants.salutcestcool');
 Route::post('/participants', 'EventParticipantsController@participants')->name('participants.salut');
 
 // Route::get('/events/', 'EventParticipantsController@index');
