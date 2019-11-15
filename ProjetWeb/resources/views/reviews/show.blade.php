@@ -13,7 +13,7 @@
         <hr>
         <small>Ajouté le {{$review->created_at}} by {{$review->author}} </small>
         <hr>
-        <a href="/reviews/{{$review->id}}/edit" class="btn">Edition</a>
+        <a href="/reviews/{{$review->id}}/edit" class="btn btn-primary">Edition</a>
         {!!Form::open(['action' => ['ReviewsController@destroy', $review->id], 'method' => 'POST'])!!}
             {{Form::hidden('_method', 'DELETE')}}
             {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}

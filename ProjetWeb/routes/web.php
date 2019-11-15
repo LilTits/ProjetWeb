@@ -45,7 +45,7 @@ Route::resource('ideas', 'IdeasController');
 Route::resource('images', 'ImagesController');
 Route::resource('orders', 'OrdersController');
 Route::resource('permissions', 'PermissionsController');
-Route::resource('product_categories', 'ProductCategoriesController');
+//Route::resource('inc', 'ProductCategoriesController');
 Route::resource('products', 'ProductTypesController');
 Route::resource('product_types', 'ProductTypesController');
 Route::resource('reviews', 'ReviewsController');
@@ -66,3 +66,24 @@ Route::get('/basket', [
     'uses' => 'ProductTypesController@getCart',
     'as' => 'products.basket'
 ]);
+
+//product categories
+
+Route::get('/products/category/{id}', [
+    'uses' => 'ProductTypesController@getCategory',
+    'as' => 'products.category'
+]);
+
+//product sorted
+
+Route::get('/products/sorted/{type}', [
+    'uses' => 'ProductTypesController@getProductSorted',
+    'as' => 'products.sorted'
+]);
+
+Route::get('/search', 'ProductTypesController@getSearchedProducts')->name('search');
+
+// Route::get('/products/category/{id}', [
+//     'uses' => 'ProductTypesController@getCategory',
+//     'as' => 'products.category'
+// ]);

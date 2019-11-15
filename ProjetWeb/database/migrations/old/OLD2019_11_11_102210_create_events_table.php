@@ -18,7 +18,8 @@
 //             $table->decimal('price', 15, 2);
 //             $table->string('title');
 //             $table->mediumText('description');
-//             $table->timestamps();
+//             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
 //         });
 //     }
 

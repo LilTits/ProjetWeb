@@ -13,7 +13,7 @@
         <hr>
         <small>Ajouté le {{$comment->created_at}} by {{$comment->author}} </small>
         <hr>
-        <a href="/comments/{{$comment->id}}/edit" class="btn">Edition</a>
+        <a href="/comments/{{$comment->id}}/edit" class="btn btn-primary">Edition</a>
         {!!Form::open(['action' => ['CommentsController@destroy', $comment->id], 'method' => 'POST'])!!}
             {{Form::hidden('_method', 'DELETE')}}
             {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}

@@ -16,7 +16,7 @@
         <hr>
         <small>Ajouté le {{$event->created_at}}</small>
         <hr>
-        <a href="/events/{{$event->id}}/edit" class="btn">Edition</a>
+        <a href="/events/{{$event->id}}/edit" class="btn btn-primary">Edition</a>
         {!!Form::open(['action' => ['EventsController@destroy', $event->id], 'method' => 'POST'])!!}
         {{Form::hidden('_method', 'DELETE')}}
         {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
