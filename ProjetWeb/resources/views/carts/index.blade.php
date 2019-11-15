@@ -21,7 +21,7 @@
                                     <h5 class="card-title">{{$product->product_id}}</h5>
                                 </div>
                                 <div class="col-6">
-                                    <p class="card-text"><small>{{$product->get(1)->products->price}} €</small></p>
+                                    <p class="card-text"><small>{{$product->price}} €</small></p>
                                 </div>
                                 <div class="col-md-12 btn-group">
                                     <a href="/products/{{$product->product_id}}" class="btn btn-primary">Retournez sur la page du produit</a>
