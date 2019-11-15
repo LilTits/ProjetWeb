@@ -21,7 +21,7 @@ class EventParticipantsController extends Controller
     public function salutcestcool($id)
     {
         $event_participants = EventParticipant::where('event_id', $id)->get();
-        // dd($event_participants);
+        dd($event_participants);
         return view('participants.index')->with('event_participants', $event_participants);
     }
 
