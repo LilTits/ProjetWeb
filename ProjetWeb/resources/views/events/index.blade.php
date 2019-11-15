@@ -9,7 +9,7 @@
             @if(count($events) > 0)
             @foreach ($events as $event)
             <div class="col-12 card frame_event">
-                <img src="/storage/events/{{$event->event_image}}" class="card-img-top img-thumbnail image_event" alt="event">
+                <img src="/storage/image/events/{{$event->event_image}}" class="card-img-top img-thumbnail image_event" alt="event">
                 <div class="card-body">
                     <h5 class="card-title">{{$event->name}}</h5>
                     <h6 class="price">{{$event->price}}</h6>

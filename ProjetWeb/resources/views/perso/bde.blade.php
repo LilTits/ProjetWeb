@@ -1,5 +1,5 @@
 <section id="bde">
-    <div class="jumbotron">
+    <div class="jumbotron ">
         <div class="container welcome_index">
             
         <a button class="btn btn-primary btn-lg" href="/products/create">Créer un produit</a>

@@ -16,8 +16,7 @@
                         <h5 class="card-title">{{$product->name}}</h5>
                         <p class="card-text">{{$product->category->name}}</p>
                         <p class="card-text">{{$product->price}}</p>
-                        <a href="/products/{{$product->id}}" class="btn btn-primary buy_button_product">En savoir
-                            plus</a>
+                        <a href="/products/{{$product->id}}" class="btn btn-primary buy_button_product">En savoir plus</a>
                         {{-- {!! Form::open(['action' => 'CartsController@store', 'method' => 'POST']) !!}
                         <div class="form-group">
                             {{Form::hidden('id', $product->id)}}

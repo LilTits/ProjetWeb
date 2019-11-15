@@ -15,7 +15,7 @@ class UtilisateurController extends Controller
      */
     public function index()
     {   
-        $users = Center::where('center_id', Auth::user()->center_id)->first();
+        //$users = Center::where('center_id', Auth::user()->center_id)->first();
 
       
            

@@ -26,7 +26,7 @@ Route::get('/deconnexion', 'PagesController@deconnexion');
 Route::get('/perso', 'PagesController@perso')->middleware('App\Http\Middleware\Auth');
 Route::get('/emails', 'SendeMailController@sendemail');
 Route::get('/email', 'SendeMail@sendemail');
-Route::get('/downloadsf', 'Download@DownloadAll');
+Route::get('/downloadsf', 'DownloadController@downloadAll');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -54,7 +54,7 @@ Route::resource('product_types', 'ProductTypesController');
 Route::resource('reviews', 'ReviewsController');
 Route::resource('roles', 'RolesController');
 Route::resource('tickets', 'TicketsController');
-Route::resource('users', 'UsersController');
+Route::resource('users', 'UsersContoller');
 Route::resource('visits', 'VisitsController');
 Route::resource('perso', 'PersoController');
 //Route::resource('emails', 'SendeMailController@sendemail');

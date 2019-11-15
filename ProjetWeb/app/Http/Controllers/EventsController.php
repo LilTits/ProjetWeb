@@ -62,7 +62,7 @@ class EventsController extends Controller
             $fileNameToStore = $fileName.'_'.time().'.'.$ext;
 
             // Upload the image
-            $path = $request->file('event_image')->storeAs('public/events', $fileNameToStore);
+            $path = $request->file('event_image')->storeAs('public/image/events', $fileNameToStore);
 
             // Path of event images
             // $eventPath = 'public/events';
@@ -144,7 +144,7 @@ class EventsController extends Controller
             $fileNameToStore = $fileName.'_'.time().'.'.$ext;
 
             // Upload the image
-            $path = $request->file('event_image')->storeAs('public/events', $fileNameToStore);
+            $path = $request->file('event_image')->storeAs('public/image/events', $fileNameToStore);
 
             // Path of event images
             // $eventPath = 'public/events';
