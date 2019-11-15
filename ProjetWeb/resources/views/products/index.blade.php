@@ -10,7 +10,7 @@
             @foreach ($products as $product)
             <div class="col-xs-12 col-sm-6 col-lg-4 item_product">
                 <div class="col-12 card frame_product">
-                    <img src="/storage/products/{{$product->product_image}}"
+                    <img src="/storage/image/products/{{$product->product_image}}"
                         class="card-img-top img-thumbnail image_product" alt="Product">
                     <div class="card-body">
                         <h5 class="card-title">{{$product->name}}</h5>

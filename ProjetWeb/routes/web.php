@@ -25,7 +25,6 @@ Route::get('/legale', 'PagesController@legale');
 Route::get('/deconnexion', 'PagesController@deconnexion');
 Route::get('/perso', 'PagesController@perso')->middleware('App\Http\Middleware\Auth');
 Route::get('/emails', 'SendeMailController@sendemail');
-Route::get('/email', 'SendeMail@sendemail');
 Route::get('/downloadsf', 'DownloadController@downloadAll');
 Auth::routes();
 
@@ -36,23 +35,23 @@ Route::resource('/users', 'UtilisateurController');
 
 //Route to database
 Route::resource('Adresses', 'AdressesController');
-Route::resource('carts', 'CartsController');
+// Route::resource('carts', 'CartsController');
 Route::resource('centers', 'CentersController');
-Route::resource('comment_likes', 'CommentLikesController');
+// Route::resource('comment_likes', 'CommentLikesController');
 Route::resource('comments', 'CommentsController');
-Route::resource('event_categories', 'EventCategoriesController');
-Route::resource('event_likes', 'EventLikesController');
+// Route::resource('event_categories', 'EventCategoriesController');
+// Route::resource('event_likes', 'EventLikesController');
 // Route::resource('event_participants', 'EventParticipantsController');
 Route::resource('events', 'EventsController');
 Route::resource('ideas', 'IdeasController');
 Route::resource('images', 'ImagesController');
 Route::resource('orders', 'OrdersController');
-Route::resource('permissions', 'PermissionsController');
-Route::resource('product_categories', 'ProductCategoriesController');
+// Route::resource('permissions', 'PermissionsController');
+// Route::resource('product_categories', 'ProductCategoriesController');
 Route::resource('products', 'ProductTypesController');
 Route::resource('product_types', 'ProductTypesController');
 Route::resource('reviews', 'ReviewsController');
-Route::resource('roles', 'RolesController');
+// Route::resource('roles', 'RolesController');
 Route::resource('tickets', 'TicketsController');
 Route::resource('users', 'UsersContoller');
 Route::resource('visits', 'VisitsController');
@@ -61,9 +60,12 @@ Route::resource('perso', 'PersoController');
 
 // Basket
 
-Route::get('/carts', 'CartsController@index')->name('carts.index');
-Route::post('/carts/{id}', 'CartsController@show')->name('carts.show');
-Route::post('/carts', 'CartsController@saveCart')->name('carts.store');
+Route::resource('carts', 'CartsController');
+
+// Route::get('/carts', 'CartsController@index')->name('carts.index');
+// Route::post('/carts/{id}', 'CartsController@show')->name('carts.show');
+Route::post('/carts', 'CartsController@saveCart')->name('carts.saveCarts');
+// Route::get('/carts/{id}', 'CartsController@delete')->name('carts.delete');
 
 // Participants
 

@@ -7,7 +7,7 @@
     <div class="jumbotron">
         <div class="container welcome_index">
             <h1 class="display-3 title_index">BDE Cesi La Rochelle</h1>
-            <img class="img-fluid" src="storage/img/rochelle.jpg" alt="Logo BDE">
+            <img class="img-fluid" src="storage/image//img/rochelle.jpg" alt="Logo BDE">
             <p class="description_index">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui impedit quisquam,
                 excepturi necessitatibus
                 doloremque soluta nemo in ipsum est voluptates vel ipsa expedita natus harum, voluptas ab quibusdam,
