@@ -10,24 +10,13 @@
             @foreach ($products as $product)
             <div class="col-xs-12 col-sm-6 col-lg-4 item_product">
                 <div class="col-12 card frame_product">
-                    <img src="/storage/products/{{$product->product_image}}"
+                    <img src="/storage/image/products/{{$product->product_image}}"
                         class="card-img-top img-thumbnail image_product" alt="Product">
                     <div class="card-body">
                         <h5 class="card-title">{{$product->name}}</h5>
                         <p class="card-text">{{$product->category->name}}</p>
                         <p class="card-text">{{$product->price}}</p>
                         <a href="/products/{{$product->id}}" class="btn btn-primary buy_button_product">En savoir plus</a>
-                        {{-- {!! Form::open(['action' => 'CartsController@store', 'method' => 'POST']) !!}
-                        <div class="form-group">
-                            {{Form::hidden('id', $product->id)}}
-                            {{Form::hidden('name', $product->name)}}
-                            {{Form::hidden('price', $product->price)}}
-                            {{Form::hidden('product_image', $product->product_image)}}
-                        </div>
-                        @auth                                <!--Only auth-->
-                        {{Form::submit('Ajoutez au panier', ['class' => 'btn btn-primary'])}}
-                        {!! Form::close() !!}
-                        @endauth
                         <br>
                         <small>Ajouté le {{$product->created_at}}</small>
                     </div>

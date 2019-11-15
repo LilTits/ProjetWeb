@@ -19,6 +19,8 @@
       <a href="#" class="card-link">Card link</a>
       <a href="#" class="card-link">Another link</a>
     </div>
+      <li class="list-group-item">Votre campus : {{Auth::user()->center_id}}</li>
+      <li class="list-group-item">Votre role : {{Auth::user()->roles->name}}</li>
   </div>
 </div>
 <!--If admin-->

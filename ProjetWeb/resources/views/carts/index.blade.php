@@ -15,16 +15,16 @@
                     @foreach ($cart as $product)
                     @if ($product->user_id == auth()->user()->id)
                     <li class="list-group-item">
-                        <div class="card mb-3"">
+                        <div class="card mb-3"    >
                             <div class=" row no-gutters">
                                 <div class="col-6">
-                                    <h5 class="card-title">{{$product->id}}</h5>
+                                    <h5 class="card-title">{{$product->product_id}}</h5>
                                 </div>
                                 <div class="col-6">
                                     <p class="card-text"><small>{{$product->price}} €</small></p>
                                 </div>
                                 <div class="col-md-12 btn-group">
-                                    <a href="/products/{{$product->id}}" class="btn btn-primary">Retournez sur la page du produit</a>
+                                    <a href="/products/{{$product->product_id}}" class="btn btn-primary">Retournez sur la page du produit</a>
                                     {!!Form::open(['action' => ['CartsController@destroy', $product->rowId], 'method' =>
                                     'POST'])!!}
                                     {{Form::hidden('_method', 'DELETE')}}
