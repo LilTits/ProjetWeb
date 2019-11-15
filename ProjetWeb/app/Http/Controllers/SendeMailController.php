@@ -54,4 +54,49 @@ class SendeMailController extends Controller
             dd($e->getMessage());
         }
     }
+
+
+    public function sendemailproduct()
+    {
+        
+        $user = User::select('email')->where('role_id', 4)->get();
+        $nb = $user->count();
+        foreach($user as $user2)
+        {
+            $a=0;
+            $b=0;
+            for($i = 1; $i <= $nb; $i++ )
+                    {
+           $user2 = $user->get($a)->email; 
+           $emails[$b] =$user2;
+           $b++;
+           $a++;
+                    }
+        };
+        
+        
+        
+        $title = "Une commande";
+        $content = "je suis le contenu du mail";
+        $user_name = "nom du destinataire";
+        
+        try
+        {
+                   
+            $data = ['name'=> $user_name,'subject' => $title, 'content' => $content];
+
+            Mail::send('emails/emailProduct', $data, function($message) use ($emails, $data) {
+            $subject=$data['subject'];
+            $message->from('matheo.brise17@gmail.com');
+            $message->to($emails);
+            $message->subject($subject);
+             });
+             
+            return redirect('/')->with ('success', 'Votre commande.');
+        }
+        catch (\Exception $e)
+        {
+            dd($e->getMessage());
+        }
+    }
 }

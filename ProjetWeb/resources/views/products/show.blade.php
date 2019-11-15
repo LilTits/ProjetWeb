@@ -6,7 +6,7 @@
     <div class="product_section container">
         <a href="/products" class="btn btn-default">Retour en arrière</a>
         <div class="col-12 item_product">
-            <img src="/storage/products/{{$product->product_image}}" class="card-img-top img-thumbnail image_product"
+            <img src="/storage/image/products/{{$product->product_image}}" class="card-img-top img-thumbnail image_product"
                 alt="Product">
             <small class="card-body">
                 <h5 class="card-title">{{$product->name}}</h5>
