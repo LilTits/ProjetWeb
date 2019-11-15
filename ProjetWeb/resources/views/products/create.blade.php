@@ -22,6 +22,12 @@
                 ])}}
                 </div>
                 <div class="form-group">
+                    {{Form::label('categorie', 'Categorie')}}
+                    {{Form::select('pcategory_id',["1"=>"Pas de catégorie", "2"=>"Vêtements","3"=>"Bibelots","4"=>"Services","5"=>"Tasses et tapis","6"=>"Apple de Titou","7"=>"Les poules de Mathéo","8"=>"Pantoufle et chaussettes"],"", [
+                    'class' => 'form-control',
+                ])}}
+                </div>
+                <div class="form-group">
                     {{Form::label('price', 'Prix')}}
                     {{Form::number('price', '', [ 'class' => 'form-control' ])}}
                 </div>

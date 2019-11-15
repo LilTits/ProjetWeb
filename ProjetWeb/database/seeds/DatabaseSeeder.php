@@ -225,7 +225,41 @@ class DatabaseSeeder extends Seeder
             ['event_id' => mt_rand(112,113), 'user_id' => mt_rand(111,115)],
             ['event_id' => mt_rand(112,113), 'user_id' => mt_rand(116,120)],
         ]);
-        
+
+        DB::table('comments')->insert([
+            ['id' => 100, 'description' => Str::random(10), 'event_id' => 100, 'author' => 100],
+            ['id' => 101, 'description' => Str::random(10), 'event_id' => 101, 'author' => 102],
+            ['id' => 102, 'description' => Str::random(10), 'event_id' => 101, 'author' => 100],
+            ['id' => 103, 'description' => Str::random(10), 'event_id' => 101, 'author' => 101],
+            ['id' => 104, 'description' => Str::random(10), 'event_id' => 100, 'author' => 102],
+        ]);
+
+        DB::table('comment_likes')->insert([
+            ['comment_id' => 100, 'user_id' => 100],
+            ['comment_id' => 101, 'user_id' => 102],
+            ['comment_id' => 102, 'user_id' => 100],
+            ['comment_id' => 101, 'user_id' => 101],
+            ['comment_id' => 102, 'user_id' => 101],
+            ['comment_id' => 103, 'user_id' => 101],
+            ['comment_id' => 104, 'user_id' => 101],
+        ]);
+
+        DB::table('permissions')->insert([
+            ['id' => 100, 'slug' => 'test_zero', 'name' => 'Test Zero', 'description' => Str::random(10)],
+            ['id' => 101, 'slug' => 'test_one', 'name' => 'Test One', 'description' => Str::random(10)],
+            ['id' => 102, 'slug' => 'test_two', 'name' => 'Test Two', 'description' => Str::random(10)],
+            ['id' => 103, 'slug' => 'test_three', 'name' => 'Test Three', 'description' => Str::random(10)],
+        ]);
+
+        DB::table('permission_user')->insert([
+            ['permission_id' => 100, 'user_id' => 100],
+            ['permission_id' => 101, 'user_id' => 102],
+            ['permission_id' => 102, 'user_id' => 100],
+            ['permission_id' => 101, 'user_id' => 101],
+            ['permission_id' => 102, 'user_id' => 101],
+            ['permission_id' => 103, 'user_id' => 101],
+        ]);
+
         DB::table('product_types')->insert([
             ['id' => 100, 'name' => 'Product - '.Str::random(10), 'description' => Str::random(100), 'price' => mt_rand(1,100), 'stock' => mt_rand(0, 100), 'pcategory_id' => mt_rand(1,8)],
             ['id' => 101, 'name' => 'Product - '.Str::random(10), 'description' => Str::random(100), 'price' => mt_rand(1,100), 'stock' => mt_rand(0, 100), 'pcategory_id' => mt_rand(1,8)],
@@ -258,6 +292,7 @@ class DatabaseSeeder extends Seeder
             ['id' => 128, 'name' => 'Product - '.Str::random(10), 'description' => Str::random(100), 'price' => mt_rand(1,100), 'stock' => mt_rand(0, 100), 'pcategory_id' => mt_rand(1,8)],
             ['id' => 129, 'name' => 'Product - '.Str::random(10), 'description' => Str::random(100), 'price' => mt_rand(1,100), 'stock' => mt_rand(0, 100), 'pcategory_id' => mt_rand(1,8)],
         ]);
+
 
         DB::table('products')->insert([
             ['id' => 100, 'price' => mt_rand(1,100), 'stock' => mt_rand(0, 100), 'size_id'=> mt_rand(1, 6), 'color_id'=> mt_rand(1, 6), 'ptype_id' => mt_rand(100, 129)],
@@ -312,6 +347,7 @@ class DatabaseSeeder extends Seeder
             ['id' => 149, 'price' => mt_rand(1,100), 'stock' => mt_rand(0, 100), 'size_id'=> mt_rand(1, 6), 'color_id'=> mt_rand(1, 6), 'ptype_id' => mt_rand(100, 129)],
             ['id' => 150, 'price' => mt_rand(1,100), 'stock' => mt_rand(0, 100), 'size_id'=> mt_rand(1, 6), 'color_id'=> mt_rand(1, 6), 'ptype_id' => mt_rand(100, 129)],
         ]);
+
 
     }
 }
