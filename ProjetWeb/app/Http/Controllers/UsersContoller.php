@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Auth;
 
 class UsersContoller extends Controller
 {
@@ -12,8 +14,10 @@ class UsersContoller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        $users = User::orderBy('id', 'desc')->get();
+        return view('users.index')->with('users', $users);
+        
     }
 
     /**
