@@ -17,17 +17,6 @@
                         <p class="card-text">{{$product->category->name}}</p>
                         <p class="card-text">{{$product->price}}</p>
                         <a href="/products/{{$product->id}}" class="btn btn-primary buy_button_product">En savoir plus</a>
-                        {{-- {!! Form::open(['action' => 'CartsController@store', 'method' => 'POST']) !!}
-                        <div class="form-group">
-                            {{Form::hidden('id', $product->id)}}
-                            {{Form::hidden('name', $product->name)}}
-                            {{Form::hidden('price', $product->price)}}
-                            {{Form::hidden('product_image', $product->product_image)}}
-                        </div>
-                        @auth                                <!--Only auth-->
-                        {{Form::submit('Ajoutez au panier', ['class' => 'btn btn-primary'])}}
-                        {!! Form::close() !!}
-                        @endauth
                         <br>
                         <small>Ajouté le {{$product->created_at}}</small>
                     </div>

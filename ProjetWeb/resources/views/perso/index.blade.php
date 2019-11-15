@@ -12,13 +12,9 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">{{Auth::user()->email}}</li>
       <li class="list-group-item">Votre solde : {{Auth::user()->wallet_amount}} €</li>
-      <li class="list-group-item">Votre campus : {{Auth::user()->centers->name}}</li>
+      <li class="list-group-item">Votre campus : {{Auth::user()->center_id}}</li>
       <li class="list-group-item">Votre role : {{Auth::user()->roles->name}}</li>
     </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
   </div>
 </div>
 <!--If admin-->
