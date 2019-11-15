@@ -74,8 +74,9 @@ Route::get('/products/category/{id}', [
 
 Route::get('/products/sorted/{type}', [
     'uses' => 'ProductTypesController@getProductSorted',
-]);
     'as' => 'products.sorted'
+]);
+    
 
 
 Route::get('/search', 'ProductTypesController@getSearchedProducts')->name('search');
