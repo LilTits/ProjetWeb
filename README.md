@@ -1,17 +1,23 @@
 # Project Web
 
-Creation of an **E-Commerce** Site for the BDE Association.
+Creation of an **E-Commerce** Site for the BDE Association in less than two weeks.
 
 ## Languages used :
 
 1. HTML
-2. CSS
-3. JavaScript
-4. PHP
+2. CSS - Sass
+3. JavaScript - JQuery
+4. PHP - Laravel 5.4
 
 Second year of precatory cycle at CESI computer engineering program
 
 Created by: **Varjavandi Thomas**, **Brisé Mathéo** et **Guiochet Titouan**.
+
+## Technical choice:
+
+### Why using a framework
+
+With our little allocated time, we decided to start using Laravel, it was the very first time for us we really use a Php Framework for a web project. We certainly lost time by learning how to use and master Laravel but we thinks it was worth it, when you really used to the functioning of the Framework, it's a lot easier to implements things in your app. Laravel community offer's a lot of pre-made package that you can install and use, in our case, we use one for the cart and one for the forms.
 
 ## Standards & Practices:
 
@@ -82,3 +88,4 @@ LNC Reference: https://en.wikipedia.org/wiki/Leszynski_naming_convention
 |Images/Image URL |img|
 |Type (user-defined)|typ|
 |Counter|cnt|
+
