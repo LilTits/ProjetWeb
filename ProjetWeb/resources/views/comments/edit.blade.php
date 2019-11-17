@@ -9,15 +9,15 @@
         <div class="row">
             <div class="col-12">
                 {!! Form::open(['action' => ['CommentsController@update', $comment->id], 'method' => 'POST']) !!}
-                    <div class="form-group">
-                        {{Form::label('description', 'Description')}}
-                        {{Form::textarea('description', $comment->description, [
+                <div class="form-group">
+                    {{Form::label('description', 'Description')}}
+                    {{Form::textarea('description', $comment->description, [
                         'class' => 'form-control',
                         'placeholder' => 'Votre commentaire'
                     ])}}
-                    </div>
-                    {{Form::hidden('_method', 'PUT')}}
-                    {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+                </div>
+                {{Form::hidden('_method', 'PUT')}}
+                {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
                 {!! Form::close() !!}
             </div>
         </div>

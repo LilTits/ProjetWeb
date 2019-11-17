@@ -1,5 +1,3 @@
-
-
 @extends('layout.app')
 
 @section('content')
@@ -11,20 +9,20 @@
         <div class="row">
             <div class="col-12">
                 {!! Form::open(['action' => 'IdeasController@store', 'method' => 'POST']) !!}
-                    <div class="form-group">
-                        {{Form::label('title', 'Titre')}}
-                        {{Form::text('title', '', [
+                <div class="form-group">
+                    {{Form::label('title', 'Titre')}}
+                    {{Form::text('title', '', [
                         'class' => 'form-control',
                         'placeholder' => 'Nom de la proposition'])}}
-                    </div>
-                    <div class="form-group">
-                        {{Form::label('description', 'Description')}}
-                        {{Form::textarea('description', '', [
+                </div>
+                <div class="form-group">
+                    {{Form::label('description', 'Description')}}
+                    {{Form::textarea('description', '', [
                         'class' => 'form-control',
                         'placeholder' => 'Description de la proposition'
                     ])}}
-                    </div>
-                    {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+                </div>
+                {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
                 {!! Form::close() !!}
             </div>
         </div>
@@ -38,5 +36,3 @@
 @endguest
 <!-- End of idea section -->
 @endsection
-
-

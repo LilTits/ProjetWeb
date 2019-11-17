@@ -15,8 +15,8 @@
         <hr>
         <a href="/reviews/{{$review->id}}/edit" class="btn btn-primary">Edition</a>
         {!!Form::open(['action' => ['ReviewsController@destroy', $review->id], 'method' => 'POST'])!!}
-            {{Form::hidden('_method', 'DELETE')}}
-            {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
+        {{Form::hidden('_method', 'DELETE')}}
+        {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
         {!!Form::close()!!}
     </div>
 </section>

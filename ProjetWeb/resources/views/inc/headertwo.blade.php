@@ -18,11 +18,8 @@
         <li class="nav-item">
           <a class="nav-link" href="/ideas">Boite à idées</a>
         </li>
-         
-        
-        
       </ul>
-      
+
       <input class="form-control" type="text" placeholder="Search" aria-label="Search">
 
     </div>

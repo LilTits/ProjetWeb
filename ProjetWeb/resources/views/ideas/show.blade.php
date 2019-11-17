@@ -18,8 +18,8 @@
         <hr>
         <a href="/ideas/{{$idea->idea_id}}/edit" class="btn btn-primary">Edition</a>
         {!!Form::open(['action' => ['IdeasController@destroy', $idea->idea_id], 'method' => 'POST'])!!}
-            {{Form::hidden('_method', 'DELETE')}}
-            {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
+        {{Form::hidden('_method', 'DELETE')}}
+        {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
         {!!Form::close()!!}
         <hr>
         <div class="comment_section container">
@@ -34,8 +34,8 @@
             <hr>
             <a href="/comments/{{$comment->comment_id}}/edit" class="btn btn-primary">Edition</a>
             {!!Form::open(['action' => ['CommentsController@destroy', $comment->id], 'method' => 'POST'])!!}
-                {{Form::hidden('_method', 'DELETE')}}
-                {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
+            {{Form::hidden('_method', 'DELETE')}}
+            {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
             {!!Form::close()!!}
         </div>
     </div>

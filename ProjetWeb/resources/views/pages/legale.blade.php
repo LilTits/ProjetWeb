@@ -10,35 +10,29 @@
 <section id="legale">
     <div class="container">
         <h3>Mentions légales</h3>
-        <h5>Éditeur : Association CESI</h5>
+        <h5>Éditeur : Association Bde La Rochelle</h5>
         <p>
-            SIREN : ???
+            8 rue Isabelle Autissier
             <br>
-            Siège social : ???
+            17140 Lagord
             <br>
-            Tél : ???
+            Tél : 05 46 45 19 17
             <br>
-            Fax : ???
-            <br>
-            e-mail : ???
+            e-mail : bde.cesilr@viacesi.fr
             <br>
         </p>
         <h5>Développement & hébergement</h5>
         <p>
-            Poisson Bouge, laboratoire de contenus web dynamiques
+            Brisé Mathéo, Varjavandi Thomas et Guiochet Titouan
             <br>
-            7, rue des Cadeniers
+            8 rue Isabelle Autissier
             <br>
-            44000 Nantes
-            <br>
-            09 51 71 39 39
-            <br>
-            e-mail : contact@poissonbouge.fr
+            17140 Lagord
             <br>
         </p>
         <h5>Respect de la vie privée et collecte des Données Personnelles</h5>
         <p>
-            Soucieux de protéger la vie privée de ses clients, CESI s’engage dans la protection des données
+            Soucieux de protéger la vie privée de ses clients, Bde La Rochelle s’engage dans la protection des données
             personnelles.
             Une politique sur la protection des données personnelles rappelle nos principes et nos actions visant au
             respect
@@ -47,64 +41,23 @@
         </p>
         <h5>Sécurité</h5>
         <P>
-            Le CESI s’engage à mettre en œuvre tous les moyens nécessaires au bon fonctionnement du site. Cependant, le
-            CESI
+            Le Bde La Rochelle s’engage à mettre en œuvre tous les moyens nécessaires au bon fonctionnement du site. Cependant, le
+            Bde La Rochelle
             ne peut pas garantir la continuité absolue de l’accès aux services proposés par le site. Les adhérents sont
             informés que les informations et services proposés sur le site pourront être interrompus en cas de force
             majeure
             et pourront le cas échéant contenir des erreurs techniques.
         </P>
-        <h5>Utilisation de cookies</h5>
-        <P>
-            Des cookies sont utilisés sur nos sites.
-            Pour plus d’informations, vous pouvez vous référer à la Politique sur le Protection des Données Personnelles
-            en
-            cliquant-ici
-        </P>
-        <h5>Déclarations d’activité</h5>
-        <P>
-            CESI SAS – Société par actions simplifiée au capital de 1.1M€
-            <br>
-            342 707 502
-            <br>
-            1, avenue du Général de Gaulle – Tour PB5 – 92074 Paris La Défense
-            <br>
-            Tél. : +33(0) 1 44 19 23 45 – Fax : +33(0) 1 42 50 25 06
-            <br>
-            Déclaration d’activité enregistrée sous le numéro 11 75 39666 75 auprès du Préfet de la région
-            Ile-de-France.
-            <br>
-            Cet enregistrement ne vaut pas agrément de l’État.
-            <br>
-            CESI – association loi de 1901
-            <br>
-            775 722 572
-            <br>
-            1, avenue du Général de Gaulle – Tour PB5 – 92074 Paris La Défense
-            <br>
-            Tél. : +33(0) 1 44 19 23 45 – Fax : +33(0) 1 42 50 25 06
-            <br>
-            Déclaration d’activité enregistrée sous le numéro 11 75 47883 75 auprès du Préfet de la région
-            Ile-de-France.
-            <br>
-            Cet enregistrement ne vaut pas agrément de l’État.
-        </P>
         <h3>Politique de Protection des Données Personnelles</h3>
         <p>
-            CESI est engagé dans une démarche continue de conformité avec le Règlement général sur la protection des
-            données du 27 avril 2016. Avec ce nouveau règlement CESI renforce sa politique de protection de données
-            personnelles afin que les données de nos utilisateurs soient collectées et utilisées de manière
-            transparente, confidentielle et sécurisée.
+            Le Bde La Rochelle est engagé dans une démarche continue de conformité avec le Règlement général sur la protection des
+            données.
         </p>
-        <h5>Politique de protection des données personnelles à partir du 25 mai 2018</h5>
+        <h5>Politique de protection des données personnelles</h5>
         <p>
-            Notre Politique de protection des données personnelles décrit la manière dont CESI traite les données à
+            Notre Politique de protection des données personnelles décrit la manière dont nous traitons les données à
             caractère personnel des visiteurs et des utilisateurs (ci-après les « Utilisateurs ») lors de leur
             navigation sur nos sites (ci-après le « Site ») : bdecesilr.fr
-            <br>
-            Notre Politique de protection des données personnelles décrit la manière dont CESI traite les données à
-            caractère personnel des visiteurs et des utilisateurs (ci-après les « Utilisateurs ») lors de leur
-            navigation sur nos sites (ci-après le « Site ») :
         </p>
         <h5>Données personnelles et finalités</h5>
         <p>
@@ -113,163 +66,33 @@
             données de localisation, un identifiant en ligne, un ou plusieurs éléments spécifiques propres à l’identité
             physique, physiologique, génétique, psychique, économique, culturelle ou sociale ainsi qu’à tout autre
             renseignement que nos clients décident de nous communiquer.
-            Lorsque vous utilisez notre Site et que vous souhaitez recevoir des informations sur nos offres, via un
-            formulaire de contact, ou bien un formulaire de candidature, nous collectons et traitons des données à
-            caractère personnel vous concernant telles que : votre Civilité, Nom, Prénom, Date de Naissance, Téléphone,
-            Mail, Adresse, Code Postal, Ville.
-            Nous vous demanderons également de nous transmettre votre adresse email afin d’utiliser cette donnée pour
-            l’envoi d’emails d’informations et de notifications, ainsi que pour la newsletter.
-            A la fin de votre parcours diplômant, à des fins de statistiques et de renouvellement de nos titres, nous
-            vous solliciterons dans le cadre d’une enquête de suivi des diplômés.
-            Dans le cadre d’enquêtes de satisfaction, nous pouvons utiliser un outil de mesure de satisfaction des
-            clients. Il vous sera demandé via cet outil de rédiger un avis sur la formation suivie avec CESI.
-        </p>
-        <h5>Cookies</h5>
-        <p>
-            Nous utilisons des cookies sur notre Site pour les besoins de votre navigation, l’optimisation et la
-            personnalisation de nos Services sur notre plateforme en mémorisant vos préférences.
-            Vous pouvez à tout moment désactiver les cookies.
-            Définition de « cookie » et son utilisation. Un « cookie » est un fichier texte déposé sur votre ordinateur
-            lors de la visite de notre plateforme. Dans votre ordinateur, les cookies sont gérés par votre navigateur
-            internet.
-            Nous utilisons des cookies sur notre Site pour les besoins de votre navigation, l’optimisation et la
-            personnalisation de nos Services sur notre plateforme en mémorisant vos préférences.
-            Les cookies nous permettent aussi de voir comment notre plateforme est utilisée. Nous recueillons
-            automatiquement votre adresse IP et des informations relatives à l’utilisation de notre Site. Notre
-            plateforme peut ainsi se souvenir de votre identité lorsqu’une connexion a été établie entre le serveur et
-            le navigateur web. Les informations fournies précédemment dans un formulaire web pourront ainsi être
-            conservées.
-            Différents types de cookies sont utilisés sur notre Site :
-            Des cookies sont strictement nécessaires au fonctionnement de notre plateforme. Ils vous permettent
-            d’utiliser les principales fonctionnalités de notre plateforme (par exemple l’accès à votre compte). Sans
-            ces cookies, vous ne pourrez pas utiliser notre plateforme normalement.
-            Des cookies dits « analytiques » : afin d’améliorer nos services, nous utilisons des cookies de mesures
-            d’audience telles que le nombre de pages vues, le nombre de visites, l’activité des utilisateurs et leur
-            fréquence de retour, notamment grâce aux services de Google Analytics. Ces cookies permettent seulement
-            l’établissement d’études statistiques sur le trafic des utilisateurs sur notre plateforme, dont les
-            résultats sont totalement anonymes pour nous permettre de connaître l’utilisation et les performances de
-            notre plateforme et d’en améliorer le fonctionnement. Accepter ces cookies est une condition nécessaire à
-            l’utilisation de notre plateforme. Si vous les refusez, nous ne pouvons vous garantir une utilisation
-            normale sur notre plateforme.
-            Des cookies fonctionnels : Il s’agit des cookies qui nous permettent de personnaliser votre expérience sur
-            notre plateforme en mémorisant vos préférences. Ces cookies peuvent être placés par une tierce partie pour
-            notre compte, mais elle n’est pas autorisée à les utiliser à d’autres fins que celles décrite.
-            Des cookies de ciblage : Ces cookies sont liés aux services fournis par des tierces parties, comme les
-            boutons « J’aime » ou « Partager ». Ces cookies sont placés par des tierces parties.
-            Types de cookies utilisés. Les types de cookies suivants sont utilisés sur ce Site :
-            Cookies « temporaires » : ce type de cookie est actif dans votre navigateur jusqu’à ce que vous quittiez
-            notre plateforme et expire si vous n’accédez pas au Site pendant une certaine période donnée.
-            Cookies « permanents » ou « traceurs » : ce type de cookie reste dans le fichier de cookies de votre
-            navigateur pendant une période plus longue, qui dépend des paramètres de votre navigateur web. Les cookies
-            permanents sont également appelés cookies traceurs.
-            Utilisation des cookies de tiers. Nous pouvons recourir à des partenaires tiers, tels que Google Analytics,
-            pour suivre l’activité des visiteurs de notre plateforme ou afin d’identifier vos centres d’intérêt sur
-            notre plateforme et personnaliser l’offre qui vous est adressée sur notre plateforme ou en dehors de notre
-            plateforme. Les informations pouvant ainsi être collectées par des annonceurs tiers peuvent inclure des
-            données telles que des données de géo-localisation ou des informations de contact, comme des adresses
-            électroniques. Les politiques de confidentialité de ces annonceurs tiers fournissent des informations
-            supplémentaires sur la manière dont les cookies sont utilisés.
-            Nous veillons à ce que les sociétés partenaires acceptent de traiter les informations collectées sur notre
-            plateforme exclusivement pour nos besoins et conformément à nos instructions, dans le respect de la
-            réglementation européenne et s’engagent à mettre en œuvre des mesures appropriées de sécurisation et de
-            protection de la confidentialité des données.
-            Désactivation des cookies. Vous pouvez à tout moment désactiver les cookies en sélectionnant ` les
-            paramètres appropriés de votre navigateur pour désactiver les cookies (la rubrique d’aide du navigateur
-            utilisé précise la marche à suivre).
-            Nous attirons votre attention sur le fait que la désactivation des cookies peut réduire ou empêcher
-            l’accessibilité à tout ou partie de certaines fonctions.
-            En ce qui concerne les emails promotionnels : Vous pouvez à tout moment retirer votre consentement en
-            (i)décochant la case afférente dans votre compte, (ii) cliquant sur le lien de désinscription fourni dans
-            chacune de nos communications ou (iii) en prenant contact avec nous.
-            En ce qui concerne la publicité ciblée sur des sites tiers: vous pouvez vous reporter à notre Politique
-            relative aux Cookies pour comprendre comment retirer votre consentement.
-            Nous collectons les informations que vous nous fournissez notamment quand :
-            vous créez, modifiez et accédez à votre compte personnel
-            vous remplissez un formulaire
-            de contact
-            vous remplissez un formulaire de candidature à nos offres de formation
-            vous contactez notre Service Client
         </p>
         <h5>Partage avec des tiers</h5>
         <p>
             Nous encadrons juridiquement les transferts par des engagements contractuels avec nos sous-traitants pour
             vous apporter un niveau élevé de sécurité.
             Les données personnelles vous concernant collectées sur notre Site sont destinées pour la propre utilisation
-            par CESI et peuvent être transmises aux sociétés sous-traitantes auxquelles CESI peut faire appel dans le
-            cadre de l’exécution de ses services.
-            CESI ne vend ni ne loue vos données personnelles à des tiers à des fins de marketing, en aucun cas.
-            Nous travaillons également en étroite collaboration avec des entreprises tierces qui peuvent avoir accès à
-            vos données personnelles, en particulier :
-            Lorsque nous faisons appel à des fournisseurs de moteurs de recherche et de solutions analytiques pour
-            améliorer et optimiser notre plateforme ;
-            Lorsque nous avons l’obligation légale de le faire ou si nous pensons de bonne foi que cela est nécessaire
-            pour (i) répondre à toute réclamation à l’encontre de CESI, (ii) se conformer à toute demande judiciaire,
-            (iii) faire exécuter tout contrat conclu avec nos membres, tel que les Conditions Générales d’Utilisation et
-            la présente Politique de protection des données personnelles (iv) en cas d’urgence mettant en jeu la santé
-            publique ou l’intégrité physique d’une personne, (v) dans le cadre d’enquêtes et d’investigations ou (vi)
-            afin de garantir les droits, les biens et la sécurité de CESI, ses membres et plus généralement tout tiers ;
-            En outre, CESI ne divulgue pas vos données personnelles à des tiers, excepté si (1) vous en formulez la
-            demande ou autorisez la divulgation ; (2) la divulgation est requise pour traiter des transactions ou
-            fournir des services que vous avez demandés; (3) CESI y est contraint par une autorité gouvernementale ou un
-            organisme de réglementation, en cas de réquisition judiciaire, de citation à comparaître ou de toute autre
-            exigence gouvernementale ou judiciaire similaire, ou pour établir ou défendre une demande légale ; ou (4) le
-            tiers agit en tant qu’agent ou de sous-
-            traitant de CESI dans l’exécution des services.
-            Si CESI ou tout ou partie de ses actifs sont rachetés par un tiers, les données en notre possession seront,
-            le cas échéant, transférées au nouveau propriétaire.
-            Nous pouvons agréger des données qui vous concernent et que nous recevons ou envoyons à nos partenaires
-            commerciaux, notamment tout ou partie de vos données personnelles et les informations collectées par
-            l’intermédiaire de cookies. Ces informations agrégées ne seront utilisées que pour les finalités décrites
-            ci-dessus.
+            du Bde La Rochelle.
         </p>
         <h5>Protection des données personnelles</h5>
         <p>
             Nous prenons toutes les dispositions nécessaires pour que vos données soient protégées. Nous vous demandons
             également de veiller à la confidentialité des données.
-            CESI applique les mesures de sécurité technologiques et organisationnelles généralement reconnues afin que
-            les données à caractère personnel recueillies ne soient, ni perdues, ni détournées, ni consultées, ni
-            modifiées, ni divulguées par des tiers non autorisés sauf si la communication de ces données est imposée par
-            la réglementation en vigueur, notamment à la requête d’une autorité judiciaire, de police, de gendarmerie ou
-            de toute autre autorité habilitée par la loi.
-            La sécurité des données personnelles dépend également des Utilisateurs. Les Utilisateurs qui sont membres de
-            CESI s’engagent à conserver la confidentialité de leur identifiant et de leur mot de passe. Les membres
-            s’engagent également à ne pas partager leur compte et à déclarer à CESI toute utilisation non autorisée
-            dudit compte dès lors qu’ils en ont connaissance.
         </p>
         <h5>Durée de conservation</h5>
         <p>
             Vos données sont conservées pour une durée limitée afin de vous assurer une sécurité optimale.
             Ces données seront conservées pendant toute la durée de votre inscription au parcours de formation puis un
-            (1) an après la fin du parcours de formation. En cas de délivrance d’un titre ou d’un diplôme, les données
-            relatives à celle-ci seront conservées pendant une durée de 99 ans à compter de la date d’édition du diplôme
-            ou du certificat. Elles font ensuite l’objet d’un archivage jusqu’à l’expiration de la durée de prescription
-            légale applicable.
-            En ce qui concerne les parcours de formation proposés, nous conservons vos données personnelles pour la plus
-            longue des durées légales et réglementaires applicables ou une autre durée compte tenu des contraintes
-            opérationnelles telle qu’une bonne tenue du dossier étudiant, une gestion efficace de la relation étudiants
-            et les réponses aux demandes du Répertoire National des Certifications Professionnelles (RNCP).
-            Les données collectées à des fins de prospection commerciale sont conservées pendant une durée maximale de
-            trois (3) ans à compter de la fin de la relation commerciale.
+            (1) an après la fin du parcours de formation.
         </p>
         <h5>Utilisateurs mineurs</h5>
         <p>
-            Des mineurs, dans le cadre de leur recherche d’informations, peuvent accéder à notre site. Ils peuvent
-            également demander des informations complémentaires sur certaines de nos formations. Notre objectif étant de
-            rendre l’éducation accessible à tous.
-            Néanmoins, toute inscription définitive du mineur, ne se fera qu’après consentement du ou des titulaires de
-            l’autorité parentale. En tant que mineur, vous pourrez exercer votre droit à l’oubli si vous ne souhaitez
-            plus que les données vous concernant soient dans nos bases de données.
+            Des mineurs, dans le cadre de leur recherche d’informations, peuvent accéder à notre site.
         </p>
-        <h5>Relation entre les services CESI et les réseaux sociaux</h5>
+        <h5>Relation entre les services du Bde La Rochelle et les réseaux sociaux</h5>
         <p>
             Nous ne sommes pas responsables de l’utilisation des données faite par les réseaux sociaux.
             Vous pouvez les paramétrer sur leurs sites.
-            Lorsque vous utilisez des réseaux sociaux et des services ou applications de CESI en relation avec des
-            réseaux sociaux, cela est susceptible d’entraîner une collecte et un échange de certaines données entre les
-            réseaux sociaux et CESI.
-            Nous ne sommes pas responsables de l’utilisation qui est faite de vos données par les réseaux sociaux pour
-            leur propre compte. Vous avez la possibilité de paramétrer et contrôler directement sur les réseaux sociaux
-            l’accès et la confidentialité de vos données.
         </p>
         <h5>Droits</h5>
         <p>
@@ -286,44 +109,36 @@
             droit d’opposition aux traitements des données personnelles ;
             droit à la portabilité des données que les Utilisateurs auront fournies, lorsque ces données font l’objet de
             traitements automatisés fondés sur leur consentement ou un contrat.
-            Si vous souhaitez savoir comment CESI utilise ces données personnelles, demander à les rectifier ou
-            s’opposer à un traitement vous pouvez envoyer un email à l’adresse cil@cesi.fr ou adresser un courrier à
-            l’adresse suivante : CESI – Data Protection Officer – 30 rue Cambronne 75015 Paris France. Enfin les
-            Utilisateurs de CESI peuvent déposer une réclamation auprès des autorités de contrôle, et notamment de la
-            CNIL. Vos requêtes seront traitées sous 30 jours. En complément de votre demande, nous vous demanderons de
-            joindre une photocopie d’un justificatif d’identité afin que CESI puisse vérifier votre identité.
         </p>
         <h5>Nous contacter</h5>
         <p>
-            Si vous avez des questions ou des réclamations ou si vous souhaitez faire part à CESI de recommandations ou
+            Si vous avez des questions ou des réclamations ou si vous souhaitez faire part de recommandations ou
             des commentaires visant à améliorer notre Politique de protection des données personnelles vous pouvez
-            envoyer un email à l’adresse cil@cesi.fr ou adresser un courrier à l’adresse suivante : CESI – Data
-            Protection Officer – la Défense FR, 1 Avenue du Général de Gaulle, 92074 Paris – FRANCE
+            envoyer un email à l’adresse bde.cesilr@viacesi.fr
         </p>
         <h3>Conditions générales de vente</h3>
         <p>
-            Entre la Société XYZ,
-            17 rue XYZ, 75001 Paris,
-            au Capital Social de 147.000€,
-            immatriculée au Registre du Commerce et des Sociétés de PARIS,
-            sous le numéro SIRET 123456789,
+            Entre L'association Bde Cesi La Rochelle
+            8 rue Isabelle Autissier
+            <br>
+            17140 Lagord
+            <br>
             représentée par M. Jean DUPONT
             en qualité de gérant,
             dûment habilité aux fins des présentes.
-            La société peut être jointe par email en cliquant sur le formulaire de contact accessible via la page
-            d’accueil du site.
-            Ci-après le « Vendeur » ou la « Société ».
+            L'association peut être jointe par email à l'adresse suivante bde.cesilr@viacesi.fr.
+            Ci-après l'association
             D’une part,
-            Et la personne physique ou morale procédant à l’achat de produits ou services de la société,
+            Et la personne physique ou morale procédant à l’achat de produits ou services de l'association,
             Ci-après, « l’Acheteur », ou « le Client »
             D’autre part,
             Il a été exposé et convenu ce qui suit :
         </p>
         <h5>Préambule</h5>
         <p>
-            Le Vendeur est éditeur de Produits et Services de XXX à destination de consommateurs, commercialisés par
-            l’intermédiaire de ses sites Internet (http://siteweb.com ). La liste et le descriptif des biens et services
-            proposés par la Société peuvent être consultés sur les sites susmentionnés.
+            Le Vendeur est éditeur de Produits et Services à destination de consommateurs, commercialisés par
+            l’intermédiaire de ses sites Internet (http://bdecesilr.fr ). La liste et le descriptif des biens et services
+            proposés par l'association peuvent être consultés sur les sites susmentionnés.
         </p>
         <h5>Article 1 : Objet</h5>
         <p>
@@ -333,14 +148,14 @@
         <h5>Article 2 : Dispositions generales</h5>
         <p>
             Les présentes Conditions Générales de Vente (CGV) régissent les ventes de Produits ou de Services,
-            effectuées au travers des sites Internet de la Société, et sont partie intégrante du Contrat entre
+            effectuées au travers des sites Internet de l'association, et sont partie intégrante du Contrat entre
             l’Acheteur et le Vendeur. Elles sont pleinement opposables à l’Acheteur qui les a acceptés avant de passer
             commande.
             Le Vendeur se réserve la possibilité de modifier les présentes, à tout moment par la publication d’une
             nouvelle version sur son site Internet. Les CGV applicables alors sont celles étant en vigueur à la date du
             paiement (ou du premier paiement en cas de paiements multiples) de la commande. Ces CGV sont consultables
-            sur le site Internet de la Société à l’adresse suivante : XXX .
-            La Société s’assure également que leur acceptation soit claire et sans réserve en mettant en place une case
+            sur le site Internet de l'association à l’adresse suivante : (http://bdecesilr.fr ).
+            l'association s’assure également que leur acceptation soit claire et sans réserve en mettant en place une case
             à cocher et un clic de validation. Le Client déclare avoir pris connaissance de l’ensemble des présentes
             Conditions Générales de Vente, et le cas échéant des Conditions Particulières de Vente liées à un produit ou
             à un service, et les accepter sans restriction ni réserve.
@@ -348,20 +163,20 @@
             l’adéquation de l’offre à ses besoins.
             Le Client déclare être en mesure de contracter légalement en vertu des lois françaises ou valablement
             représenter la personne physique ou morale pour laquelle il s’engage.
-            Sauf preuve contraire les informations enregistrées par la Société constituent la preuve de l’ensemble des
+            Sauf preuve contraire les informations enregistrées par l'association constituent la preuve de l’ensemble des
             transactions.
         </p>
         <h5>Article 3 : Prix</h5>
         <p>
             Les présentes Conditions Générales de Vente (CGV) régissent les ventes de Produits ou de Services,
-            effectuées au travers des sites Internet de la Société, et sont partie intégrante du Contrat entre
+            effectuées au travers des sites Internet de l'association, et sont partie intégrante du Contrat entre
             l’Acheteur et le Vendeur. Elles sont pleinement opposables à l’Acheteur qui les a acceptés avant de passer
             commande.
             Le Vendeur se réserve la possibilité de modifier les présentes, à tout moment par la publication d’une
             nouvelle version sur son site Internet. Les CGV applicables alors sont celles étant en vigueur à la date du
             paiement (ou du premier paiement en cas de paiements multiples) de la commande. Ces CGV sont consultables
-            sur le site Internet de la Société à l’adresse suivante : XXX .
-            La Société s’assure également que leur acceptation soit claire et sans réserve en mettant en place une case
+            sur le site Internet de l'association à l’adresse suivante : XXX .
+            l'association s’assure également que leur acceptation soit claire et sans réserve en mettant en place une case
             à cocher et un clic de validation. Le Client déclare avoir pris connaissance de l’ensemble des présentes
             Conditions Générales de Vente, et le cas échéant des Conditions Particulières de Vente liées à un produit ou
             à un service, et les accepter sans restriction ni réserve.
@@ -369,7 +184,7 @@
             l’adéquation de l’offre à ses besoins.
             Le Client déclare être en mesure de contracter légalement en vertu des lois françaises ou valablement
             représenter la personne physique ou morale pour laquelle il s’engage.
-            Sauf preuve contraire les informations enregistrées par la Société constituent la preuve de l’ensemble des
+            Sauf preuve contraire les informations enregistrées par l'association constituent la preuve de l’ensemble des
             transactions.
         </p>
         <h5>Article 4 : Conclusion du contrat en ligne</h5>
@@ -404,7 +219,7 @@
         <h5>Article 5 : Produits et services</h5>
         <p>
             Les caractéristiques essentielles des biens, des services et leurs prix respectifs sont mis à disposition de
-            l’acheteur sur les sites Internet de la société, de même, le cas échéant, que le mode d’utilisation du
+            l’acheteur sur les sites Internet de l'association, de même, le cas échéant, que le mode d’utilisation du
             produit. Conformément à l’article L112-1 du Code la consommation, le consommateur est informé, par voie de
             marquage, d’étiquetage, d’affichage ou par tout autre procédé approprié, des prix et des conditions
             particulières de la vente et de l’exécution des services avant toute conclusion du contrat de vente. Dans
@@ -423,7 +238,7 @@
             avec le Client sur une nouvelle date de livraison, le Vendeur rembourse le client.
             Les informations contractuelles sont présentées en détail et en langue française. Les parties conviennent
             que les illustrations ou photos des produits offerts à la vente n’ont pas de valeur contractuelle. La durée
-            de validité de l’offre des Produits ainsi que leurs prix est précisée sur les sites Internet de la Société,
+            de validité de l’offre des Produits ainsi que leurs prix est précisée sur les sites Internet de l'association,
             ainsi que la durée minimale des contrats proposés lorsque ceux-ci portent sur une fourniture continue ou
             périodique de produits ou services. Sauf conditions particulières, les droits concédés au titre des
             présentes le sont uniquement à la personne physique signataire de la commande (ou la personne titulaire de
@@ -447,7 +262,7 @@
         </p>
         <h5>Article 7 : Clause de réserve de propriété</h5>
         <p>
-            Les produits demeurent la propriété de la Société jusqu’au complet paiement du prix.
+            Les produits demeurent la propriété de l'association jusqu’au complet paiement du prix.
         </p>
         <h5>Article 8 : Modalités de livraison</h5>
         <p>
@@ -467,7 +282,7 @@
         </p>
         <h5>Article 9 : Disponibilité et présentation</h5>
         <p>
-            En cas d’indisponibilité d’un article pour une période supérieure à XXXX jours ouvrables, vous serez
+            En cas d’indisponibilité d’un article pour une période supérieure à 31 jours ouvrables, vous serez
             immédiatement prévenu des délais prévisibles de livraison et la commande de cet article pourra être annulée
             sur simple demande. Le Client pourra alors demander un avoir pour le montant de l’article ou son
             remboursement intégral et l’annulation de la commande.
@@ -491,7 +306,7 @@
         <p>
             Conformément aux dispositions de l’article L 221-5 du Code de la consommation, l’Acheteur dispose du droit
             de se rétracter sans donner de motif, dans un délai de quatorze (14) jours à la date de réception de sa
-            commande. Le droit de rétractation peut être exercé en contactant la Société de la manière suivante :
+            commande. Le droit de rétractation peut être exercé en contactant l'association de la manière suivante :
             (décrire la procédure précise). Nous informons les Clients que conformément aux dispositions des articles L.
             221-18 à L. 221-28 du Code de la consommation, ce droit de rétractation ne peut être exercé pour (décrire
             les biens non sujets à ces dispositions). En cas d’exercice du droit de rétractation dans le délai
@@ -519,13 +334,13 @@
         </p>
         <h5>Article 13 : Réclamations et médiation</h5>
         <p>
-            Le cas échéant, l’Acheteur peut présenter toute réclamation en contactant la société au moyen des
+            Le cas échéant, l’Acheteur peut présenter toute réclamation en contactant l'association au moyen des
             coordonnées suivantes (indiquer les coordonnées et la procédure).
             Conformément aux dispositions des art. L. 611-1 à L. 616-3 du Code de la consommation, le consommateur est
             informé qu’il peut recourir à un médiateur de la consommation dans les conditions prévues par le titre Ier
             du livre VI du code de la consommation.
             En cas d’échec de la demande de réclamation auprès du service client du Vendeur, ou en l’absence de réponse
-            dans un délai de deux mois, le consommateur peut soumettre le différend à un médiateur XXX qui tentera en
+            dans un délai de deux mois, le consommateur peut soumettre le différend à un médiateur qui tentera en
             toute indépendance de rapprocher les parties en vue d’obtenir une solution amiable.
         </p>
         <h5>Article 14 : Résolution du contrat</h5>
@@ -539,7 +354,7 @@
         </p>
         <h5>Article 15 : Droits de propriété intellectuelle</h5>
         <p>
-
+            Les noms et les produits appartiennent à l'association 
         </p>
         <h5>Article 16 : Force majeure</h5>
         <p>
@@ -561,7 +376,7 @@
             et services définis au présent contrat. L’Acheteur est informé des éléments suivants : l’identité et les
             coordonnées du responsable du traitement et, le cas échéant, du représentant du responsable du traitement :
             le Vendeur, tel qu’indiqué en haut des présentes CGV ; - les coordonnées du délégué à la protection des
-            données : XXX - la base juridique du traitement : l’exécution contractuelle - les destinataires ou les
+            données :  la base juridique du traitement : l’exécution contractuelle - les destinataires ou les
             catégories de destinataires des données à caractère personnel, s’ils existent : le responsable du
             traitement, ses services en charge du marketing, les services en charge de la sécurité informatique, le
             service en charge de la vente, de la livraison et de la commande, les sous-traitants intervenants dans les

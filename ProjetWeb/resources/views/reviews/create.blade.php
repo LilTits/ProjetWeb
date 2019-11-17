@@ -8,14 +8,14 @@
         <div class="row">
             <div class="col-12">
                 {!! Form::open(['action' => 'ReviewsController@store', 'method' => 'POST']) !!}
-                    <div class="form-group">
-                        {{Form::label('description', 'Description')}}
-                        {{Form::textarea('description', '', [
+                <div class="form-group">
+                    {{Form::label('description', 'Description')}}
+                    {{Form::textarea('description', '', [
                         'class' => 'form-control',
                         'placeholder' => 'Votre Avis'
                     ])}}
-                    </div>
-                    {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+                </div>
+                {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
                 {!! Form::close() !!}
             </div>
         </div>

@@ -16,7 +16,8 @@
                         <h5 class="card-title">{{$product->name}}</h5>
                         <p class="card-text">{{$product->category->name}}</p>
                         <p class="card-text">{{$product->price}}</p>
-                        <a href="/products/{{$product->id}}" class="btn btn-primary buy_button_product">En savoir plus</a>
+                        <a href="/products/{{$product->id}}" class="btn btn-primary buy_button_product">En savoir
+                            plus</a>
                         <br>
                         <small>Ajouté le {{$product->created_at}}</small>
                     </div>

@@ -9,7 +9,8 @@
             @if(count($events) > 0)
             @foreach ($events as $event)
             <div class="col-12 card frame_event">
-                <img src="/storage/image/events/{{$event->event_image}}" class="card-img-top img-thumbnail image_event" alt="event">
+                <img src="/storage/image/events/{{$event->event_image}}" class="card-img-top img-thumbnail image_event"
+                    alt="event">
                 <div class="card-body">
                     <h5 class="card-title">{{$event->name}}</h5>
                     <h6 class="price">{{$event->price}}</h6>
@@ -22,10 +23,10 @@
                     <div class="form-group">
                         {{Form::hidden('id', $event->id)}}
                     </div>
-                    @if(Auth::user()->id == $event->user_id)
+                    {{-- @if(Auth::user()->id == $event->user_id) --}}
                     {{Form::submit('S\'inscrire', ['class' => 'btn btn-primary'])}}
                     {!! Form::close() !!}
-                    @endif
+                    {{-- @endif --}}
                     <hr>
                     <small>Ajouté le {{$event->created_at}} by {{$event->eventCreator->first_name}}
                         {{$event->eventCreator->last_name}}</small>

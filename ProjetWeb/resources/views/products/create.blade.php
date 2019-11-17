@@ -2,13 +2,15 @@
 
 @section('content')
 <!-- Start of product section -->
-@auth <!--If auth-->
+@auth
+<!--If auth-->
 <section id="product">
     <div class="product_section container">
         <h3 class="title_section">Création de Produits</h3>
         <div class="row">
             <div class="col-12">
-                {!! Form::open(['action' => 'ProductTypesController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+                {!! Form::open(['action' => 'ProductTypesController@store', 'method' => 'POST', 'enctype' =>
+                'multipart/form-data']) !!}
                 <div class="form-group">
                     {{Form::label('name', 'Nom')}}
                     {{Form::text('name', '', [
@@ -40,7 +42,7 @@
                     {{Form::file('product_image')}}
                 </div>
                 {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
-            {!! Form::close() !!}
+                {!! Form::close() !!}
             </div>
         </div>
     </div>

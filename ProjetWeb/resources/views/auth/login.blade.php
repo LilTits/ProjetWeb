@@ -53,10 +53,6 @@
                                 <button type="submit" class="btn btn-primary">
                                     Connexion
                                 </button>
-<!--
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Oublie du mot de passe?
-                                </a>-->
                             </div>
                         </div>
                     </form>

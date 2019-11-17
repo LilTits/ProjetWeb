@@ -17,6 +17,7 @@
     </ul>
   </div>
 </div>
+
 <!--If admin-->
 
 @if(Auth::user()->role_id == 2)
@@ -35,8 +36,6 @@
 @include('perso.cesi')
 @endif
 
-
 @endsection
 
 @endauth
-
