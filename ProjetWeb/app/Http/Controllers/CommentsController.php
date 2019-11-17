@@ -44,10 +44,10 @@ class CommentsController extends Controller
         $comment = new Comment();
         $comment->description = $request->input('description');
         $comment->author = auth()->user()->id;
-        $comment->event_id = 1;
+        $comment->event_id = $request->id;
         $comment->save();
 
-        return redirect('/comments')->with('success', 'Commentaire créé');
+        return redirect("/events")->with('success', 'Commentaire créé');
     }
 
     /**
@@ -92,7 +92,7 @@ class CommentsController extends Controller
         $comment->description = $request->input('description');
         $comment->save();
 
-        return redirect('/comments')->with('success', 'Commentaire mis à jour');
+        return redirect('/events')->with('success', 'Commentaire mis à jour');
     }
 
     /**
@@ -105,6 +105,6 @@ class CommentsController extends Controller
     {
         $comment = Comment::find($id);
         $comment->delete();
-        return redirect('/comments')->with('sucess', 'Commentaire supprimé');
+        return redirect('/events')->with('sucess', 'Commentaire supprimé');
     }
 }
