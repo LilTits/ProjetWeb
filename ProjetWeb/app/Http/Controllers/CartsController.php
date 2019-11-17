@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Cart as myCart;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use App\User;
+use Auth;
 
 class CartsController extends Controller
 {
@@ -14,10 +16,12 @@ class CartsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $cart = myCart::all();
-
+    {  
+        
+        $cart = myCart::where('user_id', Auth::user()->id)->get();
+        
         return view('carts.index')->with('cart', $cart);
+        
     }
 
     /**
@@ -140,8 +144,12 @@ class CartsController extends Controller
      */
     public function destroy($id)
     {
-        Cart::remove($id);
+        //Cart::remove($id);
+        $cart = myCart::find($id);
+        $cart->delete();
 
         return back()->with('success', 'Le produit a été supprimé du panier');
     }
+
+   
 }

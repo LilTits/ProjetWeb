@@ -62,6 +62,7 @@ Route::resource('perso', 'PersoController');
 // Basket
 
 Route::resource('carts', 'CartsController');
+//Route::post('carts', 'CartsController@destroy');
 
 //product categories
 

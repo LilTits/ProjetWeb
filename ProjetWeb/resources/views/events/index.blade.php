@@ -14,7 +14,7 @@
                     <h5 class="card-title">{{$event->name}}</h5>
                     <h6 class="price">{{$event->price}}</h6>
                     <p class="card-text">{{$event->description}}</p>
-                    <p class="card-text">Nombre de participants : {{$event->max_participants}}</p>
+                    <p class="card-text">Nombre de place : {{$event->max_participants}}</p>
                     <p class="card-text">Débute le : {{$event->start_date}}</p>
                     {{-- <p class="card-text">Et termine le : {{$event->end_date}}</p> --}}
                     <a href="/events/{{$event->id}}" class="btn btn-primary buy_button_event">En savoir plus</a>
@@ -22,8 +22,10 @@
                     <div class="form-group">
                         {{Form::hidden('id', $event->id)}}
                     </div>
+                    @if(Auth::user()->id == $event->user_id)
                     {{Form::submit('S\'inscrire', ['class' => 'btn btn-primary'])}}
                     {!! Form::close() !!}
+                    @endif
                     <hr>
                     <small>Ajouté le {{$event->created_at}} by {{$event->eventCreator->first_name}}
                         {{$event->eventCreator->last_name}}</small>

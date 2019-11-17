@@ -49,7 +49,7 @@ class Event extends Model
 
     public function eventParticipants()
     {
-        return $this->hasMany('App\EventParticipant');
+        return $this->hasMany('App\EventParticipant', 'event_id');
     }
 
     // public function creatorProfile()

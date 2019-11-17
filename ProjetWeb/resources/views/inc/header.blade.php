@@ -7,7 +7,7 @@
         @if (Cart::instance('default')->count() >0)
         
         @endif
-        <span>{{Cart::instance('default')->count()}}</span>
+        
     </span>
     {{-- Panier <span class="badge">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span> --}}
     panier

@@ -16,7 +16,7 @@
         <hr>
         <small>Ajouté le {{$event->created_at}}</small>
         <hr>
-        <a href="{{ route('participants.index')}}" class="btn btn-primary">Liste des participants</a>
+        <a  href="/participants/{{$event->id}}"class="btn btn-primary">Liste des participants</a>
 
         @auth
         @if((Auth::user()->role_id == 3) || (Auth::user()->role_id == 4))   <!--Only admin or member BBD-->

@@ -1171,7 +1171,7 @@
             },
             "require": {
                 "ext-tokenizer": "*",
-                "php": ">=7.0"
+                "php": ">=5.5"
             },
             "require-dev": {
                 "ircmaxell/php-yacc": "0.0.5",
