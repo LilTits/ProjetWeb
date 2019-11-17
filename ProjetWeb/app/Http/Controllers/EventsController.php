@@ -95,8 +95,10 @@ class EventsController extends Controller
      */
     public function show($id)
     {
-        $event = Event::find($id);
-        return view('events.show')->with('event', $event);
+        $data =  array();
+        $data['event'] = Event::find($id);
+        $data['comments'] = Event::find($id)->comments;
+        return view('events.show',compact("data"));;
     }
 
     /**
@@ -109,6 +111,18 @@ class EventsController extends Controller
     {
         $event = Event::find($id);
         return view('events.edit')->with('event', $event);
+    }
+
+    /**
+     * Show the form for creating the specified commsnets.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function addcomment($id)
+    {
+        $event = Event::find($id);
+        return view('events.addcomment')->with('event', $event);
     }
 
     /**

@@ -78,6 +78,13 @@ Route::get('/products/sorted/{type}', [
     'uses' => 'ProductTypesController@getProductSorted',
     'as' => 'products.sorted'
 ]);
+
+//create comment
+
+Route::get('/events/{id}/addcomment', [
+    'uses' => 'EventsController@addcomment',
+    'as' => 'events.addcomment'
+]);
     
 
 
