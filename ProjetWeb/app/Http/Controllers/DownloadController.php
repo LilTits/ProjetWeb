@@ -42,4 +42,13 @@ catch (\Exception $e)
     dd($e->getMessage());
 }
     }
+
+    public function downloadpdf(){
+        
+        $file= resource_path(). "\\views\participants\index.blade.php";
+        $headers = array(
+            'Content-Type: application/pdf',
+          );
+        return response()->download($file, 'test.pdf', $headers);
+    }
 }

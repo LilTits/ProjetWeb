@@ -1,4 +1,5 @@
-<section id="bde">
+<!--Section admin-->
+<section id="admin">
     <div class="jumbotron">
         <div class="container welcome_index">
             <a button class="btn btn-primary btn-lg btn btn-dark" href="/products/create">Créer un produit</a>
@@ -10,3 +11,9 @@
         </div>
     </div>
 </section>
+<!--Section admin-->
+
+
+
+
+      

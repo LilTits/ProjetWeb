@@ -23,10 +23,10 @@
                     <div class="form-group">
                         {{Form::hidden('id', $event->id)}}
                     </div>
-                    {{-- @if(Auth::user()->id == $event->user_id) --}}
+                    
                     {{Form::submit('S\'inscrire', ['class' => 'btn btn-primary'])}}
                     {!! Form::close() !!}
-                    {{-- @endif --}}
+                    
                     <hr>
                     <small>Ajouté le {{$event->created_at}} by {{$event->eventCreator->first_name}}
                         {{$event->eventCreator->last_name}}</small>

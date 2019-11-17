@@ -4,16 +4,12 @@
 
 <section id="participants">
     <div class="container">
-        <div class="row">
+        <div class="col">
+                <p>Voici la liste des participants pour cette évènement :</p>
             @foreach ($event_participants as $participant)
-            <div class="col">
-                <p>Nom : {{$participant->user->first_name}} </p>
-                <br>
-            </div>
-            <div class="col">
-                <!-- <p>Event_id : {{$participant->event_id}} </p> -->
-                <br>
-            </div>
+            
+                <p>{{$participant->user->first_name}} </p>
+            
             @endforeach
         </div>
     </div>

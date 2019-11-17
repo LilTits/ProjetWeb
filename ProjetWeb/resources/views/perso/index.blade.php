@@ -1,3 +1,4 @@
+<!-- If login -->
 @auth
 @extends('layout.app')
 
@@ -18,24 +19,23 @@
   </div>
 </div>
 
-<!--If admin-->
-
+<!--If user-->
 @if(Auth::user()->role_id == 2)
-@include('perso.user')
+  @include('perso.user')
 @endif
 
+<!--If admin-->
 @if(Auth::user()->role_id == 3)
-@include('perso.admin')
+  @include('perso.admin')
 @endif
-
+<!--If bde-->
 @if(Auth::user()->role_id == 4)
-@include('perso.bde')
+  @include('perso.bde')
 @endif
-
+<!--If cesi-->
 @if(Auth::user()->role_id == 5)
-@include('perso.cesi')
+  @include('perso.cesi')
 @endif
 
 @endsection
-
 @endauth
