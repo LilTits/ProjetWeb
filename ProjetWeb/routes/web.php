@@ -27,6 +27,7 @@ Route::get('/perso', 'PagesController@perso')->middleware('App\Http\Middleware\A
 Route::get('/emails', 'SendeMailController@sendemail');
 Route::get('/emailsproduct', 'SendeMailController@sendemailproduct');
 Route::get('/downloadsf', 'DownloadController@downloadAll');
+Route::get('/downloadspdf', 'DownloadController@downloadpdf');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

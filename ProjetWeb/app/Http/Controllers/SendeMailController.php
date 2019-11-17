@@ -12,7 +12,7 @@ class SendeMailController extends Controller
 {
 
     use Queueable, SerializesModels;
-    public function sendemail()
+    public function sendemail()                                        
     {
         $user = User::select('email')->where('role_id', 4)->get();    /*We take all email of member BDE*/ 
         $nb = $user->count();
@@ -28,13 +28,11 @@ class SendeMailController extends Controller
         };
         
         $title = "Contenu inapproprié";
-        $content = "je suis le contenu du mail";
-        $user_name = "nom du destinataire";
+       
         
         try                                                         /*We try to send mail*/
         {       
-            $data = ['name'=> $user_name,'subject' => $title, 'content' => $content];
-
+            $data = ['subject' => $title];
             Mail::send('emails/email', $data, function($message) use ($emails, $data) {
             $subject=$data['subject'];
             $message->from('matheo.brise17@gmail.com');
@@ -56,32 +54,24 @@ class SendeMailController extends Controller
 
         $cart = myCart::all();
 
-        $user = User::select('email')->where('role_id', 4)->get();
+        $user = User::select('email')->where('role_id', 4)->get();     /*We take all email of member BDE*/ 
         $nb = $user->count();
-        foreach($user as $user2)
-        {
+        foreach($user as $user2){
             $a=0;
             $b=0;
-            for($i = 1; $i <= $nb; $i++ )
-                    {
+        for($i = 1; $i <= $nb; $i++ ){
            $user2 = $user->get($a)->email; 
            $emails[$b] =$user2;
            $b++;
            $a++;
-                    }
+        }
         };
         
-        
-        
         $title = "Une commande";
-        $content = "je suis le contenu du mail";
-        $user_name = "nom du destinataire";
         
-        try
-        {
-                   
-            $data = ['name'=> $user_name,'subject' => $title, 'content' => $content];
-
+        try                                                             /*We try to send mail*/
+        {     
+            $data = ['subject' => $title];
             Mail::send('carts/emailProduct', $data, function($message) use ($emails, $data, $cart) {
             $subject=$data['subject'];
             $message->from('matheo.brise17@gmail.com');
