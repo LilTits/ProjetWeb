@@ -18,9 +18,12 @@
     "lodash": "^4.17.4",
     "popper.js": "^1.16.0",
     "resolve-url-loader": "^3.1.0",
-    "sass": "^1.23.3",
+    "sass": "^1.23.6",
     "sass-loader": "^8.0.0",
     "vue": "^2.1.10",
     "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2"
   }
 }

@@ -25,6 +25,6 @@
   </div>
 </div>
 
-<button class="btn btn-default" data-toggle="modal" data-target="#exampleModal">
-  Cookie
+<button class="btn btn-default text_footer" data-toggle="modal" data-target="#exampleModal">
+  Cookie <i class="fas fa-cookie-bite"></i>
 </button>

@@ -3,7 +3,7 @@
 @section('content')
 <!-- Start of product section -->
 <section id="product">
-    <div class="product_section container">
+    <div class="container">
         <h3 class="title_section">Produits</h3>
         <div class="row">
             @if(count($products) > 0)

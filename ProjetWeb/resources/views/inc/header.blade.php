@@ -1,16 +1,7 @@
 <!-- Début header -->
 <header>
   <nav id="navigation" class="navbar navbar-expand-md navbar-dark mb-4">
-    <a class="navbar-brand" href="{{route('carts.index')}}">
-      <span class="badge">
-        @if (Cart::instance('default')->count() >0)
-
-        @endif
-
-      </span>
-      {{-- Panier <span class="badge">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span> --}}
-      panier
-    </a>
+    <a class="navbar-brand" href="{{route('carts.index')}}"><i class="fas fa-shopping-basket"></i></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
       aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -71,7 +62,6 @@
 
       <!-- Searchbar -->
       <form action="{{ route('search') }}" method="GET" class="search-form">
-        <i class="fa fa-search search-icon"></i>
         <input class="form-control" type="text" name="query" value="{{ request()->input('query') }}" id="query"
           placeholder="Recherché - Tout Produit">
       </form>
