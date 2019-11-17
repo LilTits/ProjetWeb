@@ -11696,6 +11696,10 @@ body {
   background-color: #333;
 }
 
+.dropdown-toggle {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /* 2-Welcome */
 
 .welcome_index {

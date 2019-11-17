@@ -50,7 +50,7 @@
       <!-- Sorting Dropdown -->
 
       @if(\Request::is("products") OR Request::is('products/*') OR Request::is('search*'))
-      <div class="nav-item dropdown">
+      <div class="nav-item dropdown" >
         <a href="/products" class="btn btn-primary-sort dropdown-toggle mr-4" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">Trier Par</a>
         <div class="dropdown-menu dropdown-menu-header">

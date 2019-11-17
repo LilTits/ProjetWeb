@@ -17,11 +17,15 @@ class CartsController extends Controller
      */
     public function index()
     {  
-        
+        if(Auth::user())
+        {
         $cart = myCart::where('user_id', Auth::user()->id)->get();
         
         return view('carts.index')->with('cart', $cart);
-        
+        }
+        else{
+            return view('carts.index');
+        }
     }
 
     /**

@@ -42,6 +42,10 @@
                 </ul>
             </div>
         </div>
+
+        <div class="col-12">
+            <a button class="btn btn-primary btn-lg btn-warning" href="/emailsproduct">Commander</a>
+        </div>
         @else
         <div class="col-sm-6 col-md-6">
             <h3>Pas de produit dans le panier</h3>
