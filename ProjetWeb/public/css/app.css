@@ -28333,6 +28333,10 @@ body {
   background-color: #333;
 }
 
+.icon_header:hover {
+  color: #ffc252;
+}
+
 /* 2-Carts */
 
 .title_alert,
