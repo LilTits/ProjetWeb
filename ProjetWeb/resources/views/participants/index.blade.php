@@ -8,7 +8,7 @@
                 <p>Voici la liste des participants pour cette évènement :</p>
             @foreach ($event_participants as $participant)
             
-                <p>{{$participant->user->first_name}} </p>
+                <p>{{$participant->user->first_name}} {{$participant->user->last_name}} </p>
             
             @endforeach
         </div>
