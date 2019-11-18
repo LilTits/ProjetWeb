@@ -15,6 +15,10 @@ Second year of precatory cycle at CESI computer engineering program
 
 Created by: **Varjavandi Thomas**, **Brisé Mathéo** et **Guiochet Titouan**.
 
+## How to use the site in local
+
+Copy the .env.example, create a file called .env and paste in the text.
+
 ## Technical choice:
 
 ### Why using a framework
