@@ -40,14 +40,15 @@
             </div>
         </div>
         <a href="/events" class="btn btn-default">Retour en arrière</a>
+        @auth
+        <a href="/events/{{$data['event']->id}}/addcomment" class="btn">Ajouter un Commentaire</a>
+        @endauth
     </div>
 </section>
 
 <section id="comments">
 
-    @auth
-    <a href="/events/{{$data['event']->id}}/addcomment" class="btn">Ajouter un Commentaire</a>
-    @endauth
+
 
 
     <h3 class="title_section">Commentaire</h3>
