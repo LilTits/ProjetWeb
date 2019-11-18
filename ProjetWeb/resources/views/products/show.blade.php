@@ -13,7 +13,9 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">{{$data['product']->category->name}}</li>
                 <li class="list-group-item">{{$data['product']->price}} €</li>
-                <li class="list-group-item">Avis Moyen: {{$data['reviews']->avg('rating');}} €</li>
+                @if(count($data['reviews']) > 0)
+                <li class="list-group-item">Avis Moyen: {{$data['reviews']->avg('rating')}}</li>
+                @endif
                 <li class="list-group-item"><small>Ajouté le {{$data['product']->created_at}}</small></li>
             </ul>
             <div class="col-md-12 btn-group">
@@ -43,7 +45,7 @@
 <section id="reviews">
 
 @auth
-<a href="/product/{{$data['product']->id}}/addreview" class="btn">Ajoute Avis</a>
+<a href="/products/{{$data['product']->id}}/addreview" class="btn">Ajoute Avis</a>
 @endauth
 
 

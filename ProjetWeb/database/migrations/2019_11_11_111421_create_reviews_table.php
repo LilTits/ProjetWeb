@@ -15,7 +15,7 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->increments('id');
-            $table->int('rating')->unsigned();
+            $table->integer('rating')->unsigned();
             $table->string('description');
             $table->integer('author')->unsigned();
             $table->integer('product_id')->unsigned();
@@ -26,7 +26,7 @@ class CreateReviewsTable extends Migration
 
             //FOREIGN KEY CONSTRAINTS
             $table->foreign('author')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('product_types')->onDelete('cascade');
             $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
         });
     }

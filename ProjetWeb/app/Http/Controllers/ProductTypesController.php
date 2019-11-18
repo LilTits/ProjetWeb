@@ -95,8 +95,22 @@ class ProductTypesController extends Controller
      */
     public function show($id)
     {
+        $data =  array();
+        $data['product'] = ProductType::find($id);
+        $data['reviews'] = ProductType::find($id)->reviews;
+        return view('products.show',compact("data"));;
+    }
+
+    /**
+     * Show the form for creating the specified commsnets.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function addreview($id)
+    {
         $product = ProductType::find($id);
-        return view('products.show')->with('product', $product);
+        return view('products.addreview')->with('product', $product);
     }
 
     /**

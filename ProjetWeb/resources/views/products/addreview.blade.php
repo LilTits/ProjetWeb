@@ -6,10 +6,10 @@
 @auth <!--If auth-->
 <section id="review">
     <div class="comment_section container">
-        <h3>Commentaire</h3>
+        <h3>Avis</h3>
         <div class="row">
             <div class="col-12">
-                {!! Form::open(['action' => 'CommentsController@store', 'method' => 'POST']) !!}
+                {!! Form::open(['action' => 'ReviewsController@store', 'method' => 'POST']) !!}
                     <div class="form-group">
                         {{Form::label('rating', 'Avis')}}
                         {{Form::selectRange('rating', 1, 5)}}
