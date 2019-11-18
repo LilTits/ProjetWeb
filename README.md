@@ -1,3 +1,5 @@
+[![BCH compliance](https://bettercodehub.com/edge/badge/LilTits/ProjetWeb?branch=master)](https://bettercodehub.com/)
+
 # Project Web
 
 Creation of an **E-Commerce** Site for the BDE Association in less than two weeks.
