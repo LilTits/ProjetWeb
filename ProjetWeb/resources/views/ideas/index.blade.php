@@ -10,7 +10,6 @@
             @foreach ($ideas as $idea)
             <div class="col-xs-12 col-sm-6 col-lg-4 item_idea">
                 <div class="col-12 card frame_idea">
-                    <img src="iphonex.png" class="card-img-top img-thumbnail image_idea" alt="Idea">
                     <div class="card-body">
                         <h5 class="card-title">{{$idea->title}}</h5>
                         <p class="card-text">{{$idea->description}}</p>
@@ -21,10 +20,12 @@
                 </div>
             </div>
             @endforeach
+            
             @else
             <p>Pas de produits</p>
             @endif
         </div>
+        <a button class="btn btn-primary btn-lg btn btn-dark" href="/ideas/create">Une idée d'évènement?</a>
     </div>
 </section>
 <!-- End of idea section -->

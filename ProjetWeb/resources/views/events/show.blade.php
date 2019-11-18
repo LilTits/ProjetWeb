@@ -18,9 +18,9 @@
         <hr>
         @auth
         @if((Auth::user()->role_id == 3) || (Auth::user()->role_id == 4))   <!--Only admin or member BBD-->
-        <a  href="/participants/{{$event->id}}"class="btn btn-primary">Liste des participants</a>
-        <a href="/events/{{$event->id}}/edit" class="btn">Edition</a>
-        {!!Form::open(['action' => ['EventsController@destroy', $event->id], 'method' => 'POST'])!!}
+        <a  href="/participants/{{$data['event']->id}}"class="btn btn-primary">Liste des participants</a>
+        <a href="/events/{{$data['event']->id}}/edit" class="btn">Edition</a>
+        {!!Form::open(['action' => ['EventsController@destroy', $data['event']->id], 'method' => 'POST'])!!}
         {{Form::hidden('_method', 'DELETE')}}
         {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
         {!!Form::close()!!}
@@ -29,6 +29,29 @@
         <hr>
     </div>
 </section>
+
+{{-- <section id="participant">
+    @if (count($data['event']_participants) > 0)
+        <div class="col-sm-6 col-md-6">
+            <div class="row">
+                <ul class="list-group">
+                    @foreach ($data['event']_participants as $participant)
+                    <li class="list-group-item">
+                        <div class="card mb-3">
+                            <div class=" row no-gutters">
+                                <div class="col-6">
+                                    <p class="card-text">{{$participant->id}} €</p>
+                                    <p class="card-text">{{$participant->id}} €</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    @endif    
+</section> --}}
 
 <section id="comments">
 

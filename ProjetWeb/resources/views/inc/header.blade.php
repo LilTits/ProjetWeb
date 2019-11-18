@@ -78,7 +78,7 @@
       <!--When session-->
       <!--Only admin can make a product-->
       <ul class="navbar-nav navbar-right">
-        <li><a class="nav-link" href="/ideas/create">Une idée d'évènement?</a></li>
+        <li><a class="nav-link" href="/ideas">Les idée d'évènement</a></li>
         <li><a class="nav-link">Bonjour {{Auth::user()->first_name}} !!!</a></li>
         <li><a class="nav-link" href="/perso">Espace personnel</a></li>
         <li><a href="/deconnexion" button class="btn btn-primary">Déconnexion</a></li>
