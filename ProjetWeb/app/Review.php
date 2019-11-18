@@ -10,7 +10,7 @@ class Review extends Model
 {
     use SoftDeletes;
 
-    public function author()
+    public function reviewAuthor()
     {
         return $this->belongsTo('App\User', 'author');
     }

@@ -15,7 +15,7 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('rating', [1,2,3,4,5]);
+            $table->int('rating')->unsigned();
             $table->string('description');
             $table->integer('author')->unsigned();
             $table->integer('product_id')->unsigned();
