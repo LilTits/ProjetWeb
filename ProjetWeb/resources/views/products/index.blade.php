@@ -9,7 +9,7 @@
         <div class="row">
             
             @foreach ($products as $product)
-            @if($product->id <= 4)
+            @if($product->id <= 8)
             <div class="col-xs-12 col-sm-6 col-lg-4 item_product">
                 <div class="col-12 card frame_product">
                     <img src="/storage/image/products/{{$product->product_image}}"
