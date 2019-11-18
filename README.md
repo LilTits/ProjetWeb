@@ -91,3 +91,8 @@ LNC Reference: https://en.wikipedia.org/wiki/Leszynski_naming_convention
 |Type (user-defined)|typ|
 |Counter|cnt|
 
+
+### Compte
+BDE : Sacha.garnier@viacesi.fr  password : Sacha17
+Student : matheo.brise@viacesi.fr    pasword : Matheo17
+Cesi : titouan.guiochet@viacesi.fr    password : Titouan17
