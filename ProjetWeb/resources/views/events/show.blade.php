@@ -30,29 +30,6 @@
     </div>
 </section>
 
-{{-- <section id="participant">
-    @if (count($data['event']_participants) > 0)
-        <div class="col-sm-6 col-md-6">
-            <div class="row">
-                <ul class="list-group">
-                    @foreach ($data['event']_participants as $participant)
-                    <li class="list-group-item">
-                        <div class="card mb-3"">
-                            <div class=" row no-gutters">
-                                <div class="col-6">
-                                    <p class="card-text">{{$participant->id}} €</p>
-                                    <p class="card-text">{{$participant->id}} €</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    @endforeach
-                </ul>
-            </div>
-        </div>
-    @endif    
-</section> --}}
-
 <section id="comments">
 
 @auth

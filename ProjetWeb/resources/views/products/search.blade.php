@@ -24,7 +24,11 @@
             </div>
             @endforeach
             @else
-            <p>Pas de produits - 0 result(s) for '{{ request()->input('query') }}' </p>
+            <div class="col-6 alert_cart">
+                <div class="alert alert-primary" role="alert">
+                    <h3 class="title_alert">Pas de produit disponible - 0 result(s) for '{{ request()->input('query') }}' </h3>
+                </div>
+            </div>
             @endif
         </div>
     </div>
