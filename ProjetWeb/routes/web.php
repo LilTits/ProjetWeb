@@ -85,6 +85,13 @@ Route::get('/events/{id}/addcomment', [
     'uses' => 'EventsController@addcomment',
     'as' => 'events.addcomment'
 ]);
+
+//create review
+
+Route::get('/products/{id}/addreview', [
+    'uses' => 'ProductTypesController@addreview',
+    'as' => 'products.addreview'
+]);
     
 
 

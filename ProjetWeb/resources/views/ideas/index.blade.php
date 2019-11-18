@@ -22,7 +22,11 @@
             @endforeach
             
             @else
-            <p>Pas de produits</p>
+            <div class="col-6 alert_cart">
+                <div class="alert alert-primary" role="alert">
+                    <h3 class="title_alert">Pas d'idée</h3>
+                </div>
+            </div>
             @endif
         </div>
         <a button class="btn btn-primary btn-lg btn btn-dark" href="/ideas/create">Une idée d'évènement?</a>

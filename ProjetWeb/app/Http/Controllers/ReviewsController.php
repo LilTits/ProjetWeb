@@ -7,7 +7,7 @@ use App\Review;
 
 class ReviewsController extends Controller
 {
-    /**
+    /** 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -43,11 +43,12 @@ class ReviewsController extends Controller
         // Create review
         $review = new Review();
         $review->description = $request->input('description');
-        $review->author = 1;
-        $review->product_id = 1;
+        $review->rating = $request->input('rating');
+        $review->author = auth()->user()->id;
+        $review->product_id = $request->id;
         $review->save();
 
-        return redirect('/reviews')->with('success', 'Avis créé');
+        return redirect('/products')->with('success', 'Avis créé');
     }
 
     /**
@@ -90,11 +91,10 @@ class ReviewsController extends Controller
         // Create review
         $review = Review::find($id);
         $review->description = $request->input('description');
-        $review->author = 1;
-        $review->product_id = 1;
+        $review->rating = $request->input('rating');
         $review->save();
 
-        return redirect('/reviews')->with('success', 'Avis mis à jour');
+        return redirect('/products')->with('success', 'Avis mis à jour');
     }
 
     /**
@@ -107,6 +107,6 @@ class ReviewsController extends Controller
     {
         $review = Review::find($id);
         $review->delete();
-        return redirect('/reviews')->with('sucess', 'Avis supprimé');
+        return redirect('/products')->with('sucess', 'Avis supprimé');
     }
 }

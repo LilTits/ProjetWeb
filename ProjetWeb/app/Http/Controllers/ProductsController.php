@@ -7,7 +7,7 @@ use App\Product;
 
 class ProductsController extends Controller
 {
-    /**
+    /** 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -62,8 +62,22 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        // $product =  Product::find($id);
-        // return view('products.show')->with('product', $product);
+        $data =  array();
+        $data['product'] = Product::find($id);
+        $data['reviews'] = Product::find($id)->comments;
+        return view('product.show',compact("data"));;
+    }
+
+    /**
+     * Show the form for creating the specified commsnets.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function addreview($id)
+    {
+        $product = Product::find($id);
+        return view('product.addreview')->with('product', $product);
     }
 
     /**

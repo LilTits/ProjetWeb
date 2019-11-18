@@ -10,14 +10,14 @@ class Review extends Model
 {
     use SoftDeletes;
 
-    public function author()
+    public function reviewAuthor()
     {
         return $this->belongsTo('App\User', 'author');
     }
 
     public function product()
     {
-        return $this->belongsTo('App\Product');
+        return $this->belongsTo('App\ProductType');
     }
 
     public function image()

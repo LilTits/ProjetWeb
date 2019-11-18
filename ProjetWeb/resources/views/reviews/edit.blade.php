@@ -9,6 +9,8 @@
             <div class="col-12">
                 {!! Form::open(['action' => ['ReviewsController@update', $review->id], 'method' => 'POST']) !!}
                 <div class="form-group">
+                    {{Form::label('rating', 'Avis')}}
+                    {{Form::selectRange('rating', 1, 5)}}
                     {{Form::label('description', 'Description')}}
                     {{Form::textarea('description', $review->description, [
                         'class' => 'form-control',
