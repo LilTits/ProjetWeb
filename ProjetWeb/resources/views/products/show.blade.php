@@ -1,11 +1,12 @@
 @extends('layout.app')
 
 @section('content')
-<!-- Start of product section --> 
+<!-- Start of product section -->
 <section id="product">
-    <div  class="container">
+    <div class="container">
         <div class="card item_product">
-            <img src="/storage/image/products/{{$data['product']->product_image}}" class="card-img-top image_product" alt="...">
+            <img src="/storage/image/products/{{$data['product']->product_image}}" class="card-img-top image_product"
+                alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{$data['product']->name}}</h5>
                 <p class="card-text">{{$data['product']->description}}</p>
@@ -31,11 +32,15 @@
                 @if((Auth::user()->role_id == 3) || (Auth::user()->role_id == 4))
                 <!--Only admin or member BBD-->
                 <a href="/products/{{$data['product']->id}}/edit" class="btn">Edition</a>
-                {!!Form::open(['action' => ['ProductTypesController@destroy', $data['product']->id], 'method' => 'POST'])!!}
+                {!!Form::open(['action' => ['ProductTypesController@destroy', $data['product']->id], 'method' =>
+                'POST'])!!}
                 {{Form::hidden('_method', 'DELETE')}}
                 {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
                 {!!Form::close()!!}
                 @endif
+                @endauth
+                @auth
+                <a href="/products/{{$data['product']->id}}/addreview" class="btn">Ajoute Avis</a>
                 @endauth
             </div>
         </div>
@@ -44,38 +49,39 @@
 
 <section id="reviews">
 
-@auth
-<a href="/products/{{$data['product']->id}}/addreview" class="btn">Ajoute Avis</a>
-@endauth
 
+    @if(count($data['reviews']) > 0)
+    @foreach ($data['reviews'] as $review)
 
-@if(count($data['reviews']) > 0)
-            @foreach ($data['reviews'] as $review)
-            
-            <div class="col-12 card frame_comment">
-                <div class="card-body">
-                    <p class="card-text">Etoile Donnes: {{$review->rating}}</p>
-                    <br>
-                    <p class="card-text">{{$review->description}}</p>
-                    <br>
-                    <small>Ajouté le {{$review->created_at}} by {{$review->reviewAuthor->first_name}} {{$review->reviewAuthor->last_name}} </small>
-                </div>
-                @auth
-                @if((Auth::user()->id == $review->author))
-                <a href="/reviews/{{$review->id}}edit" class="btn btn-primary">Edition</a>
-                @endif
-                @if((Auth::user()->role_id == 3) || (Auth::user()->role_id == 4) || (Auth::user()->id == $review->author))
-                {!!Form::open(['action' => ['ReviewsController@destroy', $review->id], 'method' => 'POST'])!!}
-                    {{Form::hidden('_method', 'DELETE')}}
-                    {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
-                {!!Form::close()!!}
-                @endif
-                @endauth
-            </div>
-            @endforeach
-            @else
-            <p>Pas de Avis</p>
-            @endif
+    <div class="col-12 card frame_comment">
+        <div class="card-body">
+            <p class="card-text">Etoile Donnes: {{$review->rating}}</p>
+            <br>
+            <p class="card-text">{{$review->description}}</p>
+            <br>
+            <small>Ajouté le {{$review->created_at}} by {{$review->reviewAuthor->first_name}}
+                {{$review->reviewAuthor->last_name}} </small>
+        </div>
+        @auth
+        @if((Auth::user()->id == $review->author))
+        <a href="/reviews/{{$review->id}}edit" class="btn btn-primary">Edition</a>
+        @endif
+        @if((Auth::user()->role_id == 3) || (Auth::user()->role_id == 4) || (Auth::user()->id == $review->author))
+        {!!Form::open(['action' => ['ReviewsController@destroy', $review->id], 'method' => 'POST'])!!}
+        {{Form::hidden('_method', 'DELETE')}}
+        {{Form::submit('Suppression', ['class' => 'btn btn-danger'])}}
+        {!!Form::close()!!}
+        @endif
+        @endauth
+    </div>
+    @endforeach
+    @else
+    <div class="col-6 alert_cart">
+        <div class="alert alert-primary" role="alert">
+            <h3 class="title_alert">Pas d'Avis</h3>
+        </div>
+    </div>
+    @endif
 </section>
 <!-- End of product section -->
 @endsection
