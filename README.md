@@ -15,7 +15,6 @@ Second year of precatory cycle at CESI computer engineering program
 
 Created by: **Varjavandi Thomas**, **Brisé Mathéo** et **Guiochet Titouan**.
 
-<<<<<<< HEAD
 ## Files we modified :
 
 1. app/Http/Controllers
@@ -63,7 +62,6 @@ The subfolders contains all our image for the website
 ## How to use the site in local
 
 Copy the .env.example, create a file called .env and paste in the text.
->>>>>>> master
 
 ## Technical choice:
 
