@@ -13,6 +13,50 @@ Second year of precatory cycle at CESI computer engineering program
 
 Created by: **Varjavandi Thomas**, **Brisé Mathéo** et **Guiochet Titouan**.
 
+## Files we modified :
+
+1. app/Http/Controllers
+
+Everithing in the controller was created by us.
+
+2. app/Mail
+
+Created for mail use.
+
+3. app/Permisions
+
+Created for future version
+
+4. app
+
+All the single files are the models that we created
+
+5. database/migrations
+
+Files for the creation opf the database
+
+6. database/seeds
+
+Add fake data to test the database and the website
+
+7. ressources/assets/sass
+
+_custom.scss - All our css for the website
+app.scss - File that integrate our css
+
+8. ressources/views
+
+All the subfolders are the actual pages of the website.
+
+9. routes
+
+web.php - Link between view and controller
+
+10. storage/app/public/image
+
+The subfolders contains all our image for the website
+
+
 ## Technical choice:
 
 ### Why using a framework
